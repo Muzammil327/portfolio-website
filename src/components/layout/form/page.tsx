@@ -19,13 +19,18 @@ export default function FooterForm() {
   })
 
   const SubmitHandle = async (e: any) => {
-    e.preventDefault();
+    e.preventDefault()
 
     try {
-      const { fname, lname, email, phone, message } = data;
       const res = await axios.post(`/api/contactForm`, data)
       toast.success(res.data.message)
-
+      setData({
+        fname: '',
+        lname: '',
+        email: '',
+        phone: '',
+        message: '',
+      })
     } catch (error) {
       console.log(error)
       toast.warning('Error during Task Update')
