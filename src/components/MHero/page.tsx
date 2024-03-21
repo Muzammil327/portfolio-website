@@ -8,7 +8,7 @@ const Social = dynamic(() => import("@/components/elements/Social/page"));
 import Typewriter from "typewriter-effect";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Button from "../elements/Button/page";
+import Button from "@/components/elements/Button/page";
 
 export default function MHero() {
   const settings = {

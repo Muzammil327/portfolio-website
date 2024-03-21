@@ -5,7 +5,7 @@ const Container = dynamic(() => import("@/components/elements/container/page"));
 const Social = dynamic(() => import("@/components/elements/Social/page"));
 import { urlForImage } from "@/sanity/lib/image";
 import { Portfolio } from "@/src/types/page";
-import Button from "../../elements/Button/page";
+import Button from "@/components/elements/Button/page";
 
 interface Iprops {
   datas: Portfolio;
