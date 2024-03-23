@@ -13,7 +13,7 @@ interface Iprops {
 
 export default function PortfolioHero({ datas }: Iprops) {
   return (
-    <div className="mb-2">
+    <div className="mb-2 md:mt-8 mt-24">
       <Container>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-7">
           <div className="lg:py-44 md:py-20 pt-2 md:text-left text-center">

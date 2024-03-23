@@ -22,7 +22,7 @@ export default function MHero() {
   };
 
   return (
-    <div className="md:my-10 mb-6">
+    <div className="md:my-10 my-6">
       <Container>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-7">
           <div className="lg:py-40 pt-40 md:text-left text-center">

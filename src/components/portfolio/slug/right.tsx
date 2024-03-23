@@ -10,6 +10,7 @@ interface Iprops {
 export default function PortfolioRight({ datas }: Iprops) {
   return (
     <div>
+      
       <div className="flex flex-col">
         <span className="my-3 text-[22px] font-semibold text-black leading-7">
           Date

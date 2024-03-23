@@ -1,5 +1,5 @@
 export const apiVersion =
-  process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2024-03-18";
+  process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2024-03-20";
 
 export const token = process.env.NEXT_PUBLIC_SANITY_TOKEN || "";
 
