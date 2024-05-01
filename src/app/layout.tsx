@@ -104,6 +104,7 @@ export default function RootLayout({
           property="twitter:domain"
           content="mmuzammil-portfolio.vercel.app"
         />
+        
       </head>
       <body className={inter.className}>
         <Navbar />
