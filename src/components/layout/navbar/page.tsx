@@ -1,6 +1,5 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { Dialog } from '@headlessui/react'
 import BarIcon from '@/components/elements/icon/bars/page'
 import TimeIcon from '@/components/elements/icon/time/page'
 import Link from 'next/link'
@@ -18,13 +17,13 @@ const navigation: Slug[] = [
   { name: 'About', href: '/about' },
   { name: 'Skill', href: '/skill' },
   { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Services', href: '/services' },
+  // { name: 'Services', href: '/services' },
   { name: 'Contact', href: '/contact' },
-  // { name: "Blogs", href: "/blog" },
+  { name: "Blogs", href: "https://blog-website-pink-chi.vercel.app/" },
 ]
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(true)
   const [scrolling, setScrolling] = useState(false)
 
   useEffect(() => {
@@ -48,67 +47,51 @@ export default function Navbar() {
         }`}
       >
         <Container>
-          <nav aria-label="Navbar" className={styles.nav}>
+          <nav aria-label="Navbar" className={`${styles.nav}`}>
             <div className={styles.logo}>
               <Logo />
             </div>
             <div className={styles.BarIcontoggle}>
-              {/* </>
-              ) : (
-                <> */}
               <button
                 type="button"
-                className={`z-50 ${styles.BarIconbutton}`}
-                onClick={() => setMobileMenuOpen(true)}
+                className={`z-50 ${styles.BarIconbutton} transition-all`}
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
-                <BarIcon aria-hidden="true" />
+                {mobileMenuOpen ? <BarIcon aria-hidden="true" /> : <TimeIcon />}
               </button>
-              {/* </> */}
-            </div>
-            <div className={styles.menu}>
-              {navigation.map((item: Slug) => (
-                <Link key={item.name} href={item.href} className={styles.link}>
-                  {item.name}
-                </Link>
-              ))}
+              <div className={styles.menu}>
+                {navigation.map((item: Slug) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={styles.link}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
             </div>
           </nav>
         </Container>
-
-        <Dialog
-          as="div"
-          className={styles.toggle}
-          open={mobileMenuOpen}
-          onClose={setMobileMenuOpen}
-        >
-          <Dialog.Panel className={styles.MdialogPanel}>
-            <div className="flex justify-between">
-              <Logo />
-              <button
-                type="button"
-                className="-m-2.0 rounded-md text-gray-700 top-6 right-6 absolute"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <TimeIcon aria-hidden="true" />
-              </button>
-            </div>
-            <div className="mt-10 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
+        <div className="md:hidden block relative transition-all">
+          {!mobileMenuOpen && (
+            <div className="absolute w-6/12 h-screen left-0 bg-white shadow-lg transition-all">
+              <ul className="flex flex-col gap-y-2">
+                {navigation.map((item: Slug) => (
+                  <li key={item.name} className="ml-2">
                     <Link
-                      key={item.name}
                       href={item.href}
-                      className={styles.mobileLink}
+                      className=" block rounded-lg px-3 py-2 text-base md:text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      onClick={() => setMobileMenuOpen(true)}
                     >
                       {item.name}
                     </Link>
-                  ))}
-                </div>
-              </div>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </Dialog.Panel>
-        </Dialog>
+          )}
+        </div>
       </div>
     </header>
   )

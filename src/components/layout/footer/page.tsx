@@ -60,7 +60,7 @@ export default function Footer() {
 
         <div className={styles.footerarea}>
           <p className={styles.footerareap}>
-            Copyright © 2023 All rights reserved | by{" "}
+            Copyright © 2023 | by{" "}
             <Link href="/" target="_blank" className="c1">
               Muzammil Safdar
             </Link>
@@ -96,11 +96,6 @@ const data1: TypeProps[] = [
     id: 4,
     title: "My Portfolio",
     href: "/portfolio",
-  },
-  {
-    id: 5,
-    title: "My Servives",
-    href: "/service",
   },
 ];
 

@@ -1,29 +1,31 @@
-import dynamic from "next/dynamic";
-const SkillAll = dynamic(() => import("@/view/skill/All/page"));
-import type { Metadata } from "next";
+import dynamic from 'next/dynamic'
+import type { Metadata } from 'next'
+import SHero from '@/src/components/SHero/page'
+import SkillCardList from '@/src/components/skill/skill/list/page'
 
 const data = {
-  title: "My Skills || Muzammil Portfolio",
+  title: 'My Skills || Muzammil Portfolio',
   description:
-    "I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.",
-  canonical: "/skill",
+    'I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.',
+  canonical: '/skill',
   index: true,
   follow: true,
-  image: "/opengraph-image.jpg",
-  url: "https://mmuzammil-portfolio.vercel.app/skill",
+  image: '/opengraph-image.jpg',
+  url: 'https://mmuzammil-portfolio.vercel.app/skill',
   keywords: [
-    "mmuzammil-portfolio",
-    "muzammil",
-    "muzammil Safdar",
-    "muzammil Safdar Portfolio",
-    "muzammil portfolio",
+    'mmuzammil-portfolio',
+    'muzammil',
+    'muzammil Safdar',
+    'muzammil Safdar Portfolio',
+    'muzammil portfolio',
   ],
-};
+}
 
 export default function Skill() {
   return (
     <>
-        <SkillAll />
+      <SHero head="My Skills" para="" />
+      <SkillCardList />
     </>
   )
 }
@@ -62,4 +64,4 @@ export const metadata: Metadata = {
       alt: data.title,
     },
   },
-};
+}

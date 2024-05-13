@@ -5,16 +5,16 @@ import {
   FaGithub,
   FaWhatsapp,
   FaInstagram,
-} from "react-icons/fa";
-import Link from "next/link";
-import { ReactNode } from "react";
-import styles from "./social.module.css";
+} from 'react-icons/fa'
+import Link from 'next/link'
+import { ReactNode } from 'react'
+import styles from './social.module.css'
 
 type TypeProps = {
-  id: number;
-  icon: ReactNode;
-  link: string;
-};
+  id: number
+  icon: ReactNode
+  link: string
+}
 
 export default function Social() {
   return (
@@ -31,37 +31,37 @@ export default function Social() {
                 {data.icon}
               </Link>
             </li>
-          );
+          )
         })}
       </ul>
     </div>
-  );
+  )
 }
 
 const data: TypeProps[] = [
   {
     id: 0,
-    icon: <FaFacebook />,
-    link: "/",
+    icon: <FaLinkedinIn />,
+    link: 'https://www.linkedin.com/in/muzammil-safdar/',
   },
   {
     id: 1,
-    icon: <FaLinkedinIn />,
-    link: "/",
+    icon: <FaGithub />,
+    link: 'https://github.com/Muzammil327',
   },
   {
     id: 2,
-    icon: <FaGithub />,
-    link: "/",
-  },
-  {
-    id: 3,
     icon: <FaWhatsapp />,
-    link: "/",
+    link: 'https://wa.me/923144878266',
   },
-  {
-    id: 4,
-    icon: <FaInstagram />,
-    link: "/",
-  },
-];
+  // {
+  //   id: 3,
+  //   icon: <FaFacebook />,
+  //   link: '/',
+  // },
+  // {
+  //   id: 4,
+  //   icon: <FaInstagram />,
+  //   link: '/',
+  // },
+]

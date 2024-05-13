@@ -1,33 +1,34 @@
-import dynamic from "next/dynamic";
-const AboutTemplate = dynamic(() => import("@/view/about/page"));
-import type { Metadata } from "next";
+import dynamic from 'next/dynamic'
+import type { Metadata } from 'next'
+import SHero from '@/src/components/SHero/page'
+import Resume from '@/src/components/about/resume/page'
 
 const data = {
-  title: "About US || Muzammil Portfolio",
+  title: 'About US || Muzammil Portfolio',
   description:
-    "I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.",
-  canonical: "/about",
+    'I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.',
+  canonical: '/about',
   index: true,
   follow: true,
-  image: "/opengraph-image.jpg",
-  url: "https://mmuzammil-portfolio.vercel.app/about",
+  image: '/opengraph-image.jpg',
+  url: 'https://mmuzammil-portfolio.vercel.app/about',
   keywords: [
-    "mmuzammil-portfolio",
-    "muzammil",
-    "muzammil Safdar",
-    "muzammil Safdar Portfolio",
-    "muzammil portfolio",
+    'mmuzammil-portfolio',
+    'muzammil',
+    'muzammil Safdar',
+    'muzammil Safdar Portfolio',
+    'muzammil portfolio',
   ],
-};
+}
 
 export default function About() {
   return (
     <>
-        <AboutTemplate />
+      <SHero head="About Us" para="" />
+      <Resume />
     </>
   )
 }
-
 
 export const metadata: Metadata = {
   title: data.title,
@@ -63,4 +64,4 @@ export const metadata: Metadata = {
       alt: data.title,
     },
   },
-};
+}

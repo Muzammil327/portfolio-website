@@ -1,30 +1,29 @@
-import React from "react";
-import dynamic from "next/dynamic";
-const ContactTemplate = dynamic(() => import("@/view/contact/page"));
-import type { Metadata } from "next";
+import React from 'react'
+import type { Metadata } from 'next'
+import SHero from '@/src/components/SHero/page'
 
 const data = {
-  title: "Contact US || Muzammil Portfolio",
+  title: 'Contact US || Muzammil Portfolio',
   description:
-    "I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.",
-  canonical: "/contact",
+    'I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.',
+  canonical: '/contact',
   index: true,
   follow: true,
-  image: "/opengraph-image.jpg",
-  url: "https://mmuzammil-portfolio.vercel.app/contact",
+  image: '/opengraph-image.jpg',
+  url: 'https://mmuzammil-portfolio.vercel.app/contact',
   keywords: [
-    "mmuzammil-portfolio",
-    "muzammil",
-    "muzammil Safdar",
-    "muzammil Safdar Portfolio",
-    "muzammil portfolio",
+    'mmuzammil-portfolio',
+    'muzammil',
+    'muzammil Safdar',
+    'muzammil Safdar Portfolio',
+    'muzammil portfolio',
   ],
-};
+}
 
 export default function Contact() {
   return (
     <>
-        <ContactTemplate />
+      <SHero head="Contact Us" para="" />
     </>
   )
 }
@@ -63,4 +62,4 @@ export const metadata: Metadata = {
       alt: data.title,
     },
   },
-};
+}

@@ -10,8 +10,6 @@ import {
   FaLocationArrow,
 } from 'react-icons/fa'
 
-import aboutData from './data'
-
 export default function Resume() {
   return (
     <section className="home_banner_area relative z-10 lg:mb-20 md:mb-12 mb-4">
