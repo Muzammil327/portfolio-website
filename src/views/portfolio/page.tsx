@@ -40,8 +40,8 @@ const datas = [
     image: '/projects/ecommerce-website.webp',
     title: 'Full Stack Ecommerce Website',
     para: 'For this Ecommerce Website, I used Next JS Framework (Server Side Rendering ) and Styling With Tailwind CSS and Use Typescript for type-safe. And use Nextjs API . And deploy to Vercel with Github.',
-    githubLink: 'https://github.com/Muzammil327/portfolio-website',
-    liveLink: 'https://mmuzammil-portfolio.vercel.app/',
+    githubLink: 'https://github.com/Muzammil327/Full-Stack-Ecommerce-Website',
+    liveLink: 'https://full-stack-ecommerce-website-five.vercel.app/',
   },
   {
     id: 1,
@@ -56,7 +56,7 @@ const datas = [
     image: '/projects/portfolio-website.webp',
     title: 'Portfolio Website',
     para: 'For this Portfolio Website, I used Next JS Framework (Server Side Rendering ) and Styling With Tailwind CSS and Use Typescript for type-safe. And use Sanity for Data management. And deploy to Vercel with Github.',
-    githubLink: 'https://github.com/Muzammil327/Full-Stack-Ecommerce-Website',
-    liveLink: 'https://full-stack-ecommerce-website-five.vercel.app/',
+    githubLink: 'https://github.com/Muzammil327/portfolio-website',
+    liveLink: 'https://mmuzammil-portfolio.vercel.app/',
   },
 ]

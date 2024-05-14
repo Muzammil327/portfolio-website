@@ -18,14 +18,14 @@ export default function Resume() {
           <div className="banner_inner flex items-center relative w-full">
             <div className="banner_content text-left text-gray-700">
               <div className="media grid lg:grid-cols-2 grid-cols-1 lg:gap-12 md:gap-7 gap-2">
-                <div className="flex">
+                <div className="flex w-full h-auto items-center justify-center">
                   <div>
                     <Image
                       src="/staff.png"
                       title="MUHAMMAD MUZAMMIL Safdar Full Stack Next JS And MERN Developer"
                       alt="MUHAMMAD MUZAMMIL Safdar Full Stack Next JS And MERN Developer"
-                      height={999}
-                      width={999}
+                      height={500}
+                      width={369}
                       priority={true}
                     />
                   </div>
