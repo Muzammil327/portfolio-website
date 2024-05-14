@@ -54,11 +54,11 @@ const data: TypeProps[] = [
     icon: <FaWhatsapp />,
     link: 'https://wa.me/923144878266',
   },
-  // {
-  //   id: 3,
-  //   icon: <FaFacebook />,
-  //   link: '/',
-  // },
+  {
+    id: 3,
+    icon: <FaFacebook />,
+    link: 'https://web.facebook.com/muzammilmsafdar/',
+  },
   // {
   //   id: 4,
   //   icon: <FaInstagram />,
