@@ -5,12 +5,12 @@
 /* globals.scss */
 :root {
   --color1: #fff;
-  --color2: #F77A40;
+  --color2: #3FAFAA;
   --color3: #101010;
   --color3h: #262323a8;
   --border1: #dbe2ea6d;
   --border1dark: #dbe2ea5c;
-  --border2: #F77A40;
+  --border2: #3FAFAA;
 }
 
 
@@ -94,11 +94,12 @@ button:focus {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   @apply bg-color2;
+  border-radius: 10px;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #f77a40dc;
+.slick-prev,
+.slick-next {
+  display: none !important;
 }
 
 /* ---------------------------------------------------------------
@@ -110,6 +111,14 @@ button:focus {
   background: linear-gradient(90deg,
       rgba(253, 66, 167, 0.227328431372549) 50%,
       rgba(241, 117, 57, 0.2497373949579832) 100%);
+}
+
+.bg-hero-2 {
+  background-image: url(/banner-hero-1.png);
+  // @apply pb-32;
+  background-repeat: no-repeat;
+  background-position-x: right; 
+  background-size: 45%;
 }
 
 .bg-hero {
