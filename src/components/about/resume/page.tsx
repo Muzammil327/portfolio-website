@@ -1,7 +1,5 @@
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
-const Container = dynamic(() => import('@/components/elements/container/page'))
-const Social = dynamic(() => import('@/components/elements/Social/page'))
 
 import {
   FaPhone,
@@ -9,6 +7,8 @@ import {
   FaEnvelope,
   FaLocationArrow,
 } from 'react-icons/fa'
+import Container from '../../ui/Container'
+import Social from '../../ui/Social/page'
 
 export default function Resume() {
   return (

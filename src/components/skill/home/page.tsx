@@ -1,8 +1,8 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-const Container = dynamic(() => import("@/components/elements/container/page"));
-const Social = dynamic(() => import("@/components/elements/Social/page"));
+import Container from "../../ui/Container";
+import Social from "../../ui/Social/page";
 
 interface data {
   id: number;

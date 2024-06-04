@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-const Container = dynamic(() => import("@/components/elements/container/page"));
 import { FaFacebook, FaTwitter, FaYoutube, FaGithub } from "react-icons/fa";
+import Container from "../../ui/Container";
 
 export default function HireCard() {
   return (

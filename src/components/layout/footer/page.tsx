@@ -1,19 +1,19 @@
-import dynamic from "next/dynamic";
-import Link from "next/link";
-const Container = dynamic(() => import("@/components/elements/container/page"));
-const Social = dynamic(() => import("@/components/elements/Social/page"));
-const Logo = dynamic(() => import("@/components/layout/navbar/logo/page"));
-import styles from "./footer.module.css";
+import dynamic from 'next/dynamic'
+import Link from 'next/link'
+import styles from './footer.module.css'
+import Container from '../../ui/Container'
+import Logo from '../../ui/Logo'
+import Social from '../../ui/Social/page'
 
 const aboutData = {
   description:
-    "I am a Javascript developer with expertise in full-stack web development. I have strong understanding of the Javascript framework and its ecosystem. I am passionate about creating efficient, scalable, and user-friendly web applications.",
-};
+    'I am a Javascript developer with expertise in full-stack web development. I have strong understanding of the Javascript framework and its ecosystem. I am passionate about creating efficient, scalable, and user-friendly web applications.',
+}
 
 interface TypeProps {
-  id: number;
-  title: string;
-  href: string;
+  id: number
+  title: string
+  href: string
 }
 
 export default function Footer() {
@@ -37,7 +37,7 @@ export default function Footer() {
                         {data.title}
                       </Link>
                     </li>
-                  );
+                  )
                 })}
               </ul>
             </div>
@@ -51,7 +51,7 @@ export default function Footer() {
                         {data.title}
                       </Link>
                     </li>
-                  );
+                  )
                 })}
               </ul>
             </div>
@@ -60,7 +60,7 @@ export default function Footer() {
 
         <div className={styles.footerarea}>
           <p className={styles.footerareap}>
-            Copyright © 2023 | by{" "}
+            Copyright © 2023 | by{' '}
             <Link href="/" target="_blank" className="c1">
               Muzammil Safdar
             </Link>
@@ -68,87 +68,86 @@ export default function Footer() {
         </div>
       </footer>
     </>
-  );
+  )
 }
 
 const data1: TypeProps[] = [
   {
     id: 0,
-    title: "Home",
-    href: "/",
+    title: 'Home',
+    href: '/',
   },
   {
     id: 1,
-    title: "About US",
-    href: "/about",
+    title: 'About US',
+    href: '/about',
   },
   {
     id: 2,
-    title: "Contact US",
-    href: "/contact",
+    title: 'Contact US',
+    href: '/contact',
   },
   {
     id: 3,
-    title: "My Skill",
-    href: "/skill",
+    title: 'My Skill',
+    href: '/skill',
   },
   {
     id: 4,
-    title: "My Portfolio",
-    href: "/portfolio",
+    title: 'My Portfolio',
+    href: '/portfolio',
   },
-];
+]
 
 const data2: TypeProps[] = [
   {
     id: 0,
-    title: "Javascript",
-    href: "/",
+    title: 'Javascript',
+    href: '/',
   },
   {
     id: 1,
-    title: "Typescript",
-    href: "/",
+    title: 'Typescript',
+    href: '/',
   },
   {
     id: 2,
-    title: "Tailwind CSS",
-    href: "/",
+    title: 'Tailwind CSS',
+    href: '/',
   },
   {
     id: 3,
-    title: "SCSS",
-    href: "/",
+    title: 'SCSS',
+    href: '/',
   },
   {
     id: 4,
-    title: "React JS",
-    href: "/",
+    title: 'React JS',
+    href: '/',
   },
   {
     id: 5,
-    title: "Next JS",
-    href: "/",
+    title: 'Next JS',
+    href: '/',
   },
   {
     id: 6,
-    title: "Node JS",
-    href: "/",
+    title: 'Node JS',
+    href: '/',
   },
   {
     id: 7,
-    title: "Express JS",
-    href: "/",
+    title: 'Express JS',
+    href: '/',
   },
   {
     id: 8,
-    title: "MongoDB",
-    href: "/",
+    title: 'MongoDB',
+    href: '/',
   },
   {
     id: 9,
-    title: "Axios",
-    href: "/",
+    title: 'Axios',
+    href: '/',
   },
-];
-
+]

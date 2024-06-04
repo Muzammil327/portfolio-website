@@ -1,0 +1,101 @@
+.header {
+  background-color: var(--color1);
+}
+
+.nav {
+  @apply relative border-b py-2;
+  background-color: var(--color1);
+  border-color: var(--border1);
+}
+
+.navbarFixed {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  @apply top-0 left-0 w-full z-40 fixed;
+  background-color: var(--color1);
+}
+
+.desktop {
+  @apply flex items-center justify-between;
+}
+
+.barIcon {
+  @apply border-2 border-solid duration-300 ease-in block lg:hidden;
+  background-color: var(--color2);
+  color: var(--color1);
+  border-color: var(--border2);
+
+  &:hover {
+    border-color: var(--border2);
+    color: var(--color2);
+    background-color: var(--color1);
+  }
+
+}
+
+.btnGroup {
+  @apply flex items-center lg:gap-6 text-sm font-medium text-gray-700;
+
+  .btn1 {
+    color: var(--color3);
+  }
+
+  .btn2 {
+    @apply border-2 border-solid duration-300 ease-in px-6;
+    background-color: var(--color2);
+    color: var(--color1);
+
+    &:hover {
+      border-color: var(--border2);
+      color: var(--color2);
+      background-color: var(--color1);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.headerScrolled {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.logo {
+  @apply flex md:mr-12;
+}
+
+.BarIconbutton {
+  @apply -m-2.5 lg:hidden inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 transition-all;
+}
+
+
+/* menu */
+.menu {
+  @apply hidden lg:flex lg:gap-x-12;
+}
+
+.link {
+  @apply text-base font-medium leading-6 text-gray-900 hover:text-orange-600;
+}
+
+
+/* mobile  */
+.Mdialog {
+  @apply lg:hidden transition-all;
+}
+
+.MdialogPanel {
+  @apply fixed inset-y-0 transition-all right-0 z-40 w-full overflow-y-auto bg-white px-2 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10;
+}
+
+/* mobile menu */
+.mobileLink {
+  @apply -mx-3 block rounded-lg px-3 py-2 text-base md:text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50;
+}

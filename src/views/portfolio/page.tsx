@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic'
 const SHero = dynamic(() => import('@/components/SHero/page'))
-const Heading = dynamic(() => import('@/components/elements/Heading/page'))
-import Container from '@/src/components/elements/container/page'
 import PortfolioItem from '@/src/components/portfolio/item/page'
+import Container from '@/src/components/ui/Container'
+import Heading from '@/src/components/ui/Heading/page'
 
 export async function PortfolioAll() {
   return (

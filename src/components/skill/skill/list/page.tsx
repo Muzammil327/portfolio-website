@@ -1,5 +1,5 @@
+import Container from "@/src/components/ui/Container";
 import dynamic from "next/dynamic";
-const Container = dynamic(() => import("@/components/elements/container/page"));
 const SkillCard = dynamic(() => import("@/components/skill/skill/item/page"));
 
 

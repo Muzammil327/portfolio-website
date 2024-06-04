@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* globals.scss */
+:root {
+  --color1: #fff;
+  --color2: #F77A40;
+  --color3: #000;
+  --border1: #dbe2ea;
+  --border2: #F77A40;
+}
+
+
 @layer base {
-  .c1 {
-    color: #f17539;
+  .btnIcon {
+    @apply py-3 px-3 rounded-md;
   }
 }
 
@@ -13,6 +23,7 @@
 *::before {
   @apply m-0 p-0 box-border;
 }
+
 html,
 body {
   @apply w-full scroll-smooth overflow-x-hidden;
@@ -30,17 +41,26 @@ a {
 .bg {
   background-image: linear-gradient(160deg, #fd59a7, #f17539);
 }
+
+/* -----------------------Button start here ------------------- */
+
+button {
+  @apply outline-none;
+}
+
+button:focus {
+  @apply outline-none focus:ring-2 focus:ring-[border2] focus:ring-opacity-50;
+}
+
 /* ---------------------------------------------------------------
 ------------------------- Sub Hero start here --------------------
 --------------------------------------------------------------- */
 
 .home {
   background: rgb(253, 66, 167);
-  background: linear-gradient(
-    90deg,
-    rgba(253, 66, 167, 0.227328431372549) 50%,
-    rgba(241, 117, 57, 0.2497373949579832) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(253, 66, 167, 0.227328431372549) 50%,
+      rgba(241, 117, 57, 0.2497373949579832) 100%);
 }
 
 /* ---------------------------------------------------------------
@@ -54,13 +74,16 @@ a {
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
   @apply w-full h-full rounded-md cursor-pointer transition-all;
 }
+
 .card:hover {
   background-position: 0 100%;
   transform: scale(1.1);
 }
+
 .card:hover .icon {
   @apply rounded-full;
 }
+
 .card:hover h3,
 .card:hover p {
   @apply text-white;
@@ -69,6 +92,7 @@ a {
 .btn {
   @apply rounded-md bg-clip-border items-center justify-center transition-all text-lg font-normal;
 }
+
 .btn2 {
   @apply text-white py-3 px-7;
   background-color: rgba(0, 0, 0, 0);
@@ -85,16 +109,18 @@ a {
   @apply py-24 bg-cover bg-fixed bg-no-repeat;
 }
 
-
 .article h1 {
   @apply text-4xl pb-8;
 }
+
 .article h2 {
   @apply text-2xl py-5 font-semibold;
 }
+
 .article p em strong {
   @apply text-base pb-4;
 }
+
 .article p {
   @apply text-base pb-2;
 }

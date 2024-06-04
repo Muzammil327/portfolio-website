@@ -1,9 +1,16 @@
 import React from 'react'
-import './globals.css'
+import './globals.scss'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-const inter = Inter({ subsets: ['latin'] })
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Poppins } from 'next/font/google'
+
+const poppins = Poppins({
+  weight: '400',
+  style: ['normal', 'italic'],
+  display: 'swap',
+  subsets: ['latin'],
+})
+
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -104,9 +111,8 @@ export default function RootLayout({
           property="twitter:domain"
           content="mmuzammil-portfolio.vercel.app"
         />
-        
       </head>
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <Navbar />
         {children}
         <FooterForm />

@@ -2,11 +2,11 @@
 import Slider from 'react-slick'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
-const Container = dynamic(() => import('@/components/elements/container/page'))
 import Typewriter from 'typewriter-effect'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import Button from '@/components/elements/Button/page'
+import Button from '@/components/ui/Button/page'
+import Container from '../ui/Container'
 
 export default function MHero() {
   const settings = {

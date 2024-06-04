@@ -6,8 +6,8 @@ import { useState } from 'react'
 import { toast } from 'react-toastify'
 import { FaClock, FaLocationArrow, FaEnvelope, FaPhone } from 'react-icons/fa'
 
-const Container = dynamic(() => import('@/components/elements/container/page'))
 import styles from './form.module.css'
+import Container from '../../ui/Container'
 
 export default function FooterForm() {
   const [data, setData] = useState({
