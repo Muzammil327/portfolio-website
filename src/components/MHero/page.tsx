@@ -66,7 +66,7 @@ export default function MHero() {
               framework and its ecosystem. I am passionate about creating
               efficient, scalable, and user-friendly web applications.
             </p>
-            <div className="mt-6 flex items-center lg:justify-start justify-center gap-4">
+            <div className="mt-6 flex sm:flex-row flex-col items-center lg:justify-start justify-center gap-4">
               <Button className="btnIcon px-12 duration-300 ease-in rounded-full flex gap-2 items-center">
                 Download CV <FaCloudDownloadAlt size={20} />
               </Button>
@@ -117,7 +117,7 @@ export default function MHero() {
                 alt=""
                 height={750}
                 width={750}
-                className="h-[520px] w-[520px] rounded-[60px] lg:rotate-12 hover:rotate-0 duration-300 ease-in-out border-8 border-solid hover:border-color2 border-transparent hover:border-opacity-60"
+                className="sm:h-[520px] h-[300px] sm:w-[520px] w-[300px] rounded-[60px] lg:rotate-12 hover:rotate-0 duration-300 ease-in-out border-8 border-solid hover:border-color2 border-transparent hover:border-opacity-60"
               />
             </div>
             <div className="">
