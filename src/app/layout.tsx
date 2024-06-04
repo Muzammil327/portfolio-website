@@ -20,6 +20,7 @@ import Footer from '@/components/layout/footer/page'
 import FooterForm from '../components/layout/form/page'
 
 import Navbar from '../components/layout/navbar/page'
+import ThemeSwitcher from '../components/provider/ThemeSwitcher'
 
 export const metadata: Metadata = {
   title: 'Muzammil Portfolio || Full Stack Developer',
@@ -53,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <meta name="application-name" content="Next.js" />
         <meta name="author" content="Muhammad Muzammil Safdar" />
@@ -113,13 +114,15 @@ export default function RootLayout({
         />
       </head>
       <body className={poppins.className}>
-        <Navbar />
-        {children}
-        <FooterForm />
-        <Footer />
-        <SpeedInsights />
-        <Analytics />
-        <ToastContainer />
+        <ThemeSwitcher>
+          <Navbar />
+          {children}
+          <FooterForm />
+          <Footer />
+          <SpeedInsights />
+          <Analytics />
+          <ToastContainer />
+        </ThemeSwitcher>
       </body>
     </html>
   )

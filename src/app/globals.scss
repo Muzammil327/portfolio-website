@@ -6,16 +6,36 @@
 :root {
   --color1: #fff;
   --color2: #F77A40;
-  --color3: #000;
-  --border1: #dbe2ea;
+  --color3: #101010;
+  --color3h: #262323a8;
+  --border1: #dbe2ea6d;
+  --border1dark: #dbe2ea5c;
   --border2: #F77A40;
 }
 
+.navbarFixed {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  @apply top-0 left-0 w-full z-40 fixed bg-white dark:bg-gray-700;
+}
 
 @layer base {
   .btnIcon {
     @apply py-3 px-3 rounded-md;
   }
+
+  .text {
+    @apply text-gray-900 dark:text-white;
+  }
+
+  .link {
+    @apply text-gray-900 dark:text-white hover:text-color2 dark:hover:text-color2;
+  }
+
+  .border1 {
+    @apply dark:border-slate-600 border-slate-200;
+  }
+
 }
 
 *,
@@ -27,6 +47,8 @@
 html,
 body {
   @apply w-full scroll-smooth overflow-x-hidden;
+  @apply dark:bg-gray-800 bg-white;
+
 }
 
 input::placeholder,

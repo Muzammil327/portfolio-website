@@ -7,11 +7,12 @@ export default function Logo() {
     <>
       <Link href="/" className="-m-1.5 p-1.5 py-2">
         <Image
-          src="/logo/Muzammil..jpg"
+          src="/logo/muzammil-safdar.png"
           alt="Muzammil Safdar"
           title="Muzammil Safdar"
           height="31"
           width="150"
+          priority
         />
       </Link>
     </>
