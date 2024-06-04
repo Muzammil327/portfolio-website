@@ -13,6 +13,8 @@
   --border2: #F77A40;
 }
 
+
+
 .navbarFixed {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
@@ -21,7 +23,7 @@
 
 @layer base {
   .btnIcon {
-    @apply py-3 px-3 rounded-md;
+    @apply py-3 px-3 border-2 rounded-md bg-color2 hover:bg-color1 border-color2 text-color1 hover:text-color2 flex items-center justify-center;
   }
 
   .text {
@@ -57,7 +59,7 @@ textarea::placeholder {
 }
 
 a {
-  @apply transition-all;
+  @apply duration-300 ease-in;
 }
 
 .bg {
@@ -75,6 +77,31 @@ button:focus {
 }
 
 /* ---------------------------------------------------------------
+------------------------- scrollbar start here --------------------
+--------------------------------------------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-color2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f77a40dc;
+}
+
+/* ---------------------------------------------------------------
 ------------------------- Sub Hero start here --------------------
 --------------------------------------------------------------- */
 
@@ -83,6 +110,11 @@ button:focus {
   background: linear-gradient(90deg,
       rgba(253, 66, 167, 0.227328431372549) 50%,
       rgba(241, 117, 57, 0.2497373949579832) 100%);
+}
+
+.bg-hero {
+  background-image: url(/banner-hero.png);
+  @apply bg-cover pb-32;
 }
 
 /* ---------------------------------------------------------------

@@ -7,7 +7,6 @@ import Image from 'next/image'
 import { FaBars, FaSun, FaTimes } from 'react-icons/fa'
 import Container from '@/src/components/ui/Container'
 import Logo from '@/src/components/ui/Logo'
-import styles from '@/src/components/layout/navbar/navbar.module.scss'
 import Button from '@/src/components/ui/Button'
 import { Featured, Sections, Items, Pages } from '@/src/types/navbar'
 import { FaMoon } from 'react-icons/fa'
@@ -38,7 +37,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   return (
-    <header>
+    <>
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog className="relative z-40 lg:hidden" onClose={setOpen}>
@@ -68,7 +67,7 @@ export default function Navbar() {
                 <div className="flex pb-2 px-4 absolute top-4 right-0">
                   <Button
                     className={`
-                    btnIcon relative -m-2 inline-flex items-center justify-center rounded-md ${styles.barIcon}`}
+                    btnIcon relative -m-2 inline-flex items-center justify-center rounded-md border-2 border-solid duration-300 ease-in`}
                     onClick={() => setOpen(false)}
                   >
                     <FaTimes size={16} />
@@ -83,12 +82,13 @@ export default function Navbar() {
                           key={category.name}
                           className={({ selected }) =>
                             classNames(
-                              selected ? 'bg-slate-100 dark:bg-gray-900' : 'link',
+                              selected
+                                ? 'bg-slate-100 dark:bg-gray-900'
+                                : 'link',
                               'flex-1 whitespace-nowrap border-b-2 px-1 py-4 text-base font-medium'
                             )
                           }
                         >
-                          
                           {category.name}
                         </Tab>
                       ))}
@@ -178,11 +178,13 @@ export default function Navbar() {
                   ))}
                 </div>
                 <div className="px-4 border-t border1"></div>
-                <div className={`my-4 ${styles.btnGroup}`}>
-                  <Button className={`btnIcon w-full link ${styles.btn1}`}>
+                <div
+                  className={`my-4 flex lg:flex-row flex-col items-center gap-3 text-sm font-medium px-4`}
+                >
+                  <Button className="w-full link duration-300 ease-in">
                     Sign In
                   </Button>
-                  <Button className={`btnIcon w-full ${styles.btn2}`}>
+                  <Button className="btnIcon w-full duration-300 ease-in">
                     Register
                   </Button>
                 </div>
@@ -334,21 +336,23 @@ export default function Navbar() {
               </div>
             </Popover.Group>
 
-            <div className={`${styles.btnGroup}`}>
+            <div className="flex lg:flex-row flex-col items-center gap-3 text-sm font-medium text-gray-700 px-4">
               <div className="lg:flex hidden items-center lg:gap-6">
-                <Button className={`btnIcon link`}>Sign In</Button>
-                <Button className={`btnIcon ${styles.btn2}`}>Register</Button>
+                <Button className="link duration-300 ease-in">Sign In</Button>
+                <Button className="btnIcon duration-300 ease-in">
+                  Register
+                </Button>
               </div>
 
               <div className="flex items-center gap-4">
                 <Button
-                  className={`btnIcon block lg:hidden ${styles.barIcon}`}
+                  className="btnIcon block lg:hidden border-2 border-solid duration-300 ease-in"
                   onClick={() => setOpen(true)}
                 >
                   <FaBars size={16} />
                 </Button>
                 <Button
-                  className={`btnIcon ${styles.modeIcon}`}
+                  className="btnIcon border-2 border-solid duration-300 ease-in"
                   onClick={() =>
                     setTheme(currentTheme === 'dark' ? 'light' : 'dark')
                   }
@@ -364,7 +368,7 @@ export default function Navbar() {
           </div>
         </Container>
       </nav>
-    </header>
+    </>
   )
 }
 

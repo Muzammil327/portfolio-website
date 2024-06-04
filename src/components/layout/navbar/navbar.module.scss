@@ -1,32 +1,17 @@
-.barIcon,
-.modeIcon {
-  @apply border-2 border-solid duration-300 ease-in;
-  background-color: var(--color2);
-  color: var(--color1);
-  border-color: var(--border2);
-
-  &:hover {
-    border-color: var(--border2);
-    color: var(--color2);
-    background-color: var(--color1);
-  }
-
-}
-
-.btnGroup {
-  @apply flex lg:flex-row flex-col items-center gap-3 text-sm font-medium text-gray-700 px-4;
+// .btnGroup {
+//   @apply ;
 
 
-  .btn2 {
-    @apply border-2 border-solid duration-300 ease-in px-6;
-    background-color: var(--color2);
-    color: var(--color1);
-    border-color: var(--border2);
+//   .btn2 {
+//     @apply border-2 border-solid duration-300 ease-in px-6;
+//     background-color: var(--color2);
+//     color: var(--color1);
+//     border-color: var(--border2);
 
-    &:hover {
-      border-color: var(--border2);
-      color: var(--color2);
-      background-color: var(--color1);
-    }
-  }
-}
+//     &:hover {
+//       border-color: var(--border2);
+//       color: var(--color2);
+//       background-color: var(--color1);
+//     }
+//   }
+// }

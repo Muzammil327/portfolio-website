@@ -115,7 +115,7 @@ export default function RootLayout({
       </head>
       <body className={poppins.className}>
         <ThemeSwitcher>
-          <Navbar />
+          
           {children}
           <FooterForm />
           <Footer />

@@ -1,11 +1,10 @@
 'use client'
 import Slider from 'react-slick'
 import Image from 'next/image'
-import dynamic from 'next/dynamic'
 import Typewriter from 'typewriter-effect'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import Button from '@/components/ui/Button/page'
+import Button from '@/components/ui/Button'
 import Container from '../ui/Container'
 
 export default function MHero() {
@@ -20,52 +19,49 @@ export default function MHero() {
   }
 
   return (
-    <div className="md:my-10 my-6">
+    <section>
       <Container>
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-7">
-          <div className="lg:py-40 pt-40 md:text-left text-center">
-            <span>Hello, My name is</span>
-            <h1 className="xl:text-5xl lg:text-3xl md:text-2xl text-3xl md:my-4 uppercase my-4 font-bold text-black">
-              Muzammil Safdar.
-            </h1>
-            <span className="flex gap-2 md:justify-start justify-center mb-4">
-              <span className="font-bold">
-                {' '}
-                <Typewriter
-                  options={{
-                    strings: [
-                      'Javascript Developer.',
-                      'React JS Developer.',
-                      'Next JS Developer.',
-                      'Frontend Developer.',
-                      'Backend Developer.',
-                      'Node JS Developer.',
-                      'SQL Developer.',
-                    ],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </span>
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+          <div className="lg:pt-40 pt-40 md:text-left text-center">
+            <span className="py-2 px-3 rounded-full border-2 border1">
+              👋 Welcome to my portfolio
             </span>
-            <p className="text-base font-normal mb-7 text-slate-500 leading-7">
+            <h1 className="mt-8 mb-4 lg:text-4xl md:text-2xl text-3xl uppercase font-semibold text">
+              I&lsquo;m Muzammil Safdar.
+            </h1>
+            <span className="text-color2 text-2xl">
+              {' '}
+              <Typewriter
+                options={{
+                  strings: [
+                    'Javascript Developer.',
+                    'React JS Developer.',
+                    'Next JS Developer.',
+                    'Frontend Developer.',
+                    'Backend Developer.',
+                    'Node JS Developer.',
+                    'SQL Developer.',
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </span>
+            <p className="font-normal text-lg my-5 leading-8 text text-gray-500">
               I am a Javascript developer with expertise in full-stack web
               development. I have a strong understanding of the Javascript
               framework and its ecosystem. I am passionate about creating
               efficient, scalable, and user-friendly web applications.
             </p>
             <div className="mt-6 flex items-center md:justify-start justify-center gap-4">
-              <Button
-                href={'/hireme'}
-                text={'Hire Me'}
-                className={'py-2 px-6'}
-              />
-              <Button
-                href={''}
-                text={'Download CV'}
-                className={'py-2 px-6'}
-              />
-
+              <Button className="btnIcon px-8 duration-300 ease-in">
+                Hire Me
+              </Button>
+              <Button className="btnIcon px-6 duration-300 ease-in">
+                Download CV
+              </Button>
+              {/* <Button href={'/hireme'} text={''} className={'py-2 px-6'} /> */}
+              {/* <Button href={''} text={'Download CV'} className={'py-2 px-6'} /> */}
             </div>
           </div>
           <div className="md:pt-40 pt-8">
@@ -88,7 +84,7 @@ export default function MHero() {
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   )
 }
 

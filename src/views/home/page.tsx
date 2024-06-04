@@ -2,12 +2,16 @@ import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { PortfolioH } from '../portfolio/page'
 import Resume from '@/src/components/about/resume/page'
+import Navbar from '@/src/components/layout/navbar/page'
 const MHero = dynamic(() => import('@/components/MHero/page'))
 
 export default function HomeTemplate() {
   return (
     <>
-      <MHero />
+      <header className="bg-hero">
+        <Navbar />
+        <MHero />
+      </header>
       <Resume />
 
       <PortfolioH />
