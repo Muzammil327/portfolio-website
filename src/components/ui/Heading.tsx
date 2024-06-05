@@ -8,7 +8,7 @@ export default function Heading({ head, subhead }: Iprops) {
     <>
       <div className="text-center my-8 mr-6 relative">
         <div className="flex items-center justify-center">
-          <span className="text xl:text-[8rem] lg:text-[7rem] sm:text-[5rem] text-[4rem] absolute xl:-top-40 lg:-top-32 md:-top-24 sm:-top-20 -top-16 opacity-5">
+          <span className="text xl:text-[8rem] lg:text-[7rem] sm:text-[5rem] text-[3rem] absolute xl:-top-40 lg:-top-32 md:-top-24 sm:-top-20 -top-16 opacity-5">
             {subhead}
           </span>
         </div>
