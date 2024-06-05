@@ -1,17 +1,17 @@
-import dynamic from 'next/dynamic'
+import MainHero from '@/src/components/hero/MainHero'
+import React from 'react'
 import type { Metadata } from 'next'
-import SHero from '@/src/components/SHero/page'
-import Resume from '@/src/components/about/resume/page'
+import BlogView from '@/src/views/blogView'
 
 const data = {
-  title: 'About US || Muzammil Portfolio',
+  title: 'My Blogs || Muzammil Portfolio',
   description:
     'I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.',
-  canonical: '/about',
+  canonical: '/portfolio',
   index: true,
   follow: true,
   image: '/opengraph-image.jpg',
-  url: 'https://mmuzammil-portfolio.vercel.app/about',
+  url: 'https://mmuzammil-portfolio.vercel.app/portfolio',
   keywords: [
     'mmuzammil-portfolio',
     'muzammil',
@@ -20,12 +20,11 @@ const data = {
     'muzammil portfolio',
   ],
 }
-
-export default function About() {
+export default function Portfolio() {
   return (
     <>
-      <SHero head="About Us" para="" />
-      <Resume />
+      <MainHero head="Blog Posts" para="" />
+      <BlogView />
     </>
   )
 }

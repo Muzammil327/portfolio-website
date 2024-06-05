@@ -1,30 +1,31 @@
-import { PortfolioAll } from "@/view/portfolio/page";
-import React from "react";
-import type { Metadata } from "next";
+import React from 'react'
+import type { Metadata } from 'next'
+import MainHero from '@/src/components/hero/MainHero'
 
 const data = {
-  title: "My Portfolio || Muzammil Portfolio",
+  title: 'Contact US || Muzammil Portfolio',
   description:
-    "I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.",
-  canonical: "/portfolio",
+    'I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.',
+  canonical: '/contact',
   index: true,
   follow: true,
-  image: "/opengraph-image.jpg",
-  url: "https://mmuzammil-portfolio.vercel.app/portfolio",
+  image: '/opengraph-image.jpg',
+  url: 'https://mmuzammil-portfolio.vercel.app/contact',
   keywords: [
-    "mmuzammil-portfolio",
-    "muzammil",
-    "muzammil Safdar",
-    "muzammil Safdar Portfolio",
-    "muzammil portfolio",
+    'mmuzammil-portfolio',
+    'muzammil',
+    'muzammil Safdar',
+    'muzammil Safdar Portfolio',
+    'muzammil portfolio',
   ],
-};
-export default function Portfolio() {
+}
+
+export default function Contact() {
   return (
     <>
-      <PortfolioAll />
+      <MainHero head="Contact Us" para="" />
     </>
-  );
+  )
 }
 
 export const metadata: Metadata = {
@@ -61,4 +62,4 @@ export const metadata: Metadata = {
       alt: data.title,
     },
   },
-};
+}

@@ -1,21 +1,19 @@
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import { PortfolioH } from '../portfolio/page'
-import Resume from '@/src/components/about/resume/page'
 import Navbar from '@/src/components/layout/navbar/page'
 import Container from '@/src/components/ui/Container'
 import Heading from '@/src/components/ui/Heading'
 import BlogCard from '@/src/components/blog/blogCard'
 import Button from '@/src/components/ui/Button'
 import { FaArrowRight } from 'react-icons/fa'
-const MHero = dynamic(() => import('@/components/MHero/page'))
+const HomeHero = dynamic(() => import('@/src/components/hero/HomeHero'))
 
 export default function HomeTemplate() {
   return (
     <>
       <header className="bg-hero">
         <Navbar />
-        <MHero />
+        <HomeHero />
       </header>
       {/* -----------------------------------------------------------------------------------
       ------------------------------- Blog portion start here -------------------------------

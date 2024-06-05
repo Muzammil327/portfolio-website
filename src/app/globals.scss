@@ -135,15 +135,14 @@ p {
 
 .bg-hero-2 {
   background-image: url(/banner-hero-1.png);
-  // @apply pb-32;
   background-repeat: no-repeat;
-  background-position-x: right;
-  background-size: 45%;
+  background-position-x: center;
+  background-size: 55%;
 }
 
 .bg-hero {
   background-image: url(/banner-hero.png);
-  @apply bg-cover lg:pb-32 md:pb-20 sm:pb-12 pb-8 ;
+  @apply bg-cover lg:pb-32 md:pb-20 sm:pb-12 pb-8;
   background-position: top center;
   background-repeat: no-repeat;
 }

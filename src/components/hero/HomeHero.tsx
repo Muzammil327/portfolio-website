@@ -6,14 +6,14 @@ import Container from '@/src/components/ui/Container'
 import Button from '@/components/ui/Button'
 import Social from '@/src/components/ui/Social'
 
-export default function MHero() {
+export default function HomeHero() {
   return (
     <section className="bg-hero-2 relative">
       <Container>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
           <div className="lg:pt-48 pt-40 lg:text-left text-center">
             <span className="py-2 px-3 rounded-full border-2 border1">
-              👋 Welcome to my portfolio
+            👋 Welcome to my portfolio
             </span>
             <h1 className="mt-8 mb-4 lg:text-4xl md:text-2xl text-3xl uppercase font-semibold text">
               I&lsquo;m Muzammil Safdar.

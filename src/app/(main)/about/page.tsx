@@ -1,16 +1,16 @@
-import React from 'react'
 import type { Metadata } from 'next'
-import SHero from '@/src/components/SHero/page'
+import MainHero from '@/src/components/hero/MainHero'
+import Resume from '@/src/components/about/resume/page'
 
 const data = {
-  title: 'Contact US || Muzammil Portfolio',
+  title: 'About US || Muzammil Portfolio',
   description:
     'I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.',
-  canonical: '/contact',
+  canonical: '/about',
   index: true,
   follow: true,
   image: '/opengraph-image.jpg',
-  url: 'https://mmuzammil-portfolio.vercel.app/contact',
+  url: 'https://mmuzammil-portfolio.vercel.app/about',
   keywords: [
     'mmuzammil-portfolio',
     'muzammil',
@@ -20,10 +20,11 @@ const data = {
   ],
 }
 
-export default function Contact() {
+export default function About() {
   return (
     <>
-      <SHero head="Contact Us" para="" />
+      <MainHero head="About Us" para="" />
+      <Resume />
     </>
   )
 }
