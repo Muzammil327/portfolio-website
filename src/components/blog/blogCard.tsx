@@ -14,7 +14,7 @@ export default function BlogCard() {
         Web Developemnt
       </span>
       <div className="flex flex-col items-start rounded-bl-md rounded-br-md bg-slate-100 dark:bg-gray-600 px-3 py-5">
-        <h4 className="text-xl text-color2">
+        <h4 className="lg:text-2xl text-xl text-color2">
           How do you improve your coding skills?
         </h4>
         <div className="flex flex-row gap-4 py-2 dark:text-gray-300 text-gray-600">
