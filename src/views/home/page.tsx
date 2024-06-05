@@ -53,7 +53,7 @@ export default function HomeTemplate() {
       {/* -----------------------------------------------------------------------------------
       ------------------------------- Portfolio portion start here --------------------------
       ------------------------------------------------------------------------------------*/}
-      <section className="md:py-10 px-3">
+      <section className="md:py-10">
         <Container>
           <Heading subhead={'Portfolio'} head={'See My Recent Projects'} />
           <div className="">

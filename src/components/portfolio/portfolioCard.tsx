@@ -4,6 +4,7 @@ import { FaEye, FaGithub } from 'react-icons/fa'
 import Button from '@/src/components/ui/Button'
 import Link from 'next/link'
 import { portfolioProps } from '@/src/types/page'
+import ImageComp from '../ui/Image'
 
 export default function PortfolioCard({
   para,
@@ -15,14 +16,13 @@ export default function PortfolioCard({
 }: portfolioProps) {
   return (
     <div className="relative mx-3">
-      <div className="image w-full">
-        <Image
-          src={image}
+      <div className="image relative overflow-hidden">
+        <ImageComp
+          imageName={image}
           alt={imagealt}
-          title={imagealt}
-          height="640"
-          width="360"
-          className="w-full h-auto"
+          height={640}
+          width={360}
+          class_name="rounded-tl-lg rounded-tr-lg h-68 w-auto duration-300 ease-in-out blogCard-img"
         />
       </div>
       <div className="btn">
@@ -38,10 +38,10 @@ export default function PortfolioCard({
         </Button>
       </div>
       <div className="bg-slate-100 dark:bg-gray-900 p-4 rounded-bl-md rounded-br-md">
-        <h4 className="text-2xl text-color2 mb-3">
+        <h4 className="md:text-2xl sm:text-xl text-lg text-color2 mb-3">
           <Link href={`${liveLink}`}>{name}</Link>
         </h4>
-        <p className="text-gray-400 dark:text-gray-500 !leading-7 !my-0">
+        <p className="text-gray-400 dark:text-gray-500 !leading-8 text-justify !my-0 text-base">
           {para}
         </p>
       </div>

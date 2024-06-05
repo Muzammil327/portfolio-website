@@ -12,12 +12,12 @@ export default function Social() {
   return (
     <ul className="flex gap-4">
       <li className="btnIcon">
-        <Link href="/">
+        <Link href="https://github.com/Muzammil327" target="_blank">
           <FaGithub size={16} />
         </Link>
       </li>
       <li className="btnIcon">
-        <Link href="/">
+        <Link href="https://www.linkedin.com/in/muzammil327/" target="_blank">
           <FaLinkedinIn size={16} />
         </Link>
       </li>
