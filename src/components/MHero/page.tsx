@@ -120,7 +120,7 @@ export default function MHero() {
                 className="sm:h-[520px] h-[300px] sm:w-[520px] w-[300px] rounded-[60px] lg:rotate-12 hover:rotate-0 duration-300 ease-in-out border-8 border-solid hover:border-color2 border-transparent hover:border-opacity-60"
               />
             </div>
-            <div className="">
+            {/* <div className="">
               <div className="sm:absolute flex items-center sm:gap-4 gap-2 md:mt-0 sm:mt-4 mt-2 md:mx-0 sm:mx-6 mx-3 bg-cyan-50 dark:bg-gray-700 py-3 px-4 rounded-md max-w-[280px] border1 duration-300 ease-in-out 2xl:right-[15rem] xl:right-[10rem] md::right-[7rem] bottom-0">
                 <span className="btnIcon lg:px-4 md:px-3 px-2 lg:py-4 md:py-3 py-2">
                   <FaPhone />{' '}
@@ -154,7 +154,7 @@ export default function MHero() {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </Container>
