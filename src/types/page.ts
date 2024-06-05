@@ -12,6 +12,17 @@ export interface portfolioProps {
   imagealt: string
 }
 
+/* ----------------------------------------------------------------
+------------- Brands COMPONENTS TYPES  start here -----------------
+---------------------------------------------------------------- */
+
+export interface brandsProps {
+  id?: number
+  name: string
+  liveLink: string
+  image: string
+}
+
 export type Tag = {
   _id: string
   name: String
