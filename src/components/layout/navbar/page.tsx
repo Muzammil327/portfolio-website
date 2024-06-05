@@ -75,7 +75,7 @@ export default function Navbar() {
                 </div>
 
                 <Tab.Group as="div" className="mt-24">
-                  <div className="border-b border-gray-200">
+                  {/* <div className="border-b border-gray-200">
                     <Tab.List className="-mb-px flex space-x-8 px-4">
                       {navigation.categories.map((category) => (
                         <Tab
@@ -161,7 +161,7 @@ export default function Navbar() {
                         ))}
                       </Tab.Panel>
                     ))}
-                  </Tab.Panels>
+                  </Tab.Panels> */}
                 </Tab.Group>
 
                 <div className="space-y-6 border-t border1 px-4 py-6">
@@ -213,7 +213,7 @@ export default function Navbar() {
                 >
                   Home
                 </Link>
-                {navigation.categories.map((category) => (
+                {/*   {navigation.categories.map((category) => (
                   <Popover key={category.name} className="flex">
                     {({ open, close }) => (
                       <>
@@ -323,7 +323,7 @@ export default function Navbar() {
                     )}
                   </Popover>
                 ))}
-
+*/}
                 {navigation.pages.map((page: Pages) => (
                   <Link
                     key={page.name}

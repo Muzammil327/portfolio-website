@@ -1,6 +1,10 @@
 import MainHero from '@/src/components/hero/MainHero'
 import React from 'react'
 import type { Metadata } from 'next'
+import { portfolio_data } from '@/src/data/portfolio'
+import { portfolioProps } from '@/src/types/page'
+import PortfolioCard from '@/src/components/portfolio/portfolioCard'
+import Container from '@/src/components/ui/Container'
 
 const data = {
   title: 'My Portfolio || Muzammil Portfolio',
@@ -23,6 +27,26 @@ export default function Portfolio() {
   return (
     <>
       <MainHero head="My Portfolio" para="" />
+      <section>
+        <Container>
+          <div className="grid 2xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 items-center justify-center">
+            {portfolio_data.map((data: portfolioProps) => {
+              return (
+                <div key={data.id}>
+                  <PortfolioCard
+                    para={data.para}
+                    name={data.name}
+                    liveLink={data.liveLink}
+                    githubLink={data.githubLink}
+                    image={data.image}
+                    imagealt={data.imagealt}
+                  />
+                </div>
+              )
+            })}
+          </div>
+        </Container>
+      </section>
     </>
   )
 }
