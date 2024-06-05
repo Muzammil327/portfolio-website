@@ -19,11 +19,10 @@ import { Analytics } from '@vercel/analytics/react'
 import Footer from '@/components/layout/footer/page'
 import FooterForm from '../components/layout/form/page'
 
-import Navbar from '../components/layout/navbar/page'
 import ThemeSwitcher from '../components/provider/ThemeSwitcher'
 
 export const metadata: Metadata = {
-  title: 'Muzammil Portfolio || Full Stack Developer',
+  title: 'Muzammil Safdar || Full Stack Developer',
   description:
     'I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.',
   keywords: [
@@ -32,17 +31,17 @@ export const metadata: Metadata = {
     'JavaScript',
     'muzammil',
     'muzmmil safdar',
-    'muzammil portfolio',
+    'muzammil Safdar',
     'muzammil safdar portfolio',
   ],
   openGraph: {
-    title: 'Muzammil Portfolio || Full Stack Developer',
+    title: 'Muzammil Safdar || Full Stack Developer',
     description:
       'I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.',
   },
   metadataBase: new URL('https://mmuzammil-portfolio.vercel.app'),
   twitter: {
-    title: 'Muzammil Portfolio || Full Stack Developer',
+    title: 'Muzammil Safdar || Full Stack Developer',
     description:
       'I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.',
   },
@@ -54,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="scroll-smooth dark">
       <head>
         <meta name="application-name" content="Next.js" />
         <meta name="author" content="Muhammad Muzammil Safdar" />
@@ -115,9 +114,7 @@ export default function RootLayout({
       </head>
       <body className={poppins.className}>
         <ThemeSwitcher>
-          
           {children}
-          <FooterForm />
           <Footer />
           <SpeedInsights />
           <Analytics />

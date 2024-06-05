@@ -1,9 +1,7 @@
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
-import styles from './footer.module.css'
-import Container from '../../ui/Container'
-import Logo from '../../ui/Logo'
-import Social from '../../ui/Social/page'
+import Container from '@/src/components/ui/Container'
+import Logo from '@/src/components/ui/Logo'
+import Social from '@/src/components/ui/Social'
 
 const aboutData = {
   description:
@@ -11,7 +9,6 @@ const aboutData = {
 }
 
 interface TypeProps {
-  id: number
   title: string
   href: string
 }
@@ -19,21 +16,23 @@ interface TypeProps {
 export default function Footer() {
   return (
     <>
-      <footer className="bg-blue-50 mt-8">
+      <footer className="mt-8 bg-hero !pb-4">
         <Container>
-          <div className={styles.section}>
-            <div className={`col-span-2 ${styles.C1}`}>
+          <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 md:gap-4 md:pt-16 pt-8 md:pb-10">
+            <div className="lg:col-span-2 col-span-1 md:ml-5 ml-0 mb-8">
               <Logo />
-              <p className="py-6">{aboutData.description}</p>
+              <p className="pb-3 text-base">{aboutData.description}</p>
               <Social />
             </div>
-            <div className={`col-span-1 ${styles.C1}`}>
-              <h3 className={styles.heading}>Useful Links</h3>
+            <div className="col-span-1 md:ml-5 ml-0 mb-8">
+              <h3 className="mb-5 text-lg font-bold text-color2">
+                Useful Links
+              </h3>
               <ul>
                 {data1.map((data: TypeProps) => {
                   return (
-                    <li className="mb-3" key={data.id}>
-                      <Link href={data.href} key={data.id} className="hover:c1">
+                    <li className="mb-5" key={data.title}>
+                      <Link href={data.href} className="link">
                         {data.title}
                       </Link>
                     </li>
@@ -41,13 +40,13 @@ export default function Footer() {
                 })}
               </ul>
             </div>
-            <div className={`col-span-2 ${styles.C1}`}>
-              <h3 className={styles.heading}>Skills</h3>
+            <div className="lg:col-span-2 col-span-1 md:ml-5 ml-0 mb-8">
+              <h3 className="mb-5 text-lg font-bold text-color2">Skills</h3>
               <ul className="grid grid-cols-2 gap-2">
                 {data2.map((data: TypeProps) => {
                   return (
-                    <li className="mb-3" key={data.id}>
-                      <Link href={data.href} key={data.id} className="hover:c1">
+                    <li className="mb-3" key={data.title}>
+                      <Link href={data.href} className="link">
                         {data.title}
                       </Link>
                     </li>
@@ -58,10 +57,10 @@ export default function Footer() {
           </div>
         </Container>
 
-        <div className={styles.footerarea}>
-          <p className={styles.footerareap}>
-            Copyright © 2023 | by{' '}
-            <Link href="/" target="_blank" className="c1">
+        <div className="text-center border-t-2 border-solid pt-4 border-border1">
+          <p className="mb-0 font-normal text-sm text !my-0">
+            Copyright © 2024 | by{' '}
+            <Link href="/" target="_blank" className="text-color2">
               Muzammil Safdar
             </Link>
           </p>
@@ -73,80 +72,69 @@ export default function Footer() {
 
 const data1: TypeProps[] = [
   {
-    id: 0,
     title: 'Home',
     href: '/',
   },
   {
-    id: 1,
-    title: 'About US',
+    title: 'About',
     href: '/about',
   },
   {
-    id: 2,
-    title: 'Contact US',
+    title: 'Contact',
     href: '/contact',
   },
+  // {
+  //   title: 'Services',
+  //   href: '/services',
+  // },
   {
-    id: 3,
-    title: 'My Skill',
-    href: '/skill',
+    title: 'Portfolios',
+    href: '/portfolios',
   },
   {
-    id: 4,
-    title: 'My Portfolio',
-    href: '/portfolio',
+    title: 'Blogs',
+    href: '/blogs',
   },
 ]
 
 const data2: TypeProps[] = [
   {
-    id: 0,
     title: 'Javascript',
     href: '/',
   },
   {
-    id: 1,
     title: 'Typescript',
     href: '/',
   },
   {
-    id: 2,
     title: 'Tailwind CSS',
     href: '/',
   },
   {
-    id: 3,
     title: 'SCSS',
     href: '/',
   },
   {
-    id: 4,
     title: 'React JS',
     href: '/',
   },
   {
-    id: 5,
     title: 'Next JS',
     href: '/',
   },
   {
-    id: 6,
     title: 'Node JS',
     href: '/',
   },
   {
-    id: 7,
     title: 'Express JS',
     href: '/',
   },
   {
-    id: 8,
     title: 'MongoDB',
     href: '/',
   },
   {
-    id: 9,
     title: 'Axios',
     href: '/',
   },

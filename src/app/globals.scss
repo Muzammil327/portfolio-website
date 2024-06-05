@@ -13,7 +13,9 @@
   --border2: #3FAFAA;
 }
 
-
+::selection {
+  @apply bg-color2 text-white;
+}
 
 .navbarFixed {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -21,9 +23,19 @@
   @apply top-0 left-0 w-full z-40 fixed bg-white dark:bg-gray-700;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   .btnIcon {
     @apply py-3 px-3 border-2 rounded-md bg-color2 hover:bg-color1 border-color2 text-color1 hover:text-color2 flex items-center justify-center;
+
+    &:hover {
+      .btnIconhover {
+        @apply opacity-90 duration-300 ease-in-out;
+      }
+    }
   }
 
   .text {
@@ -105,6 +117,10 @@ button:focus {
 /* ---------------------------------------------------------------
 ------------------------- Sub Hero start here --------------------
 --------------------------------------------------------------- */
+p {
+  line-height: 210% !important;
+  @apply font-normal text-lg my-5 text text-gray-500;
+}
 
 .home {
   background: rgb(253, 66, 167);
@@ -113,17 +129,23 @@ button:focus {
       rgba(241, 117, 57, 0.2497373949579832) 100%);
 }
 
+.blogCard-img:hover {
+  transform: scale(1.25)
+}
+
 .bg-hero-2 {
   background-image: url(/banner-hero-1.png);
   // @apply pb-32;
   background-repeat: no-repeat;
-  background-position-x: right; 
+  background-position-x: right;
   background-size: 45%;
 }
 
 .bg-hero {
   background-image: url(/banner-hero.png);
   @apply bg-cover pb-32;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 /* ---------------------------------------------------------------

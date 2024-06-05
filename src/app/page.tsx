@@ -3,7 +3,7 @@ import HomeTemplate from "@/view/home/page";
 import type { Metadata } from "next";
 
 const data = {
-  title: "Muzammil Portfolio || Full Stack Developer",
+  title: "Muzammil Safdar || Full Stack Developer",
   description:
     "I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.",
   canonical: "/",

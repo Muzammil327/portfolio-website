@@ -181,7 +181,7 @@ export default function Navbar() {
                 <div
                   className={`my-4 flex lg:flex-row flex-col items-center gap-3 text-sm font-medium px-4`}
                 >
-                  <Button className="w-full link duration-300 ease-in">
+                  <Button className="w-full link duration-300 ease-in my-3">
                     Sign In
                   </Button>
                   <Button className="btnIcon w-full duration-300 ease-in">
@@ -499,5 +499,8 @@ const navigation = {
       ],
     },
   ],
-  pages: [{ name: 'Stores', href: '/stores' }],
+  pages: [
+    { name: 'Portfolios', href: '/portfolios' },
+    { name: 'Blogs', href: '/blogs' }
+  ],
 }

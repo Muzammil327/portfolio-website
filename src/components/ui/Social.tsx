@@ -1,26 +1,26 @@
 import {
-  FaFacebook,
   FaYoutube,
   FaLinkedinIn,
   FaGithub,
-  FaWhatsapp,
   FaInstagram,
   FaFacebookF,
   FaTwitter,
 } from 'react-icons/fa'
 import Link from 'next/link'
-import { ReactNode } from 'react'
-import styles from './social.module.css'
-
-type TypeProps = {
-  id: number
-  icon: ReactNode
-  link: string
-}
 
 export default function Social() {
   return (
     <ul className="flex gap-4">
+      <li className="btnIcon">
+        <Link href="/">
+          <FaGithub size={16} />
+        </Link>
+      </li>
+      <li className="btnIcon">
+        <Link href="/">
+          <FaLinkedinIn size={16} />
+        </Link>
+      </li>
       <li className="btnIcon">
         <Link href="/">
           <FaFacebookF size={16} />
@@ -44,31 +44,3 @@ export default function Social() {
     </ul>
   )
 }
-
-const data: TypeProps[] = [
-  {
-    id: 0,
-    icon: <FaLinkedinIn />,
-    link: 'https://www.linkedin.com/in/muzammil-safdar/',
-  },
-  {
-    id: 1,
-    icon: <FaGithub />,
-    link: 'https://github.com/Muzammil327',
-  },
-  {
-    id: 2,
-    icon: <FaWhatsapp />,
-    link: 'https://wa.me/923144878266',
-  },
-  {
-    id: 3,
-    icon: <FaFacebook />,
-    link: 'https://web.facebook.com/muzammilmsafdar/',
-  },
-  // {
-  //   id: 4,
-  //   icon: <FaInstagram />,
-  //   link: '/',
-  // },
-]
