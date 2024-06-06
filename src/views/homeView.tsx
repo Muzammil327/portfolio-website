@@ -6,7 +6,7 @@ import Container from '@/src/components/ui/Container'
 import Heading from '@/src/components/ui/Heading'
 import BlogCard from '@/src/components/blog/blogCard'
 import Button from '@/src/components/ui/Button'
-import { FaArrowRight } from 'react-icons/fa'
+import { FaArrowRight, FaPlay } from 'react-icons/fa'
 import Image from 'next/image'
 const HomeHero = dynamic(() => import('@/src/components/hero/HomeHero'))
 import PortfolioCard from '@/src/components/portfolio/portfolioCard'
@@ -16,10 +16,9 @@ import Slider from 'react-slick'
 import { portfolioProps } from '@/src/types/page'
 import { portfolio_data } from '@/src/data/portfolio'
 import ContactForm from '../components/layout/form/page'
+import ImageComp from '../components/ui/Image'
 
 export default function HomeView() {
-
-
   var settings = {
     infinite: true,
     speed: 500,
@@ -45,13 +44,81 @@ export default function HomeView() {
       },
     ],
   }
- 
+
   return (
     <>
       <header className="bg-hero">
         <Navbar />
         <HomeHero />
       </header>
+      {/* -----------------------------------------------------------------------------------
+      ------------------------------- About portion start here --------------------------
+      ------------------------------------------------------------------------------------*/}
+
+      <section className="pt-20 about relative">
+        <Container>
+          <div className="grid lg:grid-cols-3 gap-6 items-center">
+            <div className="lg:col-span-2">
+              <h1 className="text-color2 lg:text-8xl text-6xl font-bold pb-4">
+                2+ Years of Experience
+              </h1>
+              <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised words which don&apos;t look even
+                slightly believable. If you are going to use a passage Lorem
+                Ipsum available, but the majority.
+              </p>
+            </div>
+            <div className="lg:col-span-1">
+              <div className="vedio relative">
+                <ImageComp
+                  imageName="/projects/blog-website.png"
+                  alt={''}
+                  height={480}
+                  width={720}
+                  class_name="rounded-lg"
+                />
+                <a id="play-video" className="video-play-button" href="#">
+                  <span></span>
+                </a>
+              </div>
+              <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered Lorem Ipsum available, but the
+                majority.
+              </p>
+              <div className="stats flex items-center justify-between">
+                <div className="flex flex-col gap-2">
+                  <span className="text-3xl font-semibold text-color2">
+                    1650 +
+                  </span>
+                  <span className="text">
+                    Complete <br /> Project
+                  </span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <span className="text-3xl font-semibold text-color2">
+                    502 +
+                  </span>
+                  <span className="text">
+                    Happy <br /> Customers
+                  </span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <span className="text-3xl font-semibold text-color2">
+                    98%
+                  </span>
+                  <span className="text">
+                    Client <br /> Satisfied
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* -----------------------------------------------------------------------------------
       ------------------------------- Portfolio portion start here --------------------------
       ------------------------------------------------------------------------------------*/}
@@ -93,7 +160,7 @@ export default function HomeView() {
       ------------------------------- Call To Action portion start here ---------------------
       ------------------------------------------------------------------------------------*/}
 
-      <div className="bg-color4 dark:bg-gray-900 lg:mb-20 md:mb-10 mb-4 bg-hero bg-hero-2">
+      <div className="bg-gray-50 dark:bg-gray-900 lg:mb-20 md:mb-10 mb-4 bg-hero bg-hero-2">
         <Container>
           <div className="grid lg:grid-cols-6 gap-8 items-center py-10">
             <div className="flex pt-12 justify-center md:col-span-2">

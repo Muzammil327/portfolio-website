@@ -7,7 +7,7 @@
 
 .textArea:active,
 .textArea:focus {
- @apply border-color4 duration-300 ease-in-out;
+  @apply border-color4 duration-300 ease-in-out;
 }
 
 .button {
