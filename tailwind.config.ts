@@ -14,6 +14,7 @@ const config: Config = {
         border2: 'var(--border2)', // Use a custom CSS variable
         color3: 'var(--color3)', // Use a custom CSS variable
         color3h: 'var(--color3h)', // Use a custom CSS variable
+        color4: 'var(--color4)', // Use a custom CSS variable
       },
     },
   },

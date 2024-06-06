@@ -7,6 +7,7 @@
   --color1: #fff;
   --color2: #3fafaa;
   --color3: #101010;
+  --color4: #F2F4FF;
   --color3h: #262323a8;
   --border1: #dbe2ea6d;
   --border1dark: #dbe2ea5c;
@@ -129,11 +130,9 @@ button:focus {
 
 .home {
   background: rgb(253, 66, 167);
-  background: linear-gradient(
-    90deg,
-    rgba(253, 66, 167, 0.227328431372549) 50%,
-    rgba(241, 117, 57, 0.2497373949579832) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(253, 66, 167, 0.227328431372549) 50%,
+      rgba(241, 117, 57, 0.2497373949579832) 100%);
 }
 
 .blogCard-img:hover {

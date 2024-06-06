@@ -130,36 +130,31 @@ export default function HomeView() {
       {/* -----------------------------------------------------------------------------------
       ------------------------------- Call To Action portion start here ---------------------
       ------------------------------------------------------------------------------------*/}
-      {/* 
-      <div className="py-10 bg-gray-100 dark:bg-gray-900 lg:mb-20 md:mb-10 mb-4 bg-hero bg-hero-2">
+
+      <div className="bg-color4 dark:bg-gray-900 lg:mb-20 md:mb-10 mb-4 bg-hero bg-hero-2">
         <Container>
-          <div className="grid md:grid-cols-5 gap-8">
+          <div className="grid lg:grid-cols-6 gap-8 items-center py-10">
             <div className="flex pt-12 justify-center md:col-span-2">
               <Image
                 src="/hero_img.jpg"
                 alt=""
-                height={750}
-                width={750}
-                className="sm:h-[520px] h-[400px] sm:w-[520px] w-[400px] rounded-[60px] lg:rotate-12 hover:rotate-0 duration-300 ease-in-out border-8 border-solid hover:border-color2 border-transparent hover:border-opacity-60"
+                height={400}
+                width={400}
+                className="md:rounded-full rounded-3xl lg:rotate-12 hover:rotate-0 duration-300 ease-in-out border-8 border-solid hover:border-color2 border-transparent hover:border-opacity-60"
               />
             </div>
-            <div className="md:col-span-3 ml-6 flex flex-col justify-center">
-              <div className="relative">
-                <span className="opacity-10 text md:text-[8rem] text-[2rem] absolute md:-bottom-4 -bottom-1">
-                  Hello
-                </span>
-                <span className="absolute bottom-4 -left-36">
-                  <FcApproval size={80} />
-                </span>
-              </div>
-              <h4 className="text font-bold lg:text-5xl md:text-4xl text-3xl pt-4 pb-8">
+            <div className="lg:col-span-4 lg:text-left text-center ml-6 flex flex-col justify-center relative">
+              <span className="opacity-10 md:text-8xl sm:text-7xl text-6xl font-bold absolute inset-0 md:bottom-auto md:left-16 md:transform md:-translate-y-1/2 md:-translate-x-1/2 text-center pb-8">
+                Hello
+              </span>
+              <h4 className="text font-bold lg:text-5xl md:text-3xl text-2xl leading-9 pt-4 pb-8">
                 If you have any project in mind?
               </h4>
-              <span className="font-semibold text-2xl pb-8 text-gray-400 ">
+              <span className="font-semibold sm:text-2xl text-xl pb-8 text-gray-400">
                 DM now! mmuzammil327off@gmail.com
               </span>
               <div>
-                <Button className="btnIcon px-10 gap-2 duration-300 ease-in-out rounded-full">
+                <Button className="btnIcon px-10 gap-2 duration-300 ease-in-out rounded-full lg:m-0 mx-auto">
                   Hire Me Now{' '}
                   <span className="btnIconhover opacity-0 duration-300 ease-in-out">
                     <FaArrowRight />
@@ -169,12 +164,12 @@ export default function HomeView() {
             </div>
           </div>
         </Container>
-      </div> */}
+      </div>
 
       {/* -----------------------------------------------------------------------------------
       ------------------------------- Blog portion start here -------------------------------
       ------------------------------------------------------------------------------------*/}
-      <section className="md:py-10 px-3">
+      <section className="px-3">
         <Container>
           <Heading subhead={'DAILY UPDATE'} head={'Latest News & Blogs'} />
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 md:gap-4 gap-2 items-center">

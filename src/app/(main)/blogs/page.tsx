@@ -2,8 +2,6 @@ import MainHero from '@/src/components/hero/MainHero'
 import React from 'react'
 import type { Metadata } from 'next'
 import BlogView from '@/src/views/blogView'
-import Container from '@/src/components/ui/Container'
-import { FaArrowRight } from 'react-icons/fa'
 
 const data = {
   title: 'My Blogs || Muzammil Portfolio',
@@ -26,37 +24,7 @@ export default function Portfolio() {
   return (
     <>
       <MainHero head="Blog Posts" para="" />
-      <section className="mt-8">
-        <Container>
-          <ul className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-            <li className="relative bg-[#f2f4ff] dark:bg-gray-900 cursor-pointer text-base rounded-md mt-3 py-3 px-5 duration-300 ease-in-out hover:bg-color2 dark:hover:bg-color2 border-[1px] border-solid border-color2 hover:text-white flex items-center justify-between">
-              <span>Web Development</span>
-              <span>
-                <FaArrowRight />
-              </span>
-            </li>
-            <li className="relative bg-[#f2f4ff] dark:bg-gray-900 cursor-pointer text-base rounded-md mt-3 py-3 px-5 duration-300 ease-in-out hover:bg-color2 dark:hover:bg-color2 border-[1px] border-solid border-color2 hover:text-white flex items-center justify-between">
-              <span>App Development</span>
-              <span>
-                <FaArrowRight />
-              </span>
-            </li>
-            <li className="relative bg-[#f2f4ff] dark:bg-gray-900 cursor-pointer text-base rounded-md mt-3 py-3 px-5 duration-300 ease-in-out hover:bg-color2 dark:hover:bg-color2 border-[1px] border-solid border-color2 hover:text-white flex items-center justify-between">
-              <span>Product Design</span>
-              <span>
-                <FaArrowRight />
-              </span>
-            </li>
-            <li className="relative bg-[#f2f4ff] dark:bg-gray-900 cursor-pointer text-base rounded-md mt-3 py-3 px-5 duration-300 ease-in-out hover:bg-color2 dark:hover:bg-color2 border-[1px] border-solid border-color2 hover:text-white flex items-center justify-between">
-              <span>Digital Marketing</span>
-              <span>
-                <FaArrowRight />
-              </span>
-            </li>
-          </ul>
-        </Container>
-      </section>
-      {/* <BlogView /> */}
+      <BlogView />
     </>
   )
 }
