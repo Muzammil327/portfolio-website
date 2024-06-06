@@ -1,6 +1,7 @@
 import React from 'react'
 import type { Metadata } from 'next'
 import MainHero from '@/src/components/hero/MainHero'
+import ContactForm from '@/src/components/layout/form/page'
 
 const data = {
   title: 'Contact US || Muzammil Portfolio',
@@ -24,6 +25,7 @@ export default function Contact() {
   return (
     <>
       <MainHero head="Contact Us" para="" />
+      <ContactForm />
     </>
   )
 }

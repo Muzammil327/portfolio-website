@@ -35,7 +35,7 @@ body {
 
 input::placeholder,
 textarea::placeholder {
-  @apply text-black;
+  @apply text-black dark:text-color4;
 }
 
 a {
@@ -137,6 +137,11 @@ button:focus {
 
 .blogCard-img:hover {
   transform: scale(1.25);
+}
+
+.bg-hero-3 {
+  background-image: url(/banner-hero-2.png);
+  @apply bg-cover;
 }
 
 .bg-hero-2 {
