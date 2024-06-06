@@ -1,10 +1,10 @@
-import Image from 'next/image'
 import React from 'react'
 import { FaEye, FaGithub } from 'react-icons/fa'
 import Button from '@/src/components/ui/Button'
 import Link from 'next/link'
 import { portfolioProps } from '@/src/types/page'
 import ImageComp from '../ui/Image'
+import { motion } from 'framer-motion'
 
 export default function PortfolioCard({
   para,
@@ -15,7 +15,23 @@ export default function PortfolioCard({
   imagealt,
 }: portfolioProps) {
   return (
-    <div className="relative mx-3">
+    <motion.div
+      className="relative mx-3"
+      initial={{
+        // rotate: '0deg',
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1,
+      }}
+      // animate={{
+      //   // rotate: '180deg',
+      //   opacity: 1
+      // }}
+    >
       <div className="image relative overflow-hidden w-full h-auto">
         <ImageComp
           imageName={image}
@@ -26,11 +42,11 @@ export default function PortfolioCard({
         />
       </div>
       <div className="btn">
-        <Button className="btnIcon duration-300 ease-in-out absolute top-0 right-0 mr-3 mt-3">
-          <Link href={`${liveLink}`}>
+        <Link href={`${liveLink}`}>
+          <Button className="btnIcon duration-300 ease-in-out absolute top-0 right-0 mr-3 mt-3">
             <FaEye />
-          </Link>
-        </Button>
+          </Button>
+        </Link>
         <Button className="btnIcon duration-300 ease-in-out absolute top-0 left-0 ml-3 mt-3">
           <Link href={`${githubLink}`}>
             <FaGithub />
@@ -38,13 +54,13 @@ export default function PortfolioCard({
         </Button>
       </div>
       <div className="bg-slate-100 dark:bg-gray-900 p-4 rounded-bl-md rounded-br-md">
-        <h4 className="md:text-2xl sm:text-xl text-lg text-color2 mb-3">
+        <h4 className="md:text-2xl text-xl text-color2 mb-3">
           <Link href={`${liveLink}`}>{name}</Link>
         </h4>
         <p className="text-gray-400 dark:text-gray-500 !leading-8 md:text-justify !my-0 md:text-base text-sm">
           {para}
         </p>
       </div>
-    </div>
+    </motion.div>
   )
 }
