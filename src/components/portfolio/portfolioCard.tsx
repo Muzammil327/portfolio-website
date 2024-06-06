@@ -4,7 +4,6 @@ import Button from '@/src/components/ui/Button'
 import Link from 'next/link'
 import { portfolioProps } from '@/src/types/page'
 import ImageComp from '../ui/Image'
-import { motion } from 'framer-motion'
 
 export default function PortfolioCard({
   para,
@@ -15,23 +14,7 @@ export default function PortfolioCard({
   imagealt,
 }: portfolioProps) {
   return (
-    <motion.div
-      className="relative mx-3"
-      initial={{
-        // rotate: '0deg',
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      // animate={{
-      //   // rotate: '180deg',
-      //   opacity: 1
-      // }}
-    >
+    <div className="relative mx-3">
       <div className="image relative overflow-hidden w-full h-auto">
         <ImageComp
           imageName={image}
@@ -61,6 +44,6 @@ export default function PortfolioCard({
           {para}
         </p>
       </div>
-    </motion.div>
+    </div>
   )
 }
