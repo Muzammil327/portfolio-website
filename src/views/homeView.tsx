@@ -143,7 +143,7 @@ export default function HomeView() {
                 className="md:rounded-full rounded-3xl lg:rotate-12 hover:rotate-0 duration-300 ease-in-out border-8 border-solid hover:border-color2 border-transparent hover:border-opacity-60"
               />
             </div>
-            <div className="lg:col-span-4 lg:text-left text-center ml-6 flex flex-col justify-center relative">
+            <div className="lg:col-span-4 lg:text-left text-center lg:ml-6 flex flex-col justify-center relative">
               <span className="opacity-10 md:text-8xl sm:text-7xl text-6xl font-bold absolute inset-0 md:bottom-auto md:left-16 md:transform md:-translate-y-1/2 md:-translate-x-1/2 text-center pb-8">
                 Hello
               </span>
