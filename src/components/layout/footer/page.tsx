@@ -21,7 +21,7 @@ export default function Footer() {
           <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 md:gap-4 md:pt-16 pt-8 md:pb-10">
             <div className="lg:col-span-2 col-span-1 md:ml-5 ml-0 mb-8">
               <Logo />
-              <p className="pb-3 text-base">{aboutData.description}</p>
+              <p className="leading-7 text-base">{aboutData.description}</p>
               <Social />
             </div>
             <div className="col-span-1 md:ml-5 ml-0 mb-8">

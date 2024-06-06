@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 import type { Metadata } from 'next'
-import SHero from '@/src/components/SHero/page'
+import MainHero from '@/src/components/hero/MainHero'
 import SkillCardList from '@/src/components/skill/skill/list/page'
 
 const data = {
@@ -24,7 +24,7 @@ const data = {
 export default function Skill() {
   return (
     <>
-      <SHero head="My Skills" para="" />
+      <MainHero head="My Skills" para="" />
       <SkillCardList />
     </>
   )

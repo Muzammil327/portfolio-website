@@ -24,7 +24,6 @@ export default function About() {
   return (
     <>
       <MainHero head="About Us" para="" />
-      <Resume />
     </>
   )
 }

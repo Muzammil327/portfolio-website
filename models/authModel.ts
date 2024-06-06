@@ -1,11 +1,11 @@
-import mongoose, { Document } from "mongoose";
+import mongoose, { Document } from 'mongoose'
 
 interface UserDocument extends Document {
-  fname: string;
-  lname: string;
-  email: string;
-  phone: number;
-  message: string;
+  fname: string
+  lname: string
+  email: string
+  phone: number
+  message: string
 }
 
 const ContactFormSchema = new mongoose.Schema<UserDocument>(
@@ -32,10 +32,10 @@ const ContactFormSchema = new mongoose.Schema<UserDocument>(
     },
   },
   { timestamps: true }
-);
+)
 
 export const ContactForm =
   mongoose.models.ContactForm ||
-  mongoose.model<UserDocument>("ContactForm", ContactFormSchema);
+  mongoose.model<UserDocument>('ContactForm', ContactFormSchema)
 
-  export default ContactForm;
+export default ContactForm

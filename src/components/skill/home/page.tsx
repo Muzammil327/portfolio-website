@@ -1,12 +1,12 @@
-import dynamic from "next/dynamic";
-import Image from "next/image";
-import Link from "next/link";
-import Container from "../../ui/Container";
-import Social from "../../ui/Social/page";
+import dynamic from 'next/dynamic'
+import Image from 'next/image'
+import Link from 'next/link'
+import Container from '../../ui/Container'
+import Social from '../../ui/Social'
 
 interface data {
-  id: number;
-  image: string;
+  id: number
+  image: string
 }
 export default function HSkill() {
   return (
@@ -28,7 +28,10 @@ export default function HSkill() {
             <div className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 mt-4 md:gap-5 gap-2">
               {skill.map((data: data) => (
                 <>
-                  <div className="skill flex items-center justify-center" key={data.id}>
+                  <div
+                    className="skill flex items-center justify-center"
+                    key={data.id}
+                  >
                     <Image
                       src={data.image}
                       className="image rounded-full md:h-40 sm:h-32 h-24 md:w-40 sm:w-32 w-24"
@@ -46,17 +49,17 @@ export default function HSkill() {
         </div>
       </Container>
     </section>
-  );
+  )
 }
 
 const skill: data[] = [
   {
     id: 0,
-    image: "/skill/js.jpg",
+    image: '/skill/js.jpg',
   },
   {
     id: 1,
-    image: "/skill/ts.png",
+    image: '/skill/ts.png',
   },
   // {
   //   id: 2,
@@ -64,26 +67,26 @@ const skill: data[] = [
   // },
   {
     id: 2,
-    image: "/skill/tailwindcss.png",
+    image: '/skill/tailwindcss.png',
   },
   {
     id: 3,
-    image: "/skill/react.png",
+    image: '/skill/react.png',
   },
   {
     id: 4,
-    image: "/skill/nextjs.png",
+    image: '/skill/nextjs.png',
   },
   {
     id: 5,
-    image: "/skill/nodejs.png",
+    image: '/skill/nodejs.png',
   },
   {
     id: 6,
-    image: "/skill/expressjs.png",
+    image: '/skill/expressjs.png',
   },
   {
     id: 7,
-    image: "/skill/mongodb.png",
+    image: '/skill/mongodb.png',
   },
-];
+]

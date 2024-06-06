@@ -16,13 +16,13 @@ export default function PortfolioCard({
 }: portfolioProps) {
   return (
     <div className="relative mx-3">
-      <div className="image relative overflow-hidden">
+      <div className="image relative overflow-hidden w-full h-auto">
         <ImageComp
           imageName={image}
           alt={imagealt}
-          height={640}
-          width={360}
-          class_name="rounded-tl-lg rounded-tr-lg h-68 w-auto duration-300 ease-in-out blogCard-img"
+          height={480}
+          width={720}
+          class_name="rounded-tl-lg rounded-tr-lg duration-300 ease-in-out blogCard-img"
         />
       </div>
       <div className="btn">
@@ -41,7 +41,7 @@ export default function PortfolioCard({
         <h4 className="md:text-2xl sm:text-xl text-lg text-color2 mb-3">
           <Link href={`${liveLink}`}>{name}</Link>
         </h4>
-        <p className="text-gray-400 dark:text-gray-500 !leading-8 text-justify !my-0 text-base">
+        <p className="text-gray-400 dark:text-gray-500 !leading-8 md:text-justify !my-0 md:text-base text-sm">
           {para}
         </p>
       </div>

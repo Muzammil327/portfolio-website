@@ -5,13 +5,13 @@ import ImageComp from '@/src/components/ui/Image'
 export default function BlogCard() {
   return (
     <div className="rounded-bl-md rounded-br-md mt-5 relative">
-      <div className="image relative overflow-hidden">
+      <div className="image relative overflow-hidden w-full h-auto">
         <ImageComp
           imageName="/slider/backend.png"
           alt="fgh"
           height={1280}
           width={720}
-          class_name="rounded-tl-lg rounded-tr-lg h-68 w-auto duration-300 ease-in-out blogCard-img"
+          class_name="rounded-tl-lg rounded-tr-lg duration-300 ease-in-out blogCard-img"
         />
       </div>
       <span className="absolute flex justify-center items-center top-2 left-4 bg-color2 rounded-full text-white py-1 text-xs px-3">
@@ -26,7 +26,7 @@ export default function BlogCard() {
         </Link>
         <div className="flex flex-row gap-4 py-2 dark:text-gray-300 text-gray-600">
           <span className="text-color2">By Muzammil</span> |
-          <span>26-12-2024</span>
+          <span className="text-gray-500">26-12-2024</span>
         </div>
       </div>
     </div>

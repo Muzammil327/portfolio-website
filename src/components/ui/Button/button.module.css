@@ -1,4 +1,0 @@
-.button {
-  @apply rounded-md bg-clip-border items-center justify-center transition-all text-lg font-normal text-white;
-  background-image: linear-gradient(160deg, #fd59a7, #f17539);
-}

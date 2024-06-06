@@ -1,11 +1,11 @@
-import React from "react";
-import dynamic from "next/dynamic";
-const SHero = dynamic(() => import("@/components/SHero/page"));
+import React from 'react'
+import dynamic from 'next/dynamic'
+const MainHero = dynamic(() => import('@/components/hero/MainHero'))
 
 export default function NotFound() {
   return (
     <>
-      <SHero head="Not Found" para="" />
+      <MainHero head="Not Found" para="" />
     </>
-  );
+  )
 }

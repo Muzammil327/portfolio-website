@@ -2,7 +2,7 @@
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "skipLibCheck": true,    
+    "skipLibCheck": true,
     "target": "ES2017",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -28,10 +28,11 @@
       "@/components*": ["./src/components*"],
       "@/sanity*": ["./sanity*"],
       "@/public*": ["./public*"]
-    },
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
+
 
 //     "moduleResolution": "node",

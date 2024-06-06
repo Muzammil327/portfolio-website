@@ -8,7 +8,7 @@ import { FaBars, FaSun, FaTimes } from 'react-icons/fa'
 import Container from '@/src/components/ui/Container'
 import Logo from '@/src/components/ui/Logo'
 import Button from '@/src/components/ui/Button'
-import { Featured, Sections, Items, Pages } from '@/src/types/navbar'
+import { Featured, Sections, Items, Pages } from '@/src/types/page'
 import { FaMoon } from 'react-icons/fa'
 import { useTheme } from 'next-themes'
 

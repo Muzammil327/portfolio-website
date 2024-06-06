@@ -7,7 +7,7 @@ export const portfolio_data: portfolioProps[] = [
     para: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corruptieveniet voluptatem consequuntur tempore quas culpa, autem voluptate nihil dolor. Doloremque, soluta.',
     liveLink: '',
     githubLink: '',
-    image: '/projects/portfolio-website.webp',
+    image: '/slider/backend.png',
     imagealt: 'Portfolio website',
   },
   {
@@ -16,7 +16,7 @@ export const portfolio_data: portfolioProps[] = [
     para: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corruptieveniet voluptatem consequuntur tempore quas culpa, autem voluptate nihil dolor. Doloremque, soluta.',
     liveLink: '',
     githubLink: '',
-    image: '/projects/portfolio-website.webp',
+    image: '/slider/backend.png',
     imagealt: 'Portfolio website',
   },
   {
@@ -25,7 +25,7 @@ export const portfolio_data: portfolioProps[] = [
     para: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corruptieveniet voluptatem consequuntur tempore quas culpa, autem voluptate nihil dolor. Doloremque, soluta.',
     liveLink: '',
     githubLink: '',
-    image: '/projects/portfolio-website.webp',
+    image: '/slider/backend.png',
     imagealt: 'Portfolio website',
   },
 ]

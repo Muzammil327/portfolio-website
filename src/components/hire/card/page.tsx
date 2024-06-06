@@ -1,8 +1,8 @@
-import Link from "next/link";
-import Image from "next/image";
-import dynamic from "next/dynamic";
-import { FaFacebook, FaTwitter, FaYoutube, FaGithub } from "react-icons/fa";
-import Container from "../../ui/Container";
+import Link from 'next/link'
+import Image from 'next/image'
+import dynamic from 'next/dynamic'
+import { FaFacebook, FaTwitter, FaYoutube, FaGithub } from 'react-icons/fa'
+import Container from '../../ui/Container'
 
 export default function HireCard() {
   return (
@@ -82,7 +82,7 @@ export default function HireCard() {
         </div>
       </div>
     </Container>
-  );
+  )
 }
 
 export function Icon() {
@@ -122,14 +122,14 @@ export function Icon() {
         </ul>
       </div>
     </>
-  );
+  )
 }
 
 const data = {
-  id: "1",
-  name: "Muzammil Safdar",
-  position: "Developer",
-  img1: "/fiverr.png",
-  img2: "/upwork.png",
-  img3: "/linkedin.png",
-};
+  id: '1',
+  name: 'Muzammil Safdar',
+  position: 'Developer',
+  img1: '/fiverr.png',
+  img2: '/upwork.png',
+  img3: '/linkedin.png',
+}

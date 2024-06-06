@@ -1,12 +1,12 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 interface Iprops {
-  datas: Skills;
+  datas: Skills
 }
 interface Skills {
-  id:number,
-  title:string
-  image:string
+  id: number
+  title: string
+  image: string
 }
 export default function SkillCard({ datas }: Iprops) {
   return (
@@ -20,5 +20,5 @@ export default function SkillCard({ datas }: Iprops) {
         width="300"
       />
     </div>
-  );
+  )
 }

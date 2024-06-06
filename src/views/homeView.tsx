@@ -21,7 +21,7 @@ import { brands_data } from '@/src/data/brand'
 import ImageComp from '@/src/components/ui/Image'
 import { useTheme } from 'next-themes'
 
-export default function HomeTemplate() {
+export default function HomeView() {
   const { systemTheme, theme, setTheme } = useTheme()
 
   const currentTheme = theme === 'system' ? systemTheme : theme
@@ -42,7 +42,7 @@ export default function HomeTemplate() {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -212,7 +212,7 @@ export default function HomeTemplate() {
                         alt={data.name}
                         height={91}
                         width={205}
-                        class_name="mx-auto opacity-20 hover:opacity-100 duration-300 dark:opacity-100 dark:hover:opacity-20 duration-300"
+                        class_name="mx-auto border-none outline-none opacity-20 hover:opacity-100 duration-300 dark:opacity-100 dark:hover:opacity-20 duration-300"
                       />
                     </div>
                   )

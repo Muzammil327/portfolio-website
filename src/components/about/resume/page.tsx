@@ -8,7 +8,7 @@ import {
   FaLocationArrow,
 } from 'react-icons/fa'
 import Container from '../../ui/Container'
-import Social from '../../ui/Social/page'
+import Social from '../../ui/Social'
 
 export default function Resume() {
   return (

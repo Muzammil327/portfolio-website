@@ -1,8 +1,8 @@
 .circleicon {
-    @apply my-2 lg:text-lg text-base text-slate-500;
+  @apply my-2 lg:text-lg text-base text-slate-500;
 }
 .circle {
-    @apply border-2 text-orange-500 border-solid border-slate-400 h-12 w-12 p-3 rounded-full bg-slate-100;
+  @apply border-2 text-orange-500 border-solid border-slate-400 h-12 w-12 p-3 rounded-full bg-slate-100;
 }
 .RightForm {
   background-image: linear-gradient(

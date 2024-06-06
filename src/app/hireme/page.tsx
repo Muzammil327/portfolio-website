@@ -1,29 +1,29 @@
-import dynamic from "next/dynamic";
-const HireTemplate = dynamic(() => import("@/view/hireme/page"));
-import type { Metadata } from "next";
+import dynamic from 'next/dynamic'
+const HireTemplate = dynamic(() => import('@/view/hireme/page'))
+import type { Metadata } from 'next'
 
 const data = {
-  title: "Hire ME || Muzammil Portfolio",
+  title: 'Hire ME || Muzammil Portfolio',
   description:
-    "I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.",
-  canonical: "/hireme",
+    'I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.',
+  canonical: '/hireme',
   index: true,
   follow: true,
-  image: "/opengraph-image.jpg",
-  url: "https://mmuzammil-portfolio.vercel.app/hireme",
+  image: '/opengraph-image.jpg',
+  url: 'https://mmuzammil-portfolio.vercel.app/hireme',
   keywords: [
-    "mmuzammil-portfolio",
-    "muzammil",
-    "muzammil Safdar",
-    "muzammil Safdar Portfolio",
-    "muzammil portfolio",
+    'mmuzammil-portfolio',
+    'muzammil',
+    'muzammil Safdar',
+    'muzammil Safdar Portfolio',
+    'muzammil portfolio',
   ],
-};
+}
 
 export default function page() {
   return (
     <>
-    <HireTemplate />
+      <HireTemplate />
     </>
   )
 }
@@ -62,4 +62,4 @@ export const metadata: Metadata = {
       alt: data.title,
     },
   },
-};
+}

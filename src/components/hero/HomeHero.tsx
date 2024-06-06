@@ -5,6 +5,7 @@ import { FaCloudDownloadAlt } from 'react-icons/fa'
 import Container from '@/src/components/ui/Container'
 import Button from '@/components/ui/Button'
 import Social from '@/src/components/ui/Social'
+import ImageComp from '../ui/Image'
 
 export default function HomeHero() {
   return (
@@ -13,7 +14,7 @@ export default function HomeHero() {
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
           <div className="lg:pt-48 pt-40 lg:text-left text-center">
             <span className="py-2 px-3 rounded-full border-2 border1">
-            👋 Welcome to my portfolio
+              👋 Welcome to my portfolio
             </span>
             <h1 className="mt-8 mb-4 lg:text-4xl md:text-2xl text-3xl uppercase font-semibold text">
               I&lsquo;m Muzammil Safdar.
@@ -49,14 +50,14 @@ export default function HomeHero() {
               <Social />
             </div>
           </div>
-          <div className="md:pt-20 pt-8 relative">
-            <div className="flex pt-12 justify-center">
-              <Image
-                src="/hero_img.jpg"
-                alt=""
+          <div className="md:pt-16 pt-8 relative md:ml-8">
+            <div className="flex justify-center w-full h-auto">
+              <ImageComp
+                imageName="/hero_img.jpg"
+                alt="{imagealt}"
                 height={750}
                 width={750}
-                className="sm:h-[520px] h-[400px] sm:w-[520px] w-[400px] rounded-[60px] lg:rotate-12 hover:rotate-0 duration-300 ease-in-out border-8 border-solid hover:border-color2 border-transparent hover:border-opacity-60"
+                class_name="rounded-[60px] lg:rotate-12 hover:rotate-0 duration-300 ease-in-out border-8 border-solid hover:border-color2 border-transparent hover:border-opacity-60"
               />
             </div>
           </div>

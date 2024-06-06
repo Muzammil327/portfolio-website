@@ -3,11 +3,11 @@ import connectDB from '@/utilis/db'
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {
-  const formData = await req.json();
+  const formData = await req.json()
 
   const { fname, lname, phone, email, message } = formData
 
-  await connectDB();
+  await connectDB()
 
   if (!fname) {
     return NextResponse.json({
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
       message: 'Phone is Required.',
     })
   }
-  
+
   if (!message) {
     return NextResponse.json({
       status: 400,

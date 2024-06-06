@@ -1,15 +1,7 @@
 import React from 'react'
 import './globals.scss'
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
-
-const poppins = Poppins({
-  weight: '400',
-  style: ['normal', 'italic'],
-  display: 'swap',
-  subsets: ['latin'],
-})
-
+import { inter } from '@/src/app/font'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { ToastContainer } from 'react-toastify'
@@ -112,7 +104,7 @@ export default function RootLayout({
           content="mmuzammil-portfolio.vercel.app"
         />
       </head>
-      <body className={poppins.className}>
+      <body className={inter.className}>
         <ThemeSwitcher>
           {children}
           <Footer />

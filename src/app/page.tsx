@@ -1,30 +1,30 @@
-import React from "react";
-import HomeTemplate from "@/view/home/page";
-import type { Metadata } from "next";
+import React from 'react'
+import HomeView from '@/view/homeView'
+import type { Metadata } from 'next'
 
 const data = {
-  title: "Muzammil Safdar || Full Stack Developer",
+  title: 'Muzammil Safdar || Full Stack Developer',
   description:
-    "I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.",
-  canonical: "/",
+    'I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.',
+  canonical: '/',
   index: true,
   follow: true,
-  image: "/opengraph-image.jpg",
-  url: "https://mmuzammil-portfolio.vercel.app/",
+  image: '/opengraph-image.jpg',
+  url: 'https://mmuzammil-portfolio.vercel.app/',
   keywords: [
-    "mmuzammil-portfolio",
-    "muzammil",
-    "muzammil Safdar",
-    "muzammil Safdar Portfolio",
-    "muzammil portfolio",
+    'mmuzammil-portfolio',
+    'muzammil',
+    'muzammil Safdar',
+    'muzammil Safdar Portfolio',
+    'muzammil portfolio',
   ],
-};
+}
 export default function Home() {
   return (
     <>
-    <HomeTemplate />
+      <HomeView />
     </>
-  );
+  )
 }
 
 export const metadata: Metadata = {
@@ -61,4 +61,4 @@ export const metadata: Metadata = {
       alt: data.title,
     },
   },
-};
+}

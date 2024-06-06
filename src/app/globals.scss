@@ -5,18 +5,17 @@
 /* globals.scss */
 :root {
   --color1: #fff;
-  --color2: #3FAFAA;
+  --color2: #3fafaa;
   --color3: #101010;
   --color3h: #262323a8;
   --border1: #dbe2ea6d;
   --border1dark: #dbe2ea5c;
-  --border2: #3FAFAA;
+  --border2: #3fafaa;
 }
 
 /* ---------------------------------------------------------------
 --------------------- Basic Style start here ---------------------
 --------------------------------------------------------------- */
-
 
 *,
 *::after,
@@ -27,10 +26,6 @@
 html,
 body {
   @apply w-full scroll-smooth overflow-x-hidden dark:bg-gray-800 bg-white;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 ::selection {
@@ -47,10 +42,17 @@ a {
 }
 
 p {
-  line-height: 210% !important;
-  @apply font-normal text-lg my-5 text text-gray-500;
+  @apply font-normal md:text-lg text-base my-5 text text-gray-500;
+  line-height: 2;
 }
 
+button {
+  @apply outline-none;
+}
+
+button:focus {
+  @apply outline-none focus:ring-2 focus:ring-[border2] focus:ring-opacity-50;
+}
 
 /* ----------------------------------------------------------------
 ------------------------- Navbar start here -----------------------
@@ -95,7 +97,6 @@ p {
 ------------- Tailwind CSS LAYER BASE Hero start here ------------
 --------------------------------------------------------------- */
 
-
 @layer base {
   .btnIcon {
     @apply py-3 px-3 border-2 rounded-md bg-color2 hover:bg-color1 border-color2 text-color1 hover:text-color2 flex items-center justify-center;
@@ -118,35 +119,25 @@ p {
   .border1 {
     @apply dark:border-slate-600 border-slate-200;
   }
-
 }
 
-
-
+/* -----------------------Button start here ------------------- */
 
 .bg {
   background-image: linear-gradient(160deg, #fd59a7, #f17539);
 }
 
-/* -----------------------Button start here ------------------- */
-
-button {
-  @apply outline-none;
-}
-
-button:focus {
-  @apply outline-none focus:ring-2 focus:ring-[border2] focus:ring-opacity-50;
-}
-
 .home {
   background: rgb(253, 66, 167);
-  background: linear-gradient(90deg,
-      rgba(253, 66, 167, 0.227328431372549) 50%,
-      rgba(241, 117, 57, 0.2497373949579832) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(253, 66, 167, 0.227328431372549) 50%,
+    rgba(241, 117, 57, 0.2497373949579832) 100%
+  );
 }
 
 .blogCard-img:hover {
-  transform: scale(1.25)
+  transform: scale(1.25);
 }
 
 .bg-hero-2 {
@@ -158,7 +149,7 @@ button:focus {
 
 .bg-hero {
   background-image: url(/banner-hero.png);
-  @apply bg-cover lg:pb-32 md:pb-20 sm:pb-12 pb-8;
+  @apply bg-cover lg:pb-20 md:pb-10 sm:pb-5 pb-2;
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -223,58 +214,4 @@ button:focus {
 
 .article p {
   @apply text-base pb-2;
-}
-
-.animate-rotate {
-  position: relative;
-  animation: animRotate 5s infinite;
-  height: 20px;
-  @apply text-4xl;
-}
-
-@keyframes animRotate {
-  0% {
-    height: 25px;
-  }
-
-  10% {
-    height: 30px;
-  }
-
-  20% {
-    height: 40px;
-  }
-
-  30% {
-    height: 50px;
-  }
-
-  40% {
-    height: 60px;
-  }
-
-  40% {
-    height: 70px;
-  }
-
-  60% {
-    height: 60px;
-  }
-
-  70% {
-    height: 50px;
-  }
-
-  80% {
-    height: 40px;
-  }
-
-  90% {
-    height: 30px;
-  }
-
-  100% {
-    height: 25px;
-  }
-
 }
