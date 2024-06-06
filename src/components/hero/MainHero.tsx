@@ -5,7 +5,7 @@ interface Iprops {
 
 export default function SHero({ head, para }: Iprops) {
   return (
-    <section className="bg-hero bg-hero-2 text-center lg:py-44 py-32">
+    <section className="bg-hero bg-hero-2 text-center lg:py-44 py-32 sm:mb-10 mb-20">
       <h1 className="text font-semibold lg:text-5xl md:text-4xl text-3xl my-8">
         {head}
       </h1>

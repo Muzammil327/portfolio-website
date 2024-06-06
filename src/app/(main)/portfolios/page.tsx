@@ -29,7 +29,7 @@ export default function Portfolio() {
       <MainHero head="My Portfolio" para="" />
       <section>
         <Container>
-          <div className="grid 2xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 items-center justify-center">
+          <div className="grid 2xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 items-center justify-center">
             {portfolio_data.map((data: portfolioProps) => {
               return (
                 <div key={data.id}>
