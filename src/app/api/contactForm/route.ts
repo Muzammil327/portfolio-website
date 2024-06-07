@@ -1,5 +1,5 @@
 import ContactUserForm from '@/models/authModel'
-import connectDB from '@/utilis/db'
+import connectDB from '@/src/util/db'
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* globals.scss */
+/* globals Variable */
 :root {
   --color1: #fff;
   --color2: #3fafaa;
@@ -31,6 +31,11 @@ body {
 
 ::selection {
   @apply bg-color2 text-white;
+}
+
+input,
+textarea {
+  @apply outline-none;
 }
 
 input::placeholder,
@@ -254,11 +259,9 @@ button:focus {
 
 .home {
   background: rgb(253, 66, 167);
-  background: linear-gradient(
-    90deg,
-    rgba(253, 66, 167, 0.227328431372549) 50%,
-    rgba(241, 117, 57, 0.2497373949579832) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(253, 66, 167, 0.227328431372549) 50%,
+      rgba(241, 117, 57, 0.2497373949579832) 100%);
 }
 
 .blogCard-img:hover {

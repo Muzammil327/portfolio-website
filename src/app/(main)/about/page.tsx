@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import MainHero from '@/src/components/hero/MainHero'
-import Resume from '@/src/components/about/resume/page'
+import AboutUs from '@/src/components/about/aboutUs'
+import ContactForm from '@/src/components/layout/form/page'
 
 const data = {
   title: 'About US || Muzammil Portfolio',
@@ -24,6 +25,8 @@ export default function About() {
   return (
     <>
       <MainHero head="About Us" para="" />
+      <AboutUs />
+      <ContactForm />
     </>
   )
 }
