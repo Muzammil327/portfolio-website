@@ -26,18 +26,7 @@ const getPostContent = (slug: string, directories: string[]) => {
 // Example usage
 const directories = [
   "src/app/blogs/docs/nextjs/",
-  "src/app/blogs/docs/nextjs/api",
-
-  "src/app/blogs/docs/mern/",
-  "src/app/blogs/docs/mern/api",
-
-  "src/app/blogs/docs/download",
-  "src/app/blogs/docs/download/vscode",
-  "src/app/blogs/docs/download/git",
-  "src/app/blogs/docs/download/nodejs",
-  "src/app/blogs/docs/vscode/extension",
-  "src/app/blogs/docs/fashion/",
-  "src/app/blogs/docs/javascript/array/",
+  "src/app/blogs/docs/reactjs/",
 ];
 const PostPage = (props: any) => {
   const slug = props.params.slug;
