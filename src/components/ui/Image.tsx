@@ -7,6 +7,7 @@ interface ImageProps {
   alt: string
   height: number
   width: number
+  priority?: boolean
 }
 
 export default function ImageComp({
@@ -15,6 +16,7 @@ export default function ImageComp({
   height,
   width,
   class_name,
+  priority,
 }: ImageProps) {
   return (
     <Image
@@ -24,6 +26,7 @@ export default function ImageComp({
       height={height}
       width={width}
       className={class_name}
+      priority={priority}
     />
   )
 }

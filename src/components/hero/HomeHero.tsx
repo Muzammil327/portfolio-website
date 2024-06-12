@@ -58,6 +58,7 @@ export default function HomeHero() {
                 height={750}
                 width={750}
                 class_name="rounded-[60px] lg:rotate-12 hover:rotate-0 duration-300 ease-in-out border-8 border-solid hover:border-color2 border-transparent hover:border-opacity-60"
+                priority
               />
             </div>
           </div>
