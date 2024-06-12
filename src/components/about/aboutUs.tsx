@@ -9,7 +9,7 @@ export default function AboutUs() {
         <div className="grid lg:grid-cols-3 gap-6 items-center">
           <div className="lg:col-span-2">
             <h1 className="text-color2 lg:text-8xl md:text-6xl text-4xl font-bold pb-4">
-              2+ Years of Experience
+              1+ Years of Experience
             </h1>
             <p>
               There are many variations of passages of Lorem Ipsum available,
@@ -37,7 +37,7 @@ export default function AboutUs() {
               but the majority have suffered Lorem Ipsum available, but the
               majority.
             </p>
-            <div className="stats flex items-center justify-between">
+            {/* <div className="stats flex items-center justify-between">
               <div className="flex flex-col gap-2">
                 <span className="text-3xl font-semibold text-color2">
                   1650 +
@@ -60,7 +60,7 @@ export default function AboutUs() {
                   Client <br /> Satisfied
                 </span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </Container>

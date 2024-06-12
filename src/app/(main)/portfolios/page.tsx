@@ -13,7 +13,7 @@ const data = {
   canonical: '/portfolio',
   index: true,
   follow: true,
-  image: '/opengraph-image.jpg',
+  image: '/opengraph-image.png',
   url: 'https://mmuzammil-portfolio.vercel.app/portfolio',
   keywords: [
     'mmuzammil-portfolio',

@@ -13,12 +13,36 @@ import PortfolioCard from '@/src/components/portfolio/portfolioCard'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
-import { portfolioProps } from '@/src/types/page'
+import { PostCard, portfolioProps } from '@/src/types/page'
 import { portfolio_data } from '@/src/data/portfolio'
 import ContactForm from '../components/layout/form/page'
 import ImageComp from '../components/ui/Image'
+import AboutUs from '../components/about/aboutUs'
+import SkillCard from '../components/skill/skillCard'
+import TailwindCSS from '../components/svg/tailwindCss'
+import Javascript from '../components/svg/js'
+import Typescript from '../components/svg/ts'
+import ReactJs from '../components/svg/react'
+import NextJs from '../components/svg/next'
+import Git from '../components/svg/git'
+import PostMetadata from '../components/blog/PostMetadata'
+import { useEffect, useState } from 'react'
+import AWS from '../components/svg/aws'
+import Nodejs from '../components/svg/nodejs'
+import Expressjs from '../components/svg/expressjs'
+import Mongodb from '../components/svg/mongodb'
 
 export default function HomeView() {
+  const [postMetadata, setPostMetadata] = useState<PostCard[]>([])
+
+  useEffect(() => {
+    const fetchPostMetadata = async () => {
+      const metadata = await PostMetadata()
+      setPostMetadata(metadata)
+    }
+
+    fetchPostMetadata()
+  }, [])
   var settings = {
     infinite: true,
     speed: 500,
@@ -51,7 +75,7 @@ export default function HomeView() {
         <Navbar />
         <HomeHero />
       </header>
-
+      <AboutUs />
       {/* -----------------------------------------------------------------------------------
       ------------------------------- Portfolio portion start here --------------------------
       ------------------------------------------------------------------------------------*/}
@@ -93,7 +117,7 @@ export default function HomeView() {
       ------------------------------- Call To Action portion start here ---------------------
       ------------------------------------------------------------------------------------*/}
 
-      <div className="bg-gray-50 dark:bg-gray-900 lg:mb-20 md:mb-10 mb-4 bg-hero bg-hero-2">
+      <section className="bg-gray-50 dark:bg-gray-900 lg:mb-20 md:mb-10 mb-4 bg-hero bg-hero-2">
         <Container>
           <div className="grid lg:grid-cols-6 gap-8 items-center py-10">
             <div className="flex pt-12 justify-center md:col-span-2">
@@ -126,13 +150,48 @@ export default function HomeView() {
             </div>
           </div>
         </Container>
-      </div>
+      </section>
 
       {/* -----------------------------------------------------------------------------------
-      ------------------------------- Brands portion start here -----------------------------
+      ------------------------------- Skills portion start here -----------------------------
       ------------------------------------------------------------------------------------*/}
+      <section>
+        <Heading
+          subhead={'My Skills'}
+          head={'Hello there, My name is Muhammad Muzammil.'}
+        />
 
+        <Container>
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 sm:py-6">
+            <SkillCard icon={<TailwindCSS />} title="Tailwind CSS" />
+            <SkillCard icon={<Javascript />} title="Javascript" />
+            <SkillCard icon={<Typescript />} title="Typescript" />
+            <SkillCard icon={<ReactJs />} title="React JS" />
+            <SkillCard icon={<NextJs />} title="Next JS" />
+            <SkillCard icon={<Git />} title="Git" />
+            <SkillCard icon={<Nodejs />} title="Node JS" />
+            <SkillCard icon={<Expressjs />} title="Express JS" />
+            <SkillCard icon={<Mongodb />} title="Mongo DB" />
+            <SkillCard icon={<AWS />} title="AWS" news />
+          </div>
+        </Container>
+        <div className="flex items-center justify-center my-8">
+          <Link href="/skill">
+            <Button className="btnIcon px-10 gap-2 duration-300 ease-in-out">
+              View All Skills
+              <span className="btnIconhover opacity-0 duration-300 ease-in-out">
+                <FaArrowRight />
+              </span>
+            </Button>
+          </Link>
+        </div>
+      </section>
       <ContactForm />
+
+      <div className="bannerImage w-full">
+        <ImageComp imageName="/Banner-home.png" alt={''} height={720} width={1280} class_name='w-full' />
+        {/* <Image src="/framework.png" alt="" title="" height="720" width="1280" objectFit='cover' className='w-full' /> */}
+      </div>
 
       {/* -----------------------------------------------------------------------------------
       ------------------------------- Blog portion start here -------------------------------
@@ -141,9 +200,9 @@ export default function HomeView() {
         <Container>
           <Heading subhead={'DAILY UPDATE'} head={'Latest News & Blogs'} />
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 md:gap-4 gap-2 items-center">
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
+            {postMetadata.splice(0, 3).map((data: PostCard) => (
+              <BlogCard datas={data} key={data.id} />
+            ))}
           </div>
         </Container>
         <div className="flex items-center justify-center my-8">

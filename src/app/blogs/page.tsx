@@ -1,17 +1,17 @@
-import type { Metadata } from 'next'
 import MainHero from '@/src/components/hero/MainHero'
-import AboutUs from '@/src/components/about/aboutUs'
-import ContactForm from '@/src/components/layout/form/page'
+import React from 'react'
+import type { Metadata } from 'next'
+import BlogView from '@/src/views/blogView'
 
 const data = {
-  title: 'About US || Muzammil Portfolio',
+  title: 'My Blogs || Muzammil Portfolio',
   description:
     'I am a Full Stack Developer With Frontend Backend and Deveops Enginerr with Javascript, Typescript, Phython, PHP, Node JS and SQL.',
-  canonical: '/about',
+  canonical: '/portfolio',
   index: true,
   follow: true,
   image: '/opengraph-image.png',
-  url: 'https://mmuzammil-portfolio.vercel.app/about',
+  url: 'https://mmuzammil-portfolio.vercel.app/portfolio',
   keywords: [
     'mmuzammil-portfolio',
     'muzammil',
@@ -20,13 +20,10 @@ const data = {
     'muzammil portfolio',
   ],
 }
-
-export default function About() {
+export default function Portfolio() {
   return (
     <>
-      <MainHero head="About Us" para="" />
-      <AboutUs />
-      <ContactForm />
+      <BlogView />
     </>
   )
 }

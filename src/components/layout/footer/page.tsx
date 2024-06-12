@@ -1,7 +1,9 @@
+'use client'
 import Link from 'next/link'
 import Container from '@/src/components/ui/Container'
 import Logo from '@/src/components/ui/Logo'
 import Social from '@/src/components/ui/Social'
+import { FaChevronUp } from 'react-icons/fa'
 
 const aboutData = {
   description:
@@ -14,6 +16,13 @@ interface TypeProps {
 }
 
 export default function Footer() {
+    // Scroll to top function
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    };
   return (
     <>
       <footer className="mt-8 bg-hero !pb-4">
@@ -21,7 +30,7 @@ export default function Footer() {
           <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 md:gap-4 md:pt-16 pt-8 md:pb-10">
             <div className="lg:col-span-2 col-span-1 md:ml-5 ml-0 mb-8">
               <Logo />
-              <p className="leading-7 text-base">{aboutData.description}</p>
+              <p className="leading-7 text-base !mt-0">{aboutData.description}</p>
               <Social />
             </div>
             <div className="col-span-1 md:ml-5 ml-0 mb-8">
@@ -66,6 +75,9 @@ export default function Footer() {
           </p>
         </div>
       </footer>
+      <section className="topBtn fixed bottom-8 right-5">
+        <button className='bg-color2 text-white rounded-md p-3 btnIcon' onClick={scrollToTop}><FaChevronUp /></button>
+      </section>
     </>
   )
 }

@@ -442,6 +442,7 @@ const navigation = {
   ],
   pages: [
     { name: 'Portfolios', href: '/portfolios' },
+    { name: 'Skills', href: '/skill' },
     { name: 'Blogs', href: '/blogs' },
   ],
 }
