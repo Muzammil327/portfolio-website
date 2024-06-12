@@ -67,8 +67,8 @@ export default function RootLayout({
         />
         <meta property="og:locale" content="en_US" />
         <meta property="og:image:type" content="image/jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="720" />
         {/* icon */}
         <meta name="theme-color" content="#f73e3e" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
