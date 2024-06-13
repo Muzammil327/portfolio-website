@@ -19,8 +19,8 @@ export default function TailwindCSS() {
             y2="67.5555556%"
             id="linearGradient-1"
           >
-            <stop stop-color="#2298BD" offset="0%"></stop>
-            <stop stop-color="#0ED7B5" offset="100%"></stop>
+            <stop stopColor="#2298BD" offset="0%"></stop>
+            <stop stopColor="#0ED7B5" offset="100%"></stop>
           </linearGradient>
         </defs>
         <g>

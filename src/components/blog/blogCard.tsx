@@ -24,7 +24,7 @@ export default function BlogCard({ datas }: Iprops) {
     <div className="rounded-bl-md rounded-br-md mt-5 relative">
       <div className="image relative overflow-hidden w-full h-auto">
         <ImageComp
-          imageName="/slider/backend.png"
+          imageName="/projects/blog-website.png"
           alt="fgh"
           height={1280}
           width={720}

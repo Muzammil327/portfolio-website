@@ -55,8 +55,8 @@ export default function HomeHero() {
               <ImageComp
                 imageName="/hero_img.jpg"
                 alt="{imagealt}"
-                height={750}
-                width={750}
+                height={550}
+                width={550}
                 class_name="rounded-[60px] lg:rotate-12 hover:rotate-0 duration-300 ease-in-out border-8 border-solid hover:border-color2 border-transparent hover:border-opacity-60"
                 priority
               />
