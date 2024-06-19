@@ -1,19 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '@/src/components/layout/navbar/page'
-
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-
 import Container from '@/src/components/ui/Container'
 import Heading from '@/src/components/ui/Heading'
 import BlogCard from '@/src/components/blog/blogCard'
 import Button from '@/src/components/ui/Button'
 import { FaArrowRight } from 'react-icons/fa'
-import PortfolioCard from '@/src/components/portfolio/portfolioCard'
-import { PostCard, portfolioProps } from '@/src/types/page'
-import { portfolio_data } from '@/src/data/portfolio'
+import PortfolioHomeCard from '@/src/components/portfolio/portfolioHomeCard'
+import { PostCard } from '@/src/types/page'
 import ContactForm from '../components/layout/form/page'
 import ImageComp from '../components/ui/Image'
 import AboutUs from '../components/about/aboutUs'
@@ -34,32 +28,6 @@ import HomeHero from '../components/hero/HomeHero'
 export default async function HomeView() {
   const postMetadata = await PostMetadata()
 
-  var settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
-    ],
-  }
-
   return (
     <>
       <header className="bg-hero">
@@ -67,43 +35,7 @@ export default async function HomeView() {
         <HomeHero />
       </header>
       <AboutUs />
-      {/* -----------------------------------------------------------------------------------
-      ------------------------------- Portfolio portion start here --------------------------
-      ------------------------------------------------------------------------------------*/}
-      <section className="md:py-10">
-        <Container>
-          <Heading subhead={'Portfolio'} head={'See My Recent Projects'} />
-          <div className="">
-            <Slider {...settings}>
-              {portfolio_data.map((data: portfolioProps) => {
-                return (
-                  <div key={data.id}>
-                    <PortfolioCard
-                      para={data.para}
-                      name={data.name}
-                      liveLink={data.liveLink}
-                      githubLink={data.githubLink}
-                      image={data.image}
-                      imagealt={data.imagealt}
-                      link={data.link}
-                    />
-                  </div>
-                )
-              })}
-            </Slider>
-          </div>
-        </Container>
-        <div className="flex items-center justify-center my-8">
-          <Link href="/portfolios">
-            <Button className="btnIcon px-10 gap-2 duration-300 ease-in-out">
-              View All Projects
-              <span className="btnIconhover opacity-0 duration-300 ease-in-out">
-                <FaArrowRight />
-              </span>
-            </Button>
-          </Link>
-        </div>
-      </section>
+      <PortfolioHomeCard />
 
       {/* -----------------------------------------------------------------------------------
       ------------------------------- Call To Action portion start here ---------------------
