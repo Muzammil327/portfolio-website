@@ -208,8 +208,8 @@ export default function HomeView() {
         <Container>
           <Heading subhead={'DAILY UPDATE'} head={'Latest News & Blogs'} />
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 md:gap-4 gap-2 items-center">
-            {postMetadata.splice(0, 3).map((data: PostCard) => (
-              <BlogCard datas={data} key={data.id} />
+            {postMetadata.slice(0, 3).map((data: PostCard) => (
+              <BlogCard datas={data} key={data.title} />
             ))}
           </div>
         </Container>

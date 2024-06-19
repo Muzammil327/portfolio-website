@@ -1,18 +1,16 @@
 ---
-id: "1"
-title: "Mastering CRUD using MERN Stack"
-para: "After follow these steps, you can get your data from mongodb database by using next js application."
-date: "20-03-2024"
-cat: "Next js"
-catslug: "next-js"
-tag: "API"
-tagslug: "api"
-author: "Imran"
-authorslug: "imran"
-image: "/opengraph-image.webp"
-keyword: ["post api request","nextjs with mongodb", "nextjs post api request with mongodb"]
+title: 'How to upload image to cloudinary with Next JS.'
+para: 'After follow these steps, you can get your data from mongodb database by using next js application.'
+date: '24-06-2024'
+cat: 'Cloudinary'
+image: '/projects/blog-website.png'
+keyword:
+  [
+    'post api request',
+    'nextjs with mongodb',
+    'nextjs post api request with mongodb',
+  ]
 ---
-
 
 JavaScript arrays are important data structures that help in efficiently organizing and manipulating data collections. Arrays are ordered collections that can hold zero or more data types. They use numbered indices starting from 0 to access specific items.
 
@@ -27,15 +25,13 @@ let fruits = ['apple', 'banana', 'orange'];
 ```
 
 > JavaScript arrays are zero-indexed, meaning the first element is accessed at `index 0`.
-> In this array: 
+> In this array:
 
 | Array Variable Name | Index Position |
-| --- | --- |
-| apple  |  0 |
-| banana |  1 |
-| orange |  2 |
-
-
+| ------------------- | -------------- |
+| apple               | 0              |
+| banana              | 1              |
+| orange              | 2              |
 
 ### Accessing Elements
 
@@ -57,20 +53,20 @@ console.log("index 2 :", fruits[2]);  // index 2 : orange
 
 In modern JavaScript, it's recommended to use `let or const` instead of var for declaring variables, including arrays. let is used when the variable's value will be `reassigned`, while const is used when the variable's value will `remain constant` (unchanged).
 
-| Basic Array Methods      |                       |
-| ---                      | ---          |
-| [Array length](/)        | [Array toString()](/) |
-| [Array at()](/)          | [Array join()](/)     |
-| [Array pop()](/)         | [Array push()](/)     |
-| [Array shift()](/)       | [Array unshift()](/)  |
-| [Array delete()](/)      | [Array concat()](/)   |
-| [Array splice()](/)      | [Array slice()](/)    |
-| [Array copyWithin()](/)  | [Array flat()](/)     |
-| [Array toSpliced()](/)   |      |
+| Basic Array Methods     |                       |
+| ----------------------- | --------------------- |
+| [Array length](/)       | [Array toString()](/) |
+| [Array at()](/)         | [Array join()](/)     |
+| [Array pop()](/)        | [Array push()](/)     |
+| [Array shift()](/)      | [Array unshift()](/)  |
+| [Array delete()](/)     | [Array concat()](/)   |
+| [Array splice()](/)     | [Array slice()](/)    |
+| [Array copyWithin()](/) | [Array flat()](/)     |
+| [Array toSpliced()](/)  |                       |
 
 #### Conclusion
+
 JavaScript arrays are an important feature that allow developers to store and manipulate data collections efficiently.
 
-
-* [Free YouTube videos](https://www.youtube.com/watch?v=ubCNZRNjhyo)
-* [Udemy Courses](https://www.udemy.com/course/aws-certified-developer-associate/)
+- [Free YouTube videos](https://www.youtube.com/watch?v=ubCNZRNjhyo)
+- [Udemy Courses](https://www.udemy.com/course/aws-certified-developer-associate/)

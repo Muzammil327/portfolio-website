@@ -1,40 +1,39 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import Markdown from "markdown-to-jsx";
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import Markdown from 'markdown-to-jsx'
 import MainHero from '@/src/components/hero/MainHero'
-
-import Image from "next/image";
-import Container from "@/src/components/ui/Container";
-import Navbar from "@/src/components/layout/navbar/page";
+import Container from '@/src/components/ui/Container'
+import Navbar from '@/src/components/layout/navbar/page'
+import ImageComp from '@/src/components/ui/Image'
 
 const getPostContent = (slug: string, directories: string[]) => {
   for (const directory of directories) {
-    const folder = path.join(process.cwd(), directory);
-    const file = path.join(folder, `${slug}.md`);
+    const folder = path.join(process.cwd(), directory)
+    const file = path.join(folder, `${slug}.md`)
 
     if (fs.existsSync(file)) {
-      const content = fs.readFileSync(file, "utf8");
-      const matterResult = matter(content);
-      return matterResult;
+      const content = fs.readFileSync(file, 'utf8')
+      const matterResult = matter(content)
+      return matterResult
     }
   }
 
-  return null;
-};
+  return null
+}
 
 // Example usage
 const directories = [
-  "src/app/blogs/docs/nextjs/",
-  "src/app/blogs/docs/reactjs/",
-];
+  'src/app/blogs/docs/cloudinary/',
+  'src/app/blogs/docs/reactjs/',
+]
 const PostPage = (props: any) => {
-  const slug = props.params.slug;
-  const post = getPostContent(slug, directories);
+  const slug = props.params.slug
+  const post = getPostContent(slug, directories)
 
   return (
     <>
-     <header className="bg-hero">
+      <header className="bg-hero">
         <Navbar />
         <MainHero head={post?.data.title} para="" />
       </header>
@@ -43,16 +42,15 @@ const PostPage = (props: any) => {
           <div className="grid lg:grid-cols-8 grid-cols-1 lg:gap-6">
             <div className="md:col-span-6">
               <div className="my-6">
-                {/* <BannerImageComponent
-                  src={post?.data.image}
+                <ImageComp
+                  imageName={post?.data.image}
                   alt={post?.data.title}
                   height={882}
                   width={1568}
-                /> */}
+                />
                 <div className="flex mt-1">
                   <p className="t4">
-                    by{" "}
-                    <span className="text-[#ff89ba]">{post?.data.author}</span>
+                    by <span className="text-[#ff89ba]">Muzammil</span>
                   </p>
                   <span className="mx-1">-</span>
                   <p className="t4"> {post?.data.date}</p>
@@ -60,35 +58,30 @@ const PostPage = (props: any) => {
               </div>
 
               <article className="prose">
-                <Markdown>{post?.content || ""}</Markdown>
-                <p className="py-6">
-                  Thanks for reading.
-                </p>
+                <Markdown>{post?.content || ''}</Markdown>
+                <p className="py-6">Thanks for reading.</p>
               </article>
             </div>
 
-            <div className="md:col-span-2">
-              {/* <RightPost /> */}
-            </div>
+            <div className="md:col-span-2">{/* <RightPost /> */}</div>
           </div>
         </Container>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default PostPage;
+export default PostPage
 
 export async function generateMetadata(props: any) {
-  const slug = props.params.slug;
-  const post = getPostContent(slug, directories);
+  const slug = props.params.slug
+  const post = getPostContent(slug, directories)
   return {
     title: post?.data.title,
     description: post?.data.para,
     keywords: post?.data.keyword,
-    // keywords: data.keywords,
     alternates: {
-      canonical: `posts/${slug}`,
+      canonical: `blogs/${slug}`,
     },
     robots: {
       index: true,
@@ -101,7 +94,7 @@ export async function generateMetadata(props: any) {
     openGraph: {
       title: post?.data.title,
       description: post?.data.para,
-      url: `posts/${slug}`,
+      url: `blogs/${slug}`,
       images: [
         {
           url: post?.data.image,
@@ -117,5 +110,5 @@ export async function generateMetadata(props: any) {
         alt: post?.data.para,
       },
     },
-  };
+  }
 }

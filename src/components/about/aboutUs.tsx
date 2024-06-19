@@ -12,11 +12,12 @@ export default function AboutUs() {
               1+ Years of Experience
             </h1>
             <p>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don&apos;t look even
-              slightly believable. If you are going to use a passage Lorem Ipsum
-              available, but the majority.
+              With over a year of hands-on experience, I have honed my skills in
+              developing dynamic and responsive web applications. My journey as
+              a developer has been driven by a passion for crafting efficient
+              and scalable solutions. My expertise lies in integrating MongoDB,
+              Express.js, React, and Node.js to deliver high-quality, end-to-end
+              solutions.
             </p>
           </div>
           <div className="lg:col-span-1">
@@ -33,9 +34,9 @@ export default function AboutUs() {
               </a>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered Lorem Ipsum available, but the
-              majority.
+              As a dedicated MERN stack developer, I specialize in creating
+              full-stack applications that not only meet but exceed client
+              expectations.
             </p>
             {/* <div className="stats flex items-center justify-between">
               <div className="flex flex-col gap-2">

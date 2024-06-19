@@ -14,8 +14,8 @@ export default function Logo() {
             src="/logo/muzammil-safdar-light-mode.png"
             alt="Muzammil Safdar"
             title="Muzammil Safdar"
-            height="165"
-            width="170"
+            height="120"
+            width="200"
             priority
           />
         </Link>

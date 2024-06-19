@@ -27,6 +27,7 @@ export default function ImageComp({
       width={width}
       className={class_name}
       priority={priority}
+      sizes="(max-width: 200px) 100vw, 400px"
     />
   )
 }

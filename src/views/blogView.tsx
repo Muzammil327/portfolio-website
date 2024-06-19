@@ -28,7 +28,7 @@ export default function BlogView() {
         <Container>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 md:gap-4 gap-2 items-center">
             {postMetadata.map((data: PostCard) => (
-              <BlogCard datas={data} key={data.id} />
+              <BlogCard datas={data} key={data.title} />
             ))}
           </div>
         </Container>
