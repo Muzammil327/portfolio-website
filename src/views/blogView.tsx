@@ -9,7 +9,7 @@ import MainHero from '@/src/components/hero/MainHero'
 
 export default function BlogView() {
   const [postMetadata, setPostMetadata] = useState<PostCard[]>([])
-
+  console.log('postMetadata:', postMetadata)
   useEffect(() => {
     const fetchPostMetadata = async () => {
       const metadata = await PostMetadata()

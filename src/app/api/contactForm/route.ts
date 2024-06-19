@@ -1,4 +1,4 @@
-import ContactUserForm from '@/models/authModel'
+import ContactUserForm from '@/src/models/authModel'
 import connectDB from '@/src/util/db'
 import { NextRequest, NextResponse } from 'next/server'
 
