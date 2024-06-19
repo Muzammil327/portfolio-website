@@ -1,5 +1,3 @@
-'use client'
-import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '@/src/components/layout/navbar/page'
@@ -33,17 +31,9 @@ import Expressjs from '../components/svg/expressjs'
 import Mongodb from '../components/svg/mongodb'
 import HomeHero from '../components/hero/HomeHero'
 
-export default function HomeView() {
-  const [postMetadata, setPostMetadata] = useState<PostCard[]>([])
+export default async function HomeView() {
+  const postMetadata = await PostMetadata()
 
-  useEffect(() => {
-    const fetchPostMetadata = async () => {
-      const metadata = await PostMetadata()
-      setPostMetadata(metadata)
-    }
-
-    fetchPostMetadata()
-  }, [])
   var settings = {
     infinite: true,
     speed: 500,
@@ -198,7 +188,6 @@ export default function HomeView() {
           width={1280}
           class_name="w-full"
         />
-        {/* <Image src="/framework.png" alt="" title="" height="720" width="1280" objectFit='cover' className='w-full' /> */}
       </div>
 
       {/* -----------------------------------------------------------------------------------

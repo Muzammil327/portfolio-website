@@ -7,15 +7,7 @@ import MainHero from '@/src/components/hero/MainHero'
 
 export default async function BlogView() {
   const postMetadata = await PostMetadata()
-  // const [postMetadata, setPostMetadata] = useState<PostCard[]>([])
-  // console.log('postMetadata:', postMetadata)
-  // useEffect(() => {
-  //   const fetchPostMetadata = async () => {
-  //     setPostMetadata(metadata)
-  //   }
-
-  //   fetchPostMetadata()
-  // }, [])
+ 
   return (
     <>
       <header className="bg-hero">
