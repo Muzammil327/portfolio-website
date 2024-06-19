@@ -2,7 +2,6 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import Link from 'next/link'
-import Image from 'next/image'
 
 import { FaBars, FaSun, FaTimes } from 'react-icons/fa'
 import Container from '@/src/components/ui/Container'
@@ -12,17 +11,11 @@ import { Featured, Sections, Items, Pages } from '@/src/types/page'
 import { FaMoon } from 'react-icons/fa'
 import { useTheme } from 'next-themes'
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolling, setScrolling] = useState(false)
 
-  const { systemTheme, theme, setTheme } = useTheme()
-
-  const currentTheme = theme === 'system' ? systemTheme : theme
+  const { theme, setTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -353,11 +346,9 @@ export default function Navbar() {
                 </Button>
                 <Button
                   className="btnIcon border-2 border-solid duration-300 ease-in"
-                  onClick={() =>
-                    setTheme(currentTheme === 'dark' ? 'light' : 'dark')
-                  }
+                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                 >
-                  {currentTheme === 'dark' ? (
+                  {theme === 'dark' ? (
                     <FaMoon size={16} />
                   ) : (
                     <FaSun size={16} />

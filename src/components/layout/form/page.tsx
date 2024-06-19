@@ -129,7 +129,7 @@ export default function ContactForm() {
                 </div>
                 <div className="body flex flex-col">
                   <span className="text-gray-400">Address</span>
-                  <span className="text">Faisalbad, Punjab, Board</span>
+                  <span className="text">Faisalbad, Punjab, Pakistan</span>
                 </div>
               </div>
             </div>

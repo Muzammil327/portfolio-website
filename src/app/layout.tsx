@@ -9,7 +9,6 @@ import 'react-toastify/dist/ReactToastify.css'
 import { Analytics } from '@vercel/analytics/react'
 
 import Footer from '@/components/layout/footer/page'
-import FooterForm from '../components/layout/form/page'
 
 import ThemeSwitcher from '../components/provider/ThemeSwitcher'
 
@@ -56,7 +55,7 @@ export default function RootLayout({
           content="Next.js,React,JavaScript, muzammil, muzmmil safdar, muzammil portfolio, muzammil safdar portfolio"
         />
         <meta name="referrer" content="origin-when-cross-origin" />
-        <meta name="color-scheme" content="light" />
+        <meta name="color-scheme" content="dark" />
         <meta name="creator" content="mmuzammil-portfolio.vercel.app" />
         <meta name="publisher" content="mmuzammil-portfolio.vercel.app" />
         {/* og */}

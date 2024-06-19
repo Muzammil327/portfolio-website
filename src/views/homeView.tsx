@@ -1,18 +1,19 @@
 'use client'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import Navbar from '@/src/components/layout/navbar/page'
+
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 import Container from '@/src/components/ui/Container'
 import Heading from '@/src/components/ui/Heading'
 import BlogCard from '@/src/components/blog/blogCard'
 import Button from '@/src/components/ui/Button'
-import { FaArrowRight, FaPlay } from 'react-icons/fa'
-import Image from 'next/image'
-const HomeHero = dynamic(() => import('@/src/components/hero/HomeHero'))
+import { FaArrowRight } from 'react-icons/fa'
 import PortfolioCard from '@/src/components/portfolio/portfolioCard'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import Slider from 'react-slick'
 import { PostCard, portfolioProps } from '@/src/types/page'
 import { portfolio_data } from '@/src/data/portfolio'
 import ContactForm from '../components/layout/form/page'
@@ -26,11 +27,11 @@ import ReactJs from '../components/svg/react'
 import NextJs from '../components/svg/next'
 import Git from '../components/svg/git'
 import PostMetadata from '../components/blog/PostMetadata'
-import { useEffect, useState } from 'react'
 import AWS from '../components/svg/aws'
 import Nodejs from '../components/svg/nodejs'
 import Expressjs from '../components/svg/expressjs'
 import Mongodb from '../components/svg/mongodb'
+import HomeHero from '../components/hero/HomeHero'
 
 export default function HomeView() {
   const [postMetadata, setPostMetadata] = useState<PostCard[]>([])
@@ -94,6 +95,7 @@ export default function HomeView() {
                       githubLink={data.githubLink}
                       image={data.image}
                       imagealt={data.imagealt}
+                      link={data.link}
                     />
                   </div>
                 )
@@ -189,7 +191,13 @@ export default function HomeView() {
       <ContactForm />
 
       <div className="bannerImage w-full">
-        <ImageComp imageName="/Banner-home.png" alt={''} height={720} width={1280} class_name='w-full' />
+        <ImageComp
+          imageName="/Banner-home.png"
+          alt={''}
+          height={720}
+          width={1280}
+          class_name="w-full"
+        />
         {/* <Image src="/framework.png" alt="" title="" height="720" width="1280" objectFit='cover' className='w-full' /> */}
       </div>
 

@@ -9,6 +9,7 @@ export const portfolio_data: portfolioProps[] = [
     githubLink: 'https://github.com/Muzammil327/portfolio-website',
     image: '/projects/portfolio-website.png',
     imagealt: 'Portfolio website',
+    link: '/portfolios/portfolio-website',
   },
   {
     id: 1,
@@ -18,6 +19,7 @@ export const portfolio_data: portfolioProps[] = [
     githubLink: 'https://github.com/Muzammil327/Full-Stack-Ecommerce-Website',
     image: '/projects/ecommerce-website.png',
     imagealt: 'Portfolio website',
+    link: '/portfolios/ecommerce-website',
   },
   {
     id: 2,
@@ -27,5 +29,6 @@ export const portfolio_data: portfolioProps[] = [
     githubLink: 'https://github.com/Muzammil327/frontend-blog',
     image: '/projects/blog-website.png',
     imagealt: 'Portfolio website',
+    link: '/portfolios',
   },
 ]

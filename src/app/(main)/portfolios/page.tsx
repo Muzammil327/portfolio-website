@@ -40,6 +40,7 @@ export default function Portfolio() {
                     githubLink={data.githubLink}
                     image={data.image}
                     imagealt={data.imagealt}
+                    link={data.link}
                   />
                 </div>
               )

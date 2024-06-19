@@ -12,6 +12,7 @@ export default function PortfolioCard({
   githubLink,
   image,
   imagealt,
+  link,
 }: portfolioProps) {
   return (
     <div className="relative mx-3">
@@ -38,7 +39,7 @@ export default function PortfolioCard({
       </div>
       <div className="bg-slate-100 dark:bg-gray-900 p-4 rounded-bl-md rounded-br-md">
         <h4 className="md:text-2xl text-xl text-color2 mb-3">
-          <Link href={`${liveLink}`}>{name}</Link>
+          <Link href={`${link}`}>{name}</Link>
         </h4>
         <p className="text-gray-400 dark:text-gray-500 !leading-8 md:text-justify !my-0 md:text-base text-sm">
           {para}

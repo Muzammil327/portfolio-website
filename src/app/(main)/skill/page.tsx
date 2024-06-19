@@ -19,6 +19,9 @@ import Mongodb from '@/src/components/svg/mongodb'
 import Expressjs from '@/src/components/svg/expressjs'
 import Nodejs from '@/src/components/svg/nodejs'
 import Graphql from '@/src/components/svg/graphql'
+import Redux from '@/src/components/svg/redux'
+import PostgreSQL from '@/src/components/svg/postgresql'
+import Cloudinary from '@/src/components/svg/cloudinary'
 
 const data = {
   title: 'My Skills || Muzammil Portfolio',
@@ -52,16 +55,42 @@ export default function Skill() {
             <SkillCard icon={<Javascript />} title="Javascript" />
             <SkillCard icon={<Typescript />} title="Typescript" />
             <SkillCard icon={<ReactJs />} title="React JS" />
+            <SkillCard icon={<Redux />} title="Redux" />
             <SkillCard icon={<NextJs />} title="Next JS" />
             <SkillCard icon={<Git />} title="Git" />
             <SkillCard icon={<Github />} title="Github" />
             <SkillCard icon={<Nodejs />} title="Node JS" />
             <SkillCard icon={<Expressjs />} title="Express JS" />
             <SkillCard icon={<Mongodb />} title="Mongo DB" />
+            <SkillCard image="/nextAuth.png" title="Next Auth" />
             <SkillCard icon={<Vercel />} title="Vercel" />
+            <SkillCard icon={<Cloudinary />} title="Cloudinary" />
             <SkillCard icon={<Graphql />} title="Graphql" news />
             <SkillCard icon={<ReactJs />} title="React Native" news />
             <SkillCard icon={<AWS />} title="AWS" news />
+            <SkillCard icon={<PostgreSQL />} title="Postgre SQL" news />
+          </div>
+        </Container>
+      </section>
+      <section>
+        <Container>
+          <h2 className="md:text-2xl text-lg font-semibold py-1">Packages</h2>
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 sm:py-6">
+            <SkillCard title="axios" />
+            <SkillCard title="bcrypt" />
+            <SkillCard title="mongoose" />
+            <SkillCard title="react-icons" />
+            <SkillCard title="react-share" />
+            <SkillCard title="swiper" />
+            <SkillCard title="react-tagsinput" />
+            <SkillCard title="react-select" />
+            <SkillCard title="prettier" />
+            <SkillCard title="react-slick" />
+            <SkillCard title="react-toastify" />
+            <SkillCard title="typewriter-effect" />
+
+            <SkillCard title="nodemailer" news />
+            <SkillCard title="render" news />
           </div>
         </Container>
       </section>

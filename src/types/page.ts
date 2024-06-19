@@ -35,6 +35,7 @@ export interface portfolioProps {
   githubLink: string
   image: string
   imagealt: string
+  link: string
 }
 
 
