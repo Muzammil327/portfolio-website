@@ -3,6 +3,19 @@ import MainHero from '@/src/components/hero/MainHero'
 import Container from '@/src/components/ui/Container'
 import Image from 'next/image'
 import MarkdownRenderer from '@/src/components/ui/MarkdownRenderer'
+import { Metadata } from 'next'
+
+const data = {
+  title: 'Blog Card 1 Component || Muzammil Safdar',
+  description:
+    'I am created a stylish blog card using Tailwind CSS. Check it out!',
+  canonical: '/components/card/blog/1/',
+  index: true,
+  follow: true,
+  image: '/components/card/blog/1.png',
+  url: 'https://mmuzammil-portfolio.vercel.app/components/card/blog/1/',
+  keywords: ['blog card', 'blog card muzammil', 'muzammil card blog'],
+}
 
 export default function BlogCard1() {
   return (
@@ -85,3 +98,39 @@ const markdownContent1 = `
 </section>
 \`\`\`
 `
+
+export const metadata: Metadata = {
+  title: data.title,
+  description: data.description,
+  keywords: data.keywords,
+  openGraph: {
+    title: data.title,
+    description: data.description,
+    url: data.url,
+    images: [
+      {
+        url: data.image,
+        alt: data.title,
+      },
+    ],
+  },
+  alternates: {
+    canonical: data.canonical,
+  },
+  robots: {
+    index: data.index,
+    follow: data.follow,
+    googleBot: {
+      index: data.index,
+      follow: data.follow,
+    },
+  },
+  twitter: {
+    title: data.title,
+    description: data.description,
+    images: {
+      url: data.image,
+      alt: data.title,
+    },
+  },
+}
