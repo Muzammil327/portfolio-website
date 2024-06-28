@@ -20,11 +20,12 @@ export default function BlogCard1() {
           <h1 className="text-3xl leading-9 font-semibold py-5 mt-5 mb-8">
             HTML & CSS
           </h1>
-          <MarkdownRenderer markdown={markdownContent1} />
 
           <h1 className="text-3xl leading-9 font-semibold py-5 mb-8">
             HTML & TAILWIND CSS
           </h1>
+          <MarkdownRenderer markdown={markdownContent1} />
+
           <h1 className="text-3xl leading-9 font-semibold py-5 mb-8">
             HTML & SCSS
           </h1>
@@ -41,13 +42,46 @@ export default function BlogCard1() {
 }
 
 const markdownContent1 = `
-# Example Markdown Content
-
-\`\`\`javascript
-function greet(name: string): string {
-    return 'Hello, ' + name + '!';
-}
-
-console.log(greet('World'));
+\`\`\`html
+<section class="my-10">
+  <div class="container px-4 mx-auto grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+    <div class="card p-3 border-2 border-solid hover:border-gray-200 border-transparent duration-300 ease-in-out rounded-xl">
+      <div class="image">
+        <img src="https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg" alt="" class="rounded-2xl">
+      </div>
+      <div class="body">
+        <h3 class="py-2 font-semibold text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, odio.</h3>
+        <div class="flex items-center justify-between py-2">
+          <span class="text-sm font-medium"><span class="text-slate-400 mr-1 font-normal">By</span>Muzammil</span>
+          <span class="text-slate-400 mr-1 font-normal text-sm">1h ago</span>
+        </div>
+      </div>
+    </div>
+    <div class="card p-3 border-2 border-solid hover:border-gray-200 border-transparent duration-300 ease-in-out rounded-xl">
+      <div class="image">
+        <img src="https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg" alt="" class="rounded-2xl">
+      </div>
+      <div class="body">
+        <h3 class="py-2 font-semibold text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, odio.</h3>
+        <div class="lower flex items-center justify-between py-2">
+          <span class="text-sm font-medium"><span class="text-slate-400 mr-1 font-normal">By</span>Muzammil</span>
+          <span class="text-slate-400 mr-1 font-normal text-sm">1h ago</span>
+        </div>
+      </div>
+    </div>
+    <div class="card p-3 border-2 border-solid hover:border-gray-200 border-transparent duration-300 ease-in-out rounded-xl">
+      <div class="image">
+        <img src="https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg" alt="" class="rounded-2xl">
+      </div>
+      <div class="body">
+        <h3 class="py-2 font-semibold text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, odio.</h3>
+        <div class="lower flex items-center justify-between py-2">
+          <span class="text-sm font-medium"><span class="text-slate-400 mr-1 font-normal">By</span>Muzammil</span>
+          <span class="text-slate-400 mr-1 font-normal text-sm">1h ago</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 \`\`\`
 `
