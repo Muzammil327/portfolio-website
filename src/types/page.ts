@@ -29,10 +29,10 @@ export interface Pages {
 
 export interface portfolioProps {
   id?: number
-  para: string
+  para?: string
   name: string
-  liveLink: string
-  githubLink: string
+  liveLink?: string
+  githubLink?: string
   image: string
   imagealt: string
   link: string

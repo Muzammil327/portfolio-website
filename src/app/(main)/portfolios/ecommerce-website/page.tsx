@@ -92,8 +92,16 @@ export default function page() {
             <li className="py-2 text-lg">
               <strong>Catalogue:</strong> Optimizing product browsing through
               comprehensive catalog management, including advanced filtering and
-              sorting options based on various criteria such as price, catgeory,
+              sorting options based on various criteria such as price, category,
               and enhancing user navigation and satisfaction.
+            </li>
+            <li className="py-2 text-lg">
+              <strong>Product Review:</strong> Providing detailed product
+              reviews to help customers make informed decisions. This includes
+              user ratings, written feedback, and review summaries that
+              highlight the pros and cons of each product. Our review system
+              ensures authenticity and reliability, contributing to a better
+              shopping experience.
             </li>
             <li className="py-2 text-lg">
               <strong>Responsive Design:</strong> Ensuring that the entire
@@ -117,6 +125,7 @@ export default function page() {
             <SkillCard icon={<Typescript />} title="Typescript" />
             <SkillCard icon={<ReactJs />} title="React JS" />
             <SkillCard icon={<NextJs />} title="Next JS" />
+            <SkillCard icon={<NextJs />} title="Next JS API" />
             <SkillCard image="/nextAuth.png" title="Next Auth" />
           </div>
           <h2 className="md:text-2xl text-lg font-semibold py-1">Backend:</h2>
@@ -147,7 +156,11 @@ export default function page() {
             <SkillCard title="react-share" />
             <SkillCard title="swiper" />
             <SkillCard title="react-tagsinput" />
-            <SkillCard title="react-select" />
+            <SkillCard title="react-select" />{' '}
+            <SkillCard title="react-toastify" />
+            <SkillCard title="nodemailer" />
+            <SkillCard title="rc-rate" />
+            <SkillCard title="react-tabs" />
           </div>
         </Container>
       </section>

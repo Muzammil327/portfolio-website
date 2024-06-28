@@ -10,13 +10,16 @@ import Button from '@/src/components/ui/Button'
 import { Featured, Sections, Items, Pages } from '@/src/types/page'
 import { FaMoon } from 'react-icons/fa'
 import { useTheme } from 'next-themes'
+import Image from 'next/image'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolling, setScrolling] = useState(false)
 
   const { theme, setTheme } = useTheme()
-
+  function classNames(...classes: string[]) {
+    return classes.filter(Boolean).join(' ')
+  }
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -67,8 +70,8 @@ export default function Navbar() {
                   </Button>
                 </div>
 
-                <Tab.Group as="div" className="mt-24">
-                  {/* <div className="border-b border-gray-200">
+                <Tab.Group as="div" className="mt-4">
+                  <div className="border-b border-gray-200">
                     <Tab.List className="-mb-px flex space-x-8 px-4">
                       {navigation.categories.map((category) => (
                         <Tab
@@ -91,7 +94,7 @@ export default function Navbar() {
                     {navigation.categories.map((category) => (
                       <Tab.Panel
                         key={category.name}
-                        className="space-y-10 px-4 pb-8 pt-10"
+                        className="space-y-10 px-4 pb-8"
                       >
                         <div className="grid grid-cols-2 gap-x-4">
                           {category.featured.map((item: any) => (
@@ -154,7 +157,7 @@ export default function Navbar() {
                         ))}
                       </Tab.Panel>
                     ))}
-                  </Tab.Panels> */}
+                  </Tab.Panels>
                 </Tab.Group>
 
                 <div className="space-y-6 border-t border1 px-4 py-6">
@@ -206,7 +209,7 @@ export default function Navbar() {
                 >
                   Home
                 </Link>
-                {/*   {navigation.categories.map((category) => (
+                {navigation.categories.map((category) => (
                   <Popover key={category.name} className="flex">
                     {({ open, close }) => (
                       <>
@@ -316,7 +319,7 @@ export default function Navbar() {
                     )}
                   </Popover>
                 ))}
-*/}
+
                 {navigation.pages.map((page: Pages) => (
                   <Link
                     key={page.name}
@@ -369,65 +372,58 @@ const navigation = {
       id: 'components',
       name: 'Components',
       featured: [
-        {
-          name: 'New Arrivals',
-          href: '#',
-          imageSrc:
-            'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
-          imageAlt:
-            'Models sitting back to back, wearing Basic Tee in black and bone.',
-        },
-        {
-          name: 'Basic Tees',
-          href: '#',
-          imageSrc:
-            'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
-          imageAlt:
-            'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
-        },
+        // {
+        //   name: 'New Arrivals',
+        //   href: '#',
+        //   imageSrc:
+        //     'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
+        //   imageAlt:
+        //     'Models sitting back to back, wearing Basic Tee in black and bone.',
+        // },
+        // {
+        //   name: 'Basic Tees',
+        //   href: '#',
+        //   imageSrc:
+        //     'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
+        //   imageAlt:
+        //     'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+        // },
       ],
       sections: [
         {
-          id: 'clothing',
-          name: 'Clothing',
+          id: 'cards',
+          name: 'Cards',
           items: [
-            { name: 'Tops', href: '#' },
-            { name: 'Dresses', href: '#' },
-            { name: 'Pants', href: '#' },
-            { name: 'Denim', href: '#' },
-            { name: 'Sweaters', href: '#' },
-            { name: 'T-Shirts', href: '#' },
-            { name: 'Jackets', href: '#' },
-            { name: 'Activewear', href: '#' },
-            { name: 'Browse All', href: '#' },
+            { name: 'Blogs Card', href: '/components/card/blog' },
+            { name: 'Ecommerce Card', href: '/components/card/ecommerce' },
           ],
         },
-        {
-          id: 'accessories',
-          name: 'Accessories',
-          items: [
-            {
-              name: 'Watches',
-              href: '/catgeory/watches?category=women&subcategory=accessories',
-            },
-            { name: 'Wallets', href: '#' },
-            { name: 'Bags', href: '#' },
-            { name: 'Sunglasses', href: '#' },
-            { name: 'Hats', href: '#' },
-            { name: 'Belts', href: '#' },
-          ],
-        },
-        {
-          id: 'brands',
-          name: 'Brands',
-          items: [
-            { name: 'Full Nelson', href: '#' },
-            { name: 'My Way', href: '#' },
-            { name: 'Re-Arranged', href: '#' },
-            { name: 'Counterfeit', href: '#' },
-            { name: 'Significant Other', href: '#' },
-          ],
-        },
+        // {
+        //   id: 'accessories',
+        //   name: 'Accessories',
+        //   items: [
+        //     {
+        //       name: 'Watches',
+        //       href: '/catgeory/watches?category=women&subcategory=accessories',
+        //     },
+        //     { name: 'Wallets', href: '#' },
+        //     { name: 'Bags', href: '#' },
+        //     { name: 'Sunglasses', href: '#' },
+        //     { name: 'Hats', href: '#' },
+        //     { name: 'Belts', href: '#' },
+        //   ],
+        // },
+        // {
+        //   id: 'brands',
+        //   name: 'Brands',
+        //   items: [
+        //     { name: 'Full Nelson', href: '#' },
+        //     { name: 'My Way', href: '#' },
+        //     { name: 'Re-Arranged', href: '#' },
+        //     { name: 'Counterfeit', href: '#' },
+        //     { name: 'Significant Other', href: '#' },
+        //   ],
+        // },
       ],
     },
   ],

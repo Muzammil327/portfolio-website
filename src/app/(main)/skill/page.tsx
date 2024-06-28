@@ -88,9 +88,13 @@ export default function Skill() {
             <SkillCard title="react-slick" />
             <SkillCard title="react-toastify" />
             <SkillCard title="typewriter-effect" />
+            <SkillCard title="nodemailer" />
+            <SkillCard title="rc-rate" />
+            <SkillCard title="react-tabs" />
 
-            <SkillCard title="nodemailer" news />
+            <SkillCard title="crypto" news />
             <SkillCard title="render" news />
+            <SkillCard title="@tanstack/react-query" news />
           </div>
         </Container>
       </section>
