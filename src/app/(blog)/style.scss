@@ -1,11 +1,14 @@
 .prose {
     @apply tracking-wider leading-8;
+
     h1 {
         @apply text-2xl py-3 text-color2;
     }
+
     h2 {
         @apply text-2xl py-2 text-color2 border-y-[1px];
     }
+
     h3 {
         @apply text-xl py-2 text-color2;
     }
@@ -20,5 +23,74 @@
 
     a {
         @apply border-b-2 border-dotted border-color2 hover:border-solid duration-300 ease-in-out;
+    }
+
+    table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        table-layout: fixed;
+        @apply md:border-0 m-0 p-0 w-full my-3;
+
+        tr {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: .35em;
+        }
+
+        th,
+        td {
+            padding: .625em;
+            border-right: 1px solid #ddd;
+        }
+
+        th {
+            font-size: .85em;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            border-right: 1px solid #ddd;
+        }
+
+        @media screen and (max-width: 600px) {
+
+
+            thead {
+                border: none;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+
+            tr {
+                border-bottom: 3px solid #ddd;
+                display: block;
+                margin-bottom: .625em;
+            }
+
+            td {
+                border-bottom: 1px solid #ddd;
+                display: block;
+                font-size: .8em;
+                text-align: left;
+            }
+
+            td::before {
+                /*
+              * aria-label has no advantage, it won't be read inside a table
+              content: attr(aria-label);
+              */
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            td:last-child {
+                border-bottom: 0;
+            }
+        }
     }
 }

@@ -38,7 +38,6 @@ export interface portfolioProps {
   link: string
 }
 
-
 export interface PostCard {
   tagslug: string;
   authorslug: string;
