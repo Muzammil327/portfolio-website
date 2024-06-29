@@ -45,7 +45,7 @@ export interface PostCard {
   id:string,
   date:string,
   title:string,
-  slug:String,
+  slug:string,
   para:string,
   cat:string,
   author:string,
