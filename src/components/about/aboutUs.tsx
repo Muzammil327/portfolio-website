@@ -29,9 +29,9 @@ export default function AboutUs() {
                 width={720}
                 class_name="rounded-lg"
               />
-              <a id="play-video" className="video-play-button" href="#">
+              {/* <a id="play-video" className="video-play-button" href="#">
                 <span></span>
-              </a>
+              </a> */}
             </div>
             <p>
               As a dedicated MERN stack developer, I specialize in creating

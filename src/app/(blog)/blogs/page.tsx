@@ -1,4 +1,3 @@
-import MainHero from '@/src/components/hero/MainHero'
 import React from 'react'
 import type { Metadata } from 'next'
 import BlogView from '@/src/views/blogView'

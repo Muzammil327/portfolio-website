@@ -5,11 +5,12 @@ import ImageComp from '@/src/components/ui/Image'
 export interface Article {
   date: string
   title: string
-  slug: String
+  slug: string // Changed from String to string
   para: string
   cat: string
   image: string
 }
+
 interface Iprops {
   datas: Article
 }

@@ -5,7 +5,7 @@ import matter from "gray-matter";
 import { PostCard } from "@/src/types/page";
 
 const PostMetadata = async (): Promise<PostCard[]> => {
-  const baseFolder = "src/app/blogs";
+  const baseFolder = "src/app/(blog)/blogs";
 
   // Recursive function to get all Markdown files in a directory and its subdirectories
   const getAllMarkdownFiles = (dir: string): string[] => {

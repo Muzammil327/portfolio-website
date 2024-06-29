@@ -1,0 +1,24 @@
+.prose {
+    @apply tracking-wider leading-8;
+    h1 {
+        @apply text-2xl py-3 text-color2;
+    }
+    h2 {
+        @apply text-2xl py-2 text-color2 border-y-[1px];
+    }
+    h3 {
+        @apply text-xl py-2 text-color2;
+    }
+
+    ul {
+        @apply list-inside list-disc my-2;
+
+        li {
+            @apply py-2;
+        }
+    }
+
+    a {
+        @apply border-b-2 border-dotted border-color2 hover:border-solid duration-300 ease-in-out;
+    }
+}

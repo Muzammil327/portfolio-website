@@ -24,8 +24,8 @@ const getPostContent = (slug: string, directories: string[]) => {
 
 // Example usage
 const directories = [
-  'src/app/blogs/docs/cloudinary/',
-  'src/app/blogs/docs/reactjs/',
+  'src/app/(blog)/blogs/docs/css/',
+  'src/app/(blog)/blogs/docs/database/',
 ]
 const PostPage = (props: any) => {
   const slug = props.params.slug
@@ -41,7 +41,7 @@ const PostPage = (props: any) => {
         <Container>
           <div className="grid lg:grid-cols-8 grid-cols-1 lg:gap-6">
             <div className="md:col-span-6">
-              <div className="my-6">
+              <div className="mt-2">
                 <ImageComp
                   imageName={post?.data.image}
                   alt={post?.data.title}
