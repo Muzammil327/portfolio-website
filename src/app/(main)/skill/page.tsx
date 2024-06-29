@@ -22,6 +22,7 @@ import Graphql from '@/src/components/svg/graphql'
 import Redux from '@/src/components/svg/redux'
 import PostgreSQL from '@/src/components/svg/postgresql'
 import Cloudinary from '@/src/components/svg/cloudinary'
+import { FaMarkdown } from 'react-icons/fa'
 
 const data = {
   title: 'My Skills || Muzammil Portfolio',
@@ -65,6 +66,7 @@ export default function Skill() {
             <SkillCard image="/nextAuth.png" title="Next Auth" />
             <SkillCard icon={<Vercel />} title="Vercel" />
             <SkillCard icon={<Cloudinary />} title="Cloudinary" />
+            <SkillCard icon={<FaMarkdown size={45} />} title="Markdown" />
             <SkillCard icon={<Graphql />} title="Graphql" news />
             <SkillCard icon={<ReactJs />} title="React Native" news />
             <SkillCard icon={<AWS />} title="AWS" news />
