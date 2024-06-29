@@ -9,9 +9,9 @@ export const brands_data: brandsProps[] = [
   },
   {
     id: 1,
-    name: 'Ecommerce Website',
+    name: 'Code Dev Blog',
     liveLink: '',
-    image: '/brands/smi-logo.webp',
+    image: '/brands/code-dev.png',
   },
   {
     id: 2,
