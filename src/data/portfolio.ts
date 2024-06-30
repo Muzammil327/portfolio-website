@@ -34,7 +34,7 @@ export const portfolio_data: portfolioProps[] = [
   {
     id: 3,
     name: 'Messaging Website (Coming Soon)',
-    para: 'Explore my ecommerce website, where I have combined design flair with functionality to create a online shopping experience. This project showcases my ability to build scalable and user-friendly ecommerce platforms.',
+    para: '',
     liveLink: '/',
     githubLink: '/',
     image: '/projects/blog-website.png',
@@ -44,7 +44,7 @@ export const portfolio_data: portfolioProps[] = [
   {
     id: 4,
     name: 'Ecommerce Mobile Application (Coming Soon)',
-    para: 'Explore my ecommerce website, where I have combined design flair with functionality to create a online shopping experience. This project showcases my ability to build scalable and user-friendly ecommerce platforms.',
+    para: '',
     liveLink: '/',
     githubLink: '/',
     image: '/projects/blog-website.png',
