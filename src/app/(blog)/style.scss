@@ -93,4 +93,11 @@
             }
         }
     }
+
+    pre {
+        @apply bg-slate-200 rounded-md p-3;
+    }
+    code {
+        @apply bg-slate-200 px-2 py-1 rounded-md;
+    }
 }
