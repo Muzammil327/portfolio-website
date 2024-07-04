@@ -7,6 +7,23 @@ import Social from '@/src/components/ui/Social'
 import ImageComp from '../ui/Image'
 
 export default function HomeHero() {
+  const handleDownload = () => {
+    const pdfUrl = '/MUHAMMAD MUZAMMIL SAFDAR NEXTJS  Typescript  MERN STACK Developer.pdf'; // Replace with your actual file path
+
+    // Create an anchor element
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'muhamad-muzammil-safdar.pdf'; // Specify the file name
+
+    // Append to the document body (necessary for Firefox)
+    document.body.appendChild(link);
+
+    // Programmatically click the link to trigger the download
+    link.click();
+
+    // Remove the link from the document
+    document.body.removeChild(link);
+  };
   return (
     <section className="bg-hero-2 relative">
       <Container>
@@ -43,7 +60,7 @@ export default function HomeHero() {
               efficient, scalable, and user-friendly web applications.
             </p>
             <div className="mt-6 flex sm:flex-row flex-col items-center lg:justify-start justify-center gap-4">
-              <Button className="btnIcon px-12 duration-300 ease-in rounded-full flex gap-2 items-center">
+              <Button onClick={handleDownload} className="btnIcon px-12 duration-300 ease-in rounded-full flex gap-2 items-center">
                 Download CV <FaCloudDownloadAlt size={20} />
               </Button>
               <Social />
