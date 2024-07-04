@@ -14,13 +14,13 @@ const ThemeSwitcher = ({ children }: Props) => {
     setMounted(true)
   }, [])
 
-  // if (!mounted) {
-  //   return <>{children}</>
-  // }
+  if (!mounted) {
+    return null  // Render nothing on the server
+  }
 
   return (
     <ThemeProvider enableSystem={true} attribute="class">
-      {mounted ? children : <div className="dark">{children}</div>}
+      {children}
     </ThemeProvider>
   )
 }
