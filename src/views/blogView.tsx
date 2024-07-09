@@ -7,7 +7,7 @@ import MainHero from '@/src/components/hero/MainHero'
 
 export default async function BlogView() {
   const postMetadata = await PostMetadata()
- 
+
   return (
     <>
       <header className="bg-hero">
@@ -17,9 +17,11 @@ export default async function BlogView() {
       <section className="py-10 px-3">
         <Container>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 md:gap-4 gap-2 items-center">
-            {postMetadata.map((data: PostCard) => (
-              <BlogCard datas={data} key={data.title} />
-            ))}
+            {postMetadata
+              .sort((a: any, b: any) => parseInt(a.id) - parseInt(b.id))
+              .map((data: PostCard) => (
+                <BlogCard datas={data} key={data.id} />
+              ))}
           </div>
         </Container>
       </section>

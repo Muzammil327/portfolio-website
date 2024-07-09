@@ -7,6 +7,7 @@ export default function Expressjs() {
         fill="#000000"
         width="60px"
         height="60px"
+        className="mx-auto"
         viewBox="0 0 24 24"
         role="img"
         xmlns="http://www.w3.org/2000/svg"

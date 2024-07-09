@@ -6,6 +6,7 @@ export default function Cloudinary() {
       <svg
         width="60px"
         height="60px"
+        className="mx-auto"
         viewBox="0 -44 256 256"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"

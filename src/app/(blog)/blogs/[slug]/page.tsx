@@ -24,9 +24,15 @@ const getPostContent = (slug: string, directories: string[]) => {
 
 // Example usage
 const directories = [
-  'src/app/(blog)/blogs/docs/css/',
-  'src/app/(blog)/blogs/docs/js/',
-  'src/app/(blog)/blogs/docs/database/',
+  'src/app/(blog)/blogs/docs/mobile/',
+  'src/app/(blog)/blogs/docs/tools/',
+  'src/app/(blog)/blogs/docs/backend/',
+  'src/app/(blog)/blogs/docs/backend/database/',
+  'src/app/(blog)/blogs/docs/frontend/',
+  'src/app/(blog)/blogs/docs/frontend/styling/',
+  'src/app/(blog)/blogs/docs/frontend/structure/',
+  'src/app/(blog)/blogs/docs/frontend/animation/',
+  'src/app/(blog)/blogs/docs/frontend/api/',
 ]
 const PostPage = (props: any) => {
   const slug = props.params.slug

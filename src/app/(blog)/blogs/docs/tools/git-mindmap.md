@@ -1,4 +1,5 @@
 ---
+id: 7,
 title: 'Git Mindmap.'
 para: 'After follow these steps, you can get master on git beginner to master level.'
 date: '7-02-2024'

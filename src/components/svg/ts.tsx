@@ -7,6 +7,7 @@ export default function Typescript() {
         width="60px"
         height="60px"
         viewBox="0 0 256 256"
+        className='mx-auto'
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="xMidYMid"

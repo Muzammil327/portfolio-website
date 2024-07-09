@@ -1,4 +1,5 @@
 ---
+id: 17,
 title: 'MongoDB Mindmap.'
 para: 'After follow these steps, you can get master on mongodb beginner to master level.'
 date: '29-06-2024'

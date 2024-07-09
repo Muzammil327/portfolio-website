@@ -23,6 +23,9 @@ import Redux from '@/src/components/svg/redux'
 import PostgreSQL from '@/src/components/svg/postgresql'
 import Cloudinary from '@/src/components/svg/cloudinary'
 import { FaMarkdown } from 'react-icons/fa'
+import Postman from '@/src/components/svg/postman'
+import Firebase from '@/src/components/svg/firebase'
+import VScode from '@/src/components/svg/vscode'
 
 const data = {
   title: 'My Skills || Muzammil Portfolio',
@@ -46,34 +49,189 @@ export default function Skill() {
   return (
     <>
       <MainHero head="My Skills" para="" />
+
       <section>
         <Container>
+          <h2 className="md:text-2xl text-lg font-semibold py-1">
+            Website Structure
+          </h2>
           <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 sm:py-6">
-            <SkillCard icon={<HTML5 />} title="HTML5" />
-            <SkillCard icon={<CSS3 />} title="CSS3" />
-            <SkillCard icon={<SCSS />} title="SCSS" />
-            <SkillCard icon={<TailwindCSS />} title="Tailwind CSS" />
-            <SkillCard icon={<Javascript />} title="Javascript" />
-            <SkillCard icon={<Typescript />} title="Typescript" />
-            <SkillCard icon={<ReactJs />} title="React JS" />
-            <SkillCard icon={<Redux />} title="Redux" />
-            <SkillCard icon={<NextJs />} title="Next JS" />
-            <SkillCard icon={<Git />} title="Git" />
-            <SkillCard icon={<Github />} title="Github" />
-            <SkillCard icon={<Nodejs />} title="Node JS" />
-            <SkillCard icon={<Expressjs />} title="Express JS" />
-            <SkillCard icon={<Mongodb />} title="Mongo DB" />
-            <SkillCard image="/nextAuth.png" title="Next Auth" />
-            <SkillCard icon={<Vercel />} title="Vercel" />
-            <SkillCard icon={<Cloudinary />} title="Cloudinary" />
-            <SkillCard icon={<FaMarkdown size={45} />} title="Markdown" />
-            <SkillCard icon={<Graphql />} title="Graphql" news />
-            <SkillCard icon={<ReactJs />} title="React Native" news />
-            <SkillCard icon={<AWS />} title="AWS" news />
-            <SkillCard icon={<PostgreSQL />} title="Postgre SQL" news />
+            <SkillCard
+              icon={<HTML5 />}
+              title="HTML5"
+              slug="/blogs/html-mindmap/"
+            />
           </div>
         </Container>
       </section>
+
+      <section>
+        <Container>
+          <h2 className="md:text-2xl text-lg font-semibold py-1">
+            Website Styling and Framework
+          </h2>
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 sm:py-6">
+            <SkillCard
+              icon={<CSS3 />}
+              title="CSS3"
+              slug="/blogs/css-mindmap/"
+            />
+            <SkillCard
+              icon={<SCSS />}
+              title="SCSS"
+              slug="/blogs/scss-mindmap/"
+            />
+            <SkillCard
+              icon={<TailwindCSS />}
+              title="Tailwind CSS"
+              slug="/blogs/tailwind-css-mindmap/"
+            />
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <h2 className="md:text-2xl text-lg font-semibold py-1">
+            Website Programing Language and Framework
+          </h2>
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 sm:py-6">
+            <SkillCard
+              icon={<Javascript />}
+              title="Javascript"
+              slug="/blogs/javascript-mindmap/"
+            />
+            <SkillCard
+              icon={<Typescript />}
+              title="Typescript"
+              slug="/blogs/typescript-mindmap/"
+            />
+            <SkillCard
+              icon={<ReactJs />}
+              title="React JS"
+              slug="/blogs/reactjs-mindmap/"
+            />
+            <SkillCard
+              icon={<NextJs />}
+              title="Next JS"
+              slug="/blogs/nextjs-mindmap/"
+            />
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <h2 className="md:text-2xl text-lg font-semibold py-1">
+            State Management
+          </h2>
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 sm:py-6">
+            <SkillCard icon={<Redux />} title="Redux" slug="/" />
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <h2 className="md:text-2xl text-lg font-semibold py-1">
+            Authentication
+          </h2>
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 sm:py-6">
+            <SkillCard image="/nextAuth.png" title="Next Auth" slug="/" />
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <h2 className="md:text-2xl text-lg font-semibold py-1">
+            Backend and Framework
+          </h2>
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 sm:py-6">
+            <SkillCard icon={<Nodejs />} title="Node JS" slug="/" />
+            <SkillCard icon={<Expressjs />} title="Express JS" slug="/" />{' '}
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <h2 className="md:text-2xl text-lg font-semibold py-1">Database</h2>
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 sm:py-6">
+            <SkillCard icon={<Mongodb />} title="Mongo DB" slug="/" />
+            <SkillCard
+              icon={<PostgreSQL />}
+              title="Postgre SQL"
+              slug="/"
+              news
+            />
+            <SkillCard icon={<Firebase />} title="Firebase" slug="/" news />
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <h2 className="md:text-2xl text-lg font-semibold py-1">Mobile</h2>
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 sm:py-6">
+            <SkillCard icon={<ReactJs />} title="React Native" slug="/" news />
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <h2 className="md:text-2xl text-lg font-semibold py-1">APIS</h2>
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 sm:py-6">
+            <SkillCard icon={<Graphql />} title="Rest" />
+            <SkillCard icon={<Graphql />} title="Graphql" news />
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <h2 className="md:text-2xl text-lg font-semibold py-1">Tools</h2>
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 sm:py-6">
+            <SkillCard
+              icon={<VScode />}
+              title="VScode"
+              slug="https://github.com/Muzammil327/portfolio-website/tree/main/src/learning/vscode_README.md"
+            />
+            <SkillCard icon={<Git />} title="Git" slug="/blogs/git-mindmap/" />
+            <SkillCard
+              icon={<Github />}
+              title="Github"
+              slug="/blogs/git-mindmap/"
+            />
+            <SkillCard
+              icon={<FaMarkdown size={45} className="mx-auto" />}
+              title="Markdown"
+            />
+            <SkillCard icon={<Cloudinary />} title="Cloudinary" />
+            <SkillCard icon={<Postman />} title="Postman" />
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <h2 className="md:text-2xl text-lg font-semibold py-1">Deployment</h2>
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 sm:py-6">
+            <SkillCard icon={<Vercel />} title="Vercel" slug="/blogs/" />
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <h2 className="md:text-2xl text-lg font-semibold py-1">Cloud</h2>
+          <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5 sm:py-6">
+            <SkillCard icon={<AWS />} title="AWS" news slug="/" />
+          </div>
+        </Container>
+      </section>
+
       <section>
         <Container>
           <h2 className="md:text-2xl text-lg font-semibold py-1">Packages</h2>

@@ -1,4 +1,5 @@
 ---
+id: 4,
 title: 'SCSS Mindmap.'
 para: 'After follow these steps, you can get master on SCSS beginner to master level.'
 date: '7-02-2024'

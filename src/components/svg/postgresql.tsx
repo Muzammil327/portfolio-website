@@ -4,8 +4,9 @@ export default function PostgreSQL() {
   return (
     <>
       <svg
-        width="60px"
-        height="60px"
+       width="60px"
+       height="60px"
+       className="mx-auto"
         viewBox="-4 0 264 264"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"

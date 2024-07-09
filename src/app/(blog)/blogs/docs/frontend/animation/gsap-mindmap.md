@@ -1,5 +1,6 @@
 ---
-title: 'Framer Motion Mindmap.'
+id: 14,
+title: 'GSAP Mindmap.'
 para: 'After follow these steps, you can get master on Framer Motion beginner to master level.'
 date: '3-07-2024'
 cat: 'Framer Motion'

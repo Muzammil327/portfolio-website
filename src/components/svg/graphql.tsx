@@ -4,8 +4,9 @@ export default function Graphql() {
   return (
     <>
       <svg
-        width="60px"
-        height="60px"
+       width="60px"
+       height="60px"
+       className="mx-auto"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
       >

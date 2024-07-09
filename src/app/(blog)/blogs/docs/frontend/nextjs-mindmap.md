@@ -1,4 +1,5 @@
 ---
+id: 10,
 title: 'Next JS Mindmap.'
 para: 'After follow these steps, you can get master on Next JS beginner to master level.'
 date: '3-07-2024'

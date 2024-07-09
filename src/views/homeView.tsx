@@ -129,7 +129,7 @@ export default async function HomeView() {
         <Container>
           <Heading subhead={'DAILY UPDATE'} head={'Latest News & Blogs'} />
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 md:gap-4 gap-2 items-center">
-            {postMetadata.slice(0, 3).map((data: any) => (
+            {postMetadata.slice(0, 6).map((data: any) => (
               <BlogCard datas={data} key={data.title} />
             ))}
           </div>
