@@ -1,5 +1,5 @@
 ---
-id: 6,
+id: 5,
 title: 'Javascript Mindmap.'
 para: 'After follow these steps, you can get master on Javascript beginner to master level.'
 date: '7-02-2024'

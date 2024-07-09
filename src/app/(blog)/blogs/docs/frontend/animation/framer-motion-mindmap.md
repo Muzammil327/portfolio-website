@@ -1,5 +1,5 @@
 ---
-id: 13,
+id: 10,
 title: 'Framer Motion Mindmap.'
 para: 'After follow these steps, you can get master on Framer Motion beginner to master level.'
 date: '3-07-2024'

@@ -1,10 +1,10 @@
 ---
-id: 21,
+id: 12,
 title: 'Graphql Mindmap.'
 para: 'After follow these steps, you can get master on mongodb beginner to master level.'
 date: '29-06-2024'
 cat: 'MongoDB'
-image: '/blog/mongodb.png'
+image: '/blog/GRAPHQL.png'
 keyword:
   [
     'Mongodb',

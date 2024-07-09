@@ -1,5 +1,5 @@
 import Container from '@/src/components/ui/Container'
-import BlogCard from '@/src/components/blog/blogCard'
+import { BlogCard1 } from '@/src/components/blog/blogCard'
 import PostMetadata from '../components/blog/PostMetadata'
 import { PostCard } from '../types/page'
 import Navbar from '../components/layout/navbar/page'
@@ -20,7 +20,7 @@ export default async function BlogView() {
             {postMetadata
               .sort((a: any, b: any) => parseInt(a.id) - parseInt(b.id))
               .map((data: PostCard) => (
-                <BlogCard datas={data} key={data.id} />
+                <BlogCard1 datas={data} key={data.id} />
               ))}
           </div>
         </Container>

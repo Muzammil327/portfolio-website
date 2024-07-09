@@ -1,5 +1,5 @@
 ---
-id: 3,
+id: 2,
 title: 'CSS Mindmap.'
 para: 'After follow these steps, you can get master on CSS beginner to master level.'
 date: '3-07-2024'

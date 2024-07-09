@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Navbar from '@/src/components/layout/navbar/page'
 import Container from '@/src/components/ui/Container'
 import Heading from '@/src/components/ui/Heading'
-import BlogCard from '@/src/components/blog/blogCard'
+import { BlogCard2 } from '@/src/components/blog/blogCard'
 import Button from '@/src/components/ui/Button'
 import { FaArrowRight } from 'react-icons/fa'
 import PortfolioHomeCard from '@/src/components/portfolio/portfolioHomeCard'
@@ -130,7 +130,7 @@ export default async function HomeView() {
           <Heading subhead={'DAILY UPDATE'} head={'Latest News & Blogs'} />
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 md:gap-4 gap-2 items-center">
             {postMetadata.slice(0, 6).map((data: any) => (
-              <BlogCard datas={data} key={data.title} />
+              <BlogCard2 datas={data} key={data.title} />
             ))}
           </div>
         </Container>

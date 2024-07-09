@@ -1,5 +1,5 @@
 ---
-id: 8,
+id: 6,
 title: 'Typescript Mindmap.'
 para: 'After follow these steps, you can get master on Typescript beginner to master level.'
 date: '7-02-2024'

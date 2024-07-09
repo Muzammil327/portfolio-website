@@ -1,5 +1,5 @@
 ---
-id: 9,
+id: 7,
 title: 'React JS Mindmap.'
 para: 'After follow these steps, you can get master on React JS beginner to master level.'
 date: '3-07-2024'
