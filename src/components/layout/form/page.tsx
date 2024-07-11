@@ -14,6 +14,7 @@ import Container from '../../ui/Container'
 import { brandsProps } from '@/src/types/page'
 import { brands_data } from '@/src/data/brand'
 import ImageComp from '../../ui/Image'
+import { motion } from 'framer-motion'
 
 export default function ContactForm() {
   const { systemTheme, theme, setTheme } = useTheme()
@@ -97,39 +98,172 @@ export default function ContactForm() {
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
           <div className="left lg:pt-24 lg:pb-0 py-8">
             <div className="mr-6 relative">
-              <span className="text-color2 font-medium text-base">
+              <motion.span
+                className="text-color2 font-medium text-base"
+                initial={{ y: '50%', opacity: 0 }}
+                whileInView={{
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.5,
+                    duration: 0.8,
+                  },
+                }}
+              >
                 Stay Connected
-              </span>
-              <h3 className="my-4 text font-bold lg:text-3xl text-2xl">
+              </motion.span>
+              <motion.h3
+                className="my-4 text font-bold lg:text-3xl text-2xl"
+                initial={{ y: '50%', opacity: 0 }}
+                whileInView={{
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.5,
+                    duration: 0.8,
+                  },
+                }}
+              >
                 Let’s Work Together!
-              </h3>
+              </motion.h3>
             </div>
             <div className="contact">
               <div className="phone mt-5 flex gap-6">
-                <div className="icon btnIcon !py-3 !px-4">
+                <motion.div
+                  className="icon btnIcon !py-3 !px-4"
+                  initial={{ rotate: 360, opacity: 0 }}
+                  whileInView={{
+                    rotate: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.7,
+                      duration: 0.8,
+                    },
+                  }}
+                >
                   <FaPhone size={16} />
-                </div>
+                </motion.div>
                 <div className="body flex flex-col">
-                  <span className="text-gray-400">Phone</span>
-                  <span className="text">0314 4878266</span>
+                  <motion.span
+                    className="text-gray-400"
+                    initial={{ y: '50%', opacity: 0 }}
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        delay: 0.6,
+                        duration: 0.8,
+                      },
+                    }}
+                  >
+                    Phone
+                  </motion.span>
+                  <motion.span
+                    className="text"
+                    initial={{ y: '50%', opacity: 0 }}
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        delay: 0.7,
+                        duration: 0.8,
+                      },
+                    }}
+                  >
+                    0314 4878266
+                  </motion.span>
                 </div>
               </div>
               <div className="phone mt-7 flex gap-6">
-                <div className="icon btnIcon !py-3 !px-4">
+                <motion.div
+                  className="icon btnIcon !py-3 !px-4"
+                  initial={{ rotate: 360, opacity: 0 }}
+                  whileInView={{
+                    rotate: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.7,
+                      duration: 0.8,
+                    },
+                  }}
+                >
                   <FaEnvelope size={16} />
-                </div>
+                </motion.div>
                 <div className="body flex flex-col">
-                  <span className="text-gray-400">Email</span>
-                  <span className="text">mmuzammil327off@gmail.com</span>
+                  <motion.span
+                    className="text-gray-400"
+                    initial={{ y: '50%', opacity: 0 }}
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        delay: 0.6,
+                        duration: 0.8,
+                      },
+                    }}
+                  >
+                    Email
+                  </motion.span>
+                  <motion.span
+                    className="text"
+                    initial={{ y: '50%', opacity: 0 }}
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        delay: 0.7,
+                        duration: 0.8,
+                      },
+                    }}
+                  >
+                    mmuzammil327off@gmail.com
+                  </motion.span>
                 </div>
               </div>
               <div className="phone mt-7 flex gap-6">
-                <div className="icon btnIcon !py-3 !px-4">
+                <motion.div
+                  className="icon btnIcon !py-3 !px-4"
+                  initial={{ rotate: 360, opacity: 0 }}
+                  whileInView={{
+                    rotate: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.7,
+                      duration: 0.8,
+                    },
+                  }}
+                >
                   <FaLocationArrow size={16} />
-                </div>
+                </motion.div>
                 <div className="body flex flex-col">
-                  <span className="text-gray-400">Address</span>
-                  <span className="text">Faisalbad, Punjab, Pakistan</span>
+                  <motion.span
+                    className="text-gray-400"
+                    initial={{ y: '50%', opacity: 0 }}
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        delay: 0.6,
+                        duration: 0.8,
+                      },
+                    }}
+                  >
+                    Address
+                  </motion.span>
+                  <motion.span
+                    className="text"
+                    initial={{ y: '50%', opacity: 0 }}
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        delay: 0.7,
+                        duration: 0.8,
+                      },
+                    }}
+                  >
+                    Faisalbad, Punjab, Pakistan
+                  </motion.span>
                 </div>
               </div>
             </div>
@@ -138,13 +272,33 @@ export default function ContactForm() {
             <div className="absolute inset-0 bg-color2 opacity-60 rounded-md z-0"></div>
             <div className="relative z-10">
               <div className="text-center my-4">
-                <h2 className="text-white md:text-2xl text-xl mb-6 font-bold">
+                <motion.h2
+                  className="text-white md:text-2xl text-xl mb-6 font-bold"
+                  initial={{ y: '-50%', opacity: 0 }}
+                  whileInView={{
+                    y: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.7,
+                      duration: 0.8,
+                    },
+                  }}
+                >
                   Contact Us for Any Information
-                </h2>
+                </motion.h2>
               </div>
               <form onSubmit={SubmitHandle}>
                 <div className="grid md:grid-cols-2 gap-5 grid-cols-1">
-                  <input
+                  <motion.input
+                    initial={{ x: '-50%', opacity: 0 }}
+                    whileInView={{
+                      x: 0,
+                      opacity: 1,
+                      transition: {
+                        delay: 0.4,
+                        duration: 0.8,
+                      },
+                    }}
                     type="text"
                     className={styles.textArea}
                     placeholder="First name"
@@ -153,7 +307,7 @@ export default function ContactForm() {
                       setData({ ...data, fname: e.target.value })
                     }
                   />
-                  <input
+                  <motion.input
                     type="text"
                     value={data.lname}
                     onChange={(e) =>
@@ -161,10 +315,19 @@ export default function ContactForm() {
                     }
                     className={styles.textArea}
                     placeholder="Last name"
+                    initial={{ x: '50%', opacity: 0 }}
+                    whileInView={{
+                      x: 0,
+                      opacity: 1,
+                      transition: {
+                        delay: 0.6,
+                        duration: 0.8,
+                      },
+                    }}
                   />
                 </div>
                 <div className="grid md:grid-cols-2 gap-5 grid-cols-1">
-                  <input
+                  <motion.input
                     type="email"
                     className={styles.textArea}
                     value={data.email}
@@ -172,8 +335,17 @@ export default function ContactForm() {
                       setData({ ...data, email: e.target.value })
                     }
                     placeholder="Email"
+                    initial={{ x: '-50%', opacity: 0 }}
+                    whileInView={{
+                      x: 0,
+                      opacity: 1,
+                      transition: {
+                        delay: 0.7,
+                        duration: 0.8,
+                      },
+                    }}
                   />
-                  <input
+                  <motion.input
                     type="tel"
                     className={styles.textArea}
                     placeholder="Phone"
@@ -181,9 +353,18 @@ export default function ContactForm() {
                     onChange={(e) =>
                       setData({ ...data, phone: e.target.value })
                     }
+                    initial={{ x: '50%', opacity: 0 }}
+                    whileInView={{
+                      x: 0,
+                      opacity: 1,
+                      transition: {
+                        delay: 0.7,
+                        duration: 0.8,
+                      },
+                    }}
                   />
                 </div>
-                <textarea
+                <motion.textarea
                   placeholder="Your Message"
                   maxLength={5000}
                   className={`min-h-[160px] ${styles.textArea}`}
@@ -191,10 +372,30 @@ export default function ContactForm() {
                   onChange={(e) =>
                     setData({ ...data, message: e.target.value })
                   }
+                  initial={{ y: '50%', opacity: 0 }}
+                  whileInView={{
+                    y: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.7,
+                      duration: 0.8,
+                    },
+                  }}
                 />
-                <button className="btnIcon block w-full !py-4 duration-300 ease-in-out">
+                <motion.button
+                  className="btnIcon block w-full !py-4 duration-300 ease-in-out"
+                  initial={{ rotate: 180, opacity: 0 }}
+                  whileInView={{
+                    rotate: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.7,
+                      duration: 0.8,
+                    },
+                  }}
+                >
                   Submit
-                </button>
+                </motion.button>
               </form>
             </div>
           </div>

@@ -2,7 +2,7 @@
 id: 10,
 title: 'Framer Motion Mindmap.'
 para: 'After follow these steps, you can get master on Framer Motion beginner to master level.'
-date: '3-07-2024'
+date: 11-07-2024'
 cat: 'Framer Motion'
 image: '/blog/FramerMotion.webp'
 keyword:
@@ -20,6 +20,27 @@ keyword:
 
 ```bash
 npm install framer-motion
+```
+
+## Initial Property
+
+```bash
+- opacity: 0  // 0 to 1
+- x: "%"
+- y: "%"
+- scale: 
+- rotate: 
+```
+
+## Animate Property
+
+```bash
+- opacity: 0  // 0 to 1
+- x: 0
+- y: 0
+- transition: {delay,duration}
+- scale: 
+- rotate: 
 ```
 
 ### Resorces

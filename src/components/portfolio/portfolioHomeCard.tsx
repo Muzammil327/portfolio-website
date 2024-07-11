@@ -10,6 +10,7 @@ import Heading from '../ui/Heading'
 import PortfolioCard from './portfolioCard'
 import { portfolioProps } from '@/src/types/page'
 import { portfolio_data } from '@/src/data/portfolio'
+import { motion } from 'framer-motion'
 
 export default function PortfolioHomeCard() {
   var settings = {
@@ -37,15 +38,27 @@ export default function PortfolioHomeCard() {
       },
     ],
   }
+
   return (
-    <section className="md:py-10">
+    <section className="py-20">
       <Container>
         <Heading subhead={'Portfolio'} head={'See My Recent Projects'} />
         <div className="">
           <Slider {...settings}>
             {portfolio_data.map((data: portfolioProps) => {
               return (
-                <div key={data.id}>
+                <motion.div
+                  key={data.id}
+                  initial={{ y: '40%', opacity: 0 }}
+                  whileInView={{
+                    y: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.6,
+                      duration: 0.5,
+                    },
+                  }}
+                >
                   <PortfolioCard
                     para={data.para}
                     name={data.name}
@@ -55,13 +68,24 @@ export default function PortfolioHomeCard() {
                     imagealt={data.imagealt}
                     link={data.link}
                   />
-                </div>
+                </motion.div>
               )
             })}
           </Slider>
         </div>
       </Container>
-      <div className="flex items-center justify-center my-8">
+      <motion.div
+        className="flex items-center justify-center my-8"
+        initial={{ x: '40%', opacity: 0 }}
+        whileInView={{
+          x: 0,
+          opacity: 1,
+          transition: {
+            delay: 0.7,
+            duration: 0.8,
+          },
+        }}
+      >
         <Link href="/portfolios">
           <Button className="btnIcon px-10 gap-2 duration-300 ease-in-out">
             View All Projects
@@ -70,7 +94,7 @@ export default function PortfolioHomeCard() {
             </span>
           </Button>
         </Link>
-      </div>
+      </motion.div>
     </section>
   )
 }

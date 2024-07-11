@@ -1,6 +1,8 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export default function SkillCard({
   icon,
@@ -16,7 +18,18 @@ export default function SkillCard({
   news?: boolean
 }) {
   return (
-    <div className="relative sm:py-10 py-2 bg-blue-50 dark:bg-gray-900 border border-solid border-gray-200 dark:border-gray-700 rounded-lg flex items-center justify-center flex-col">
+    <motion.div
+      className="relative sm:py-10 py-2 bg-blue-50 dark:bg-gray-900 border border-solid border-gray-200 dark:border-gray-700 rounded-lg flex items-center justify-center flex-col"
+      initial={{ y: '40%', opacity: 0 }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: {
+          delay: 0.7,
+          duration: 0.8,
+        },
+      }}
+    >
       <Link href={`${slug}`}>
         {icon && <div className="icon sm:my-5 mt-7 mb-3">{icon}</div>}
         {image && (
@@ -41,6 +54,6 @@ export default function SkillCard({
         ) : null}
         <div className="text font-semibold text-lg">{title}</div>
       </Link>
-    </div>
+    </motion.div>
   )
 }

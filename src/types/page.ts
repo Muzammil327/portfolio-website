@@ -19,6 +19,7 @@ export interface Sections {
   items: Items[]
 }
 export interface Pages {
+  delay: number
   name: string
   href: string
 }

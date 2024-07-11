@@ -1,3 +1,6 @@
+'use client'
+import { motion } from 'framer-motion'
+
 interface Iprops {
   head: string
   subhead: string
@@ -7,13 +10,34 @@ export default function Heading({ head, subhead }: Iprops) {
   return (
     <>
       <div className="text-center my-20 mr-6 relative">
-        {/* <div className="flex items-center justify-center">
-          <span className="text xl:text-[5rem] text-[3rem] absolute xl:-top-20 md:-top-12 sm:-top-20 -top-16 opacity-5">
-            {subhead}
-          </span>
-        </div> */}
-        <span className="text-color2 font-medium text-base">{subhead}</span>
-        <h3 className="my-4 text font-bold lg:text-3xl text-2xl">{head}</h3>
+        <motion.span
+          className="text-color2 font-medium text-base"
+          initial={{ y: '100%', opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.6,
+              duration: 0.5,
+            },
+          }}
+        >
+          {subhead}
+        </motion.span>
+        <motion.h3
+          className="my-4 text font-bold lg:text-3xl text-2xl"
+          initial={{ y: '100%', opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.8,
+              duration: 0.5,
+            },
+          }}
+        >
+          {head}
+        </motion.h3>
       </div>
     </>
   )

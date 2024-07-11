@@ -7,10 +7,10 @@ import { FaBars, FaSun, FaTimes } from 'react-icons/fa'
 import Container from '@/src/components/ui/Container'
 import Logo from '@/src/components/ui/Logo'
 import Button from '@/src/components/ui/Button'
-import { Featured, Sections, Items, Pages } from '@/src/types/page'
+import { Sections, Items, Pages } from '@/src/types/page'
 import { FaMoon } from 'react-icons/fa'
 import { useTheme } from 'next-themes'
-import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -96,38 +96,6 @@ export default function Navbar() {
                         key={category.name}
                         className="space-y-10 px-4 pb-8"
                       >
-                        <div className="grid grid-cols-2 gap-x-4">
-                          {category.featured.map((item: any) => (
-                            <div
-                              key={item.name}
-                              className="group relative text-sm"
-                            >
-                              <div>
-                                <Image
-                                  src={item.imageSrc}
-                                  alt={item.imageAlt}
-                                  className="object-cover object-center"
-                                  height={500}
-                                  width={500}
-                                />
-                              </div>
-                              <Link
-                                href={item.href}
-                                className="mt-6 block font-medium"
-                                onClick={() => setOpen(false)}
-                              >
-                                <span
-                                  className="absolute inset-0 z-10 link"
-                                  aria-hidden="true"
-                                />
-                                {item.name}
-                              </Link>
-                              <p aria-hidden="true" className="mt-1">
-                                Shop now
-                              </p>
-                            </div>
-                          ))}
-                        </div>
                         {category.sections.map((section: any) => (
                           <div key={section.name}>
                             <p
@@ -203,17 +171,38 @@ export default function Navbar() {
             {/* Flyout menus */}
             <Popover.Group className="hidden lg:ml-24 lg:block lg:self-stretch">
               <div className="flex h-full space-x-8">
-                <Link
-                  href="/"
-                  className="flex items-center text-sm font-medium link"
+                <motion.div
+                  initial={{ y: '100%', opacity: 0 }}
+                  whileInView={{
+                    y: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.4,
+                      duration: 0.8,
+                    },
+                  }}
+                  className="flex items-center"
                 >
-                  Home
-                </Link>
+                  <Link href="/" className="text-sm font-medium link">
+                    Home
+                  </Link>
+                </motion.div>
                 {navigation.categories.map((category) => (
                   <Popover key={category.name} className="flex">
                     {({ open, close }) => (
                       <>
-                        <div className="relative flex">
+                        <motion.div
+                          className="relative flex"
+                          initial={{ y: '100%', opacity: 0 }}
+                          whileInView={{
+                            y: 0,
+                            opacity: 1,
+                            transition: {
+                              delay: category.delay,
+                              duration: 0.8,
+                            },
+                          }}
+                        >
                           <Popover.Button
                             className={classNames(
                               open ? '' : 'border-transparent link',
@@ -222,7 +211,7 @@ export default function Navbar() {
                           >
                             {category.name}
                           </Popover.Button>
-                        </div>
+                        </motion.div>
 
                         <Transition
                           as={Fragment}
@@ -242,38 +231,6 @@ export default function Navbar() {
                             <div className="relative bg-white dark:bg-gray-700">
                               <div className="mx-auto max-w-7xl px-8">
                                 <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
-                                  <div className="col-start-2 grid grid-cols-2 gap-x-8">
-                                    {category.featured.map((item: Featured) => (
-                                      <div
-                                        key={item.name}
-                                        className="group relative text-base sm:text-sm"
-                                      >
-                                        <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-                                          <Image
-                                            src={item.imageSrc}
-                                            alt={item.imageAlt}
-                                            className="object-cover object-center"
-                                            height={300}
-                                            width={300}
-                                          />
-                                        </div>
-                                        <Link
-                                          href={item.href}
-                                          className="mt-6 block font-medium"
-                                          onClick={close}
-                                        >
-                                          <span
-                                            className="absolute inset-0 z-10"
-                                            aria-hidden="true"
-                                          />
-                                          {item.name}
-                                        </Link>
-                                        <p aria-hidden="true" className="mt-1">
-                                          Shop now
-                                        </p>
-                                      </div>
-                                    ))}
-                                  </div>
                                   <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
                                     {category.sections.map(
                                       (section: Sections) => (
@@ -321,42 +278,106 @@ export default function Navbar() {
                 ))}
 
                 {navigation.pages.map((page: Pages) => (
-                  <Link
+                  <motion.div
+                    initial={{ y: '100%', opacity: 0 }}
+                    whileInView={{
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        delay: page.delay,
+                        duration: 0.8,
+                      },
+                    }}
+                    className="flex items-center"
                     key={page.name}
-                    href={page.href}
-                    className="flex items-center text-sm font-medium link"
                   >
-                    {page.name}
-                  </Link>
+                    <Link
+                      href={page.href}
+                      className="flex items-center text-sm font-medium link"
+                    >
+                      {page.name}
+                    </Link>
+                  </motion.div>
                 ))}
               </div>
             </Popover.Group>
 
             <div className="flex lg:flex-row flex-col items-center gap-3 text-sm font-medium text-gray-700 px-4">
               <div className="lg:flex hidden items-center lg:gap-6">
-                <Button className="link duration-300 ease-in">Sign In</Button>
-                <Button className="btnIcon duration-300 ease-in">
-                  Register
-                </Button>
+                <motion.div
+                  initial={{ y: '100%', opacity: 0 }}
+                  whileInView={{
+                    y: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.5,
+                      duration: 1,
+                    },
+                  }}
+                >
+                  <Button className="link duration-300 ease-in">Sign In</Button>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, skewX: 1 }}
+                  whileInView={{
+                    // y: 0,
+                    opacity: 1,
+                    skewX: 0,
+                    transition: {
+                      delay: 0.5,
+                      duration: 1,
+                    },
+                  }}
+                >
+                  <Button className="btnIcon duration-300 ease-in">
+                    Register
+                  </Button>
+                </motion.div>
               </div>
 
               <div className="flex items-center gap-4">
-                <Button
-                  className="btnIcon block lg:hidden border-2 border-solid duration-300 ease-in"
-                  onClick={() => setOpen(true)}
+                <motion.div
+                  initial={{ y: '100%', opacity: 0 }}
+                  whileInView={{
+                    y: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.4,
+                      duration: 0.8,
+                    },
+                  }}
                 >
-                  <FaBars size={16} />
-                </Button>
-                <Button
-                  className="btnIcon border-2 border-solid duration-300 ease-in"
-                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                  <Button
+                    className="btnIcon block lg:hidden border-2 border-solid duration-300 ease-in"
+                    onClick={() => setOpen(true)}
+                  >
+                    <FaBars size={16} />
+                  </Button>
+                </motion.div>
+                <motion.div
+                  initial={{ y: '100%', opacity: 0 }}
+                  whileInView={{
+                    y: 0,
+                    opacity: 1,
+                    transition: {
+                      delay: 0.4,
+                      duration: 0.8,
+                    },
+                  }}
                 >
-                  {theme === 'dark' ? (
-                    <FaMoon size={16} />
-                  ) : (
-                    <FaSun size={16} />
-                  )}
-                </Button>
+                  <Button
+                    className="btnIcon border-2 border-solid duration-300 ease-in"
+                    onClick={() =>
+                      setTheme(theme === 'dark' ? 'light' : 'dark')
+                    }
+                  >
+                    {theme === 'dark' ? (
+                      <FaMoon size={16} />
+                    ) : (
+                      <FaSun size={16} />
+                    )}
+                  </Button>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -371,24 +392,7 @@ const navigation = {
     {
       id: 'components',
       name: 'Components',
-      featured: [
-        // {
-        //   name: 'New Arrivals',
-        //   href: '#',
-        //   imageSrc:
-        //     'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
-        //   imageAlt:
-        //     'Models sitting back to back, wearing Basic Tee in black and bone.',
-        // },
-        // {
-        //   name: 'Basic Tees',
-        //   href: '#',
-        //   imageSrc:
-        //     'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
-        //   imageAlt:
-        //     'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
-        // },
-      ],
+      delay: 0.6,
       sections: [
         {
           id: 'cards',
@@ -398,38 +402,12 @@ const navigation = {
             { name: 'Ecommerce Card', href: '/components/card/ecommerce' },
           ],
         },
-        // {
-        //   id: 'accessories',
-        //   name: 'Accessories',
-        //   items: [
-        //     {
-        //       name: 'Watches',
-        //       href: '/catgeory/watches?category=women&subcategory=accessories',
-        //     },
-        //     { name: 'Wallets', href: '#' },
-        //     { name: 'Bags', href: '#' },
-        //     { name: 'Sunglasses', href: '#' },
-        //     { name: 'Hats', href: '#' },
-        //     { name: 'Belts', href: '#' },
-        //   ],
-        // },
-        // {
-        //   id: 'brands',
-        //   name: 'Brands',
-        //   items: [
-        //     { name: 'Full Nelson', href: '#' },
-        //     { name: 'My Way', href: '#' },
-        //     { name: 'Re-Arranged', href: '#' },
-        //     { name: 'Counterfeit', href: '#' },
-        //     { name: 'Significant Other', href: '#' },
-        //   ],
-        // },
       ],
     },
   ],
   pages: [
-    { name: 'Portfolios', href: '/portfolios' },
-    { name: 'Skills', href: '/skill' },
-    { name: 'Blogs', href: '/blogs' },
+    { name: 'Portfolios', href: '/portfolios', delay: 0.7 },
+    { name: 'Skills', href: '/skill', delay: 0.8 },
+    { name: 'Blogs', href: '/blogs', delay: 0.9 },
   ],
 }
