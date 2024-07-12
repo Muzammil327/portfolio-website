@@ -12,6 +12,7 @@
     h3 {
         @apply text-xl pt-5 text-color2;
     }
+
     h4 {
         @apply my-3 font-bold;
     }
@@ -20,7 +21,7 @@
         @apply list-inside list-disc my-2;
 
         li {
-            @apply py-2;
+            @apply py-2 text-lg;
         }
     }
 
@@ -81,10 +82,6 @@
             }
 
             td::before {
-                /*
-              * aria-label has no advantage, it won't be read inside a table
-              content: attr(aria-label);
-              */
                 content: attr(data-label);
                 float: left;
                 font-weight: bold;
@@ -100,6 +97,7 @@
     pre {
         @apply bg-slate-200 rounded-md p-3;
     }
+
     code {
         @apply bg-slate-200 px-2 py-1 rounded-md;
     }
