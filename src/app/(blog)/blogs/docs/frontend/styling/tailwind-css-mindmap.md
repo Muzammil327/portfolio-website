@@ -15,6 +15,9 @@ keyword:
 ---
 
 # Tailwind CSS
+[Setup with Framework Guides](https://tailwindcss.com/docs/installation/framework-guides)
 
+## Vscode Extension
+[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 ### Resorces
