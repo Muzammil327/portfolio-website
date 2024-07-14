@@ -31,6 +31,7 @@ keyword:
 - indexOf(string) // returns the position in a string.
 - substring(start,end) // extracts a part of a string. end not include
 - slice(start,end) // extracts a part of a string.
+- reverse() // start in end and end in start
 - trim() // remove white space
 - trimEnd() // remove white space at the end of string
 - trimStart() // remove white space at the start of string
