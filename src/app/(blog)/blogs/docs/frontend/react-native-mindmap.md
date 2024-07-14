@@ -27,6 +27,7 @@ style={tw`p-4`}
 ```
 
 `tailwind.config.js`
+
 ```bash
 module.exports = {
     content: [
