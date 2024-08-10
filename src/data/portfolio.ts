@@ -15,10 +15,10 @@ export const portfolio_data: portfolioProps[] = [
     id: 1,
     name: 'Ecommerce Website',
     para: 'This project represents my expertise in creating informative blog platforms. I have designed and developed a responsive website that provides readers with easy navigation and captivating content. Explore this project.',
-    liveLink: 'https://full-stack-ecommerce-website-five.vercel.app/',
+    liveLink: 'https://smishopmart.vercel.app/',
     githubLink: 'https://github.com/Muzammil327/Full-Stack-Ecommerce-Website',
     image: '/projects/ecommerce-website.png',
-    imagealt: 'Portfolio website',
+    imagealt: 'Ecommerce website',
     link: '/portfolios/ecommerce-website',
   },
   {

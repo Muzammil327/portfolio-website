@@ -4,109 +4,29 @@ Git is a distributed version control system that tracks changes to files and all
 
 ## Configuration
 
-```bash
-Set your name
-git config --global user.name "Your Name"
-```
-
----
-
-```bash
-Set your email
-git config --global user.email "youremail@example.com"
-```
+- `Set your name:` = git config --global user.name "Your Name"
+- `Set your email:` = git config --global user.email "youremail@example.com"
 
 ## Initialization
 
----
-
-```bash
-Initialize a new repository:
-git init
-```
-
----
-
-## Cloning a Repository
-
-```bash
-Clone a repository:
-git clone https://github.com/username/repository.git
-```
-
----
+- `Initialize a new repository:` = git init
+- `Clone a repository:` = git clone https://github.com/username/repository.git
 
 ## Basic Workflow
 
-```bash
-Check the status of the repository:
-git status
-```
-
----
-
-```bash
-Stage changes for commit:
-git add <file>
-git add .  // all stage
-```
-
----
-
-```bash
-Commit changes:
-git commit -m "Commit message"
-```
-
----
-
-```bash
-Pull changes from a remote repository:
-git pull
-```
-
----
-
-```bash
-Push changes to a remote repository:
-git push
-git push origin <branch-name>
-```
+- `Check the status of the repository:` = git status
+- `Stage changes for commit:` = git add <file> || git add .
+- `Commit changes:` = git commit -m "Commit message"
+- `Pull changes from a remote repository:` = git pull
+- `Push changes to a remote repository:` = git push || git push origin <branch-name>
 
 ## Branching
 
-```bash
-List branches:
-git branch
-```
-
----
-
-```bash
-Create a new branch:
-git branch <branch-name>
-```
-
----
-
-```bash
-Switch to a branch:
-git checkout <branch-name>
-```
-
----
-
-```bash
-Create and switch to a new branch:
-git checkout -b <branch-name>
-```
-
----
-
-```bash
-Merge a branch into the current branch:
-git merge <branch-name>
-```
+- `List branches:` = git branch
+- `Create a new branch:` = git branch <branch-name>
+- `Switch to a branch:` = git checkout <branch-name>
+- `Create and switch to a new branch:` = git checkout -b <branch-name>
+- `Merge a branch into the current branch:` = git merge <branch-name>
 
 ## Remote Repositories
 
@@ -146,7 +66,7 @@ git show <commit-hash>
 ---
 
 ```bash
-Reverse Commit Changing 
+Reverse Commit Changing
 git revert <commit-hash>
 ```
 

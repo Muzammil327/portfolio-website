@@ -5,7 +5,7 @@ export const brands_data: brandsProps[] = [
     id: 0,
     name: 'Portfolio Website',
     liveLink: '',
-    image: '/brands/smi-logo.webp',
+    image: '/brands/smi-logo.png',
   },
   {
     id: 1,
@@ -23,7 +23,7 @@ export const brands_data: brandsProps[] = [
     id: 3,
     name: 'Blog Website',
     liveLink: '',
-    image: '/brands/smi-logo.webp',
+    image: '/brands/portfolio.png',
   },
   {
     id: 4,

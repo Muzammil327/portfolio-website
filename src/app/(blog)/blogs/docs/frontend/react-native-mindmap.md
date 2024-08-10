@@ -11,12 +11,7 @@ keyword: ['React Native', 'React Native learning', 'React Native learning path',
 # React Native
 React Native is an open-source framework developed by Facebook that allows developers to build mobile applications using JavaScript and React. It enables building apps for both iOS and Android platforms by offering a shared codebase, which significantly reduces development time and effort.
 
-```bash
-npx create-expo-app StickerSmash --template blank 
-cd StickerSmash
-npx expo install react-dom react-native-web @expo/metro-runtime
-npm run studio
-```
+[React Native Router Installation](https://docs.expo.dev/router/installation/)
 
 ## Setup with Tailwind CSS
 

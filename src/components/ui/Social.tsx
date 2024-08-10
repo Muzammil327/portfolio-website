@@ -56,7 +56,7 @@ export default function Social() {
           },
         }}
       >
-        <Link href="/">
+        <Link href="https://web.facebook.com/profile.php?id=61559852416600">
           <FaFacebookF size={16} />
         </Link>
       </motion.li>
@@ -72,7 +72,7 @@ export default function Social() {
           },
         }}
       >
-        <Link href="/">
+        <Link href="https://www.youtube.com/channel/UCQub8LAnm9ljHbec5PLDMhQ">
           <FaYoutube size={16} />
         </Link>
       </motion.li>
@@ -88,7 +88,7 @@ export default function Social() {
           },
         }}
       >
-        <Link href="/">
+        <Link href="https://www.instagram.com/mmuzammil327/">
           <FaInstagram size={16} />
         </Link>
       </motion.li>
@@ -104,7 +104,7 @@ export default function Social() {
           },
         }}
       >
-        <Link href="/">
+        <Link href="https://x.com/mmuzammil327">
           <FaTwitter size={16} />
         </Link>
       </motion.li>
