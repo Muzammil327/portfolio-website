@@ -22,10 +22,10 @@ export default function AboutUs() {
                 },
               }}
               viewport={{
-                margin: '-200px',
+                margin: '-50px',
               }}
             >
-              1+ Years of Experience
+              2+ Years of Experience
             </motion.h1>
             <motion.p
               initial={{ y: '100%', opacity: 0 }}
@@ -38,7 +38,7 @@ export default function AboutUs() {
                 },
               }}
               viewport={{
-                margin: '-200px',
+                margin: '-50px',
               }}
             >
               With over a year of hands-on experience, I have honed my skills in

@@ -18,6 +18,7 @@ import { motion } from 'framer-motion'
 
 export default function ContactForm() {
   const { systemTheme, theme, setTheme } = useTheme()
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const currentTheme = theme === 'system' ? systemTheme : theme
 
@@ -31,8 +32,8 @@ export default function ContactForm() {
 
   const SubmitHandle = async (e: any) => {
     e.preventDefault()
-
     try {
+      setIsLoading(true)
       if (
         !data.fname ||
         !data.lname ||
@@ -53,8 +54,11 @@ export default function ContactForm() {
         message: '',
       })
     } catch (error) {
+      setIsLoading(false)
       console.log(error)
       toast.warning('Error during Task Update')
+    } finally {
+      setIsLoading(false)
     }
   }
 
@@ -394,7 +398,7 @@ export default function ContactForm() {
                     },
                   }}
                 >
-                  Submit
+                  {isLoading ? 'Loading..' : 'Submit'}
                 </motion.button>
               </form>
             </div>

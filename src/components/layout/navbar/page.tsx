@@ -400,6 +400,9 @@ const navigation = {
           items: [
             { name: 'Blogs Card', href: '/components/card/blog' },
             { name: 'Ecommerce Card', href: '/components/card/ecommerce' },
+            { name: 'Pricing Card', href: '/components/card/pricing' },
+            { name: 'Link Card', href: '/components/card/link' },
+            { name: 'Stats Card', href: '/components/card/stats' },
           ],
         },
       ],
