@@ -3,6 +3,7 @@ import Container from '@/src/components/ui/Container'
 import BlogCard1 from '@/src/app/(main)/components/card/blog/card-1'
 import BlogCard2 from '@/src/app/(main)/components/card/blog/card-2'
 import BlogCard3 from '@/src/app/(main)/components/card/blog/card-3'
+import BlogCard4 from '@/src/app/(main)/components/card/blog/card-4'
 
 const Page = () => {
   return (
@@ -12,6 +13,7 @@ const Page = () => {
         <BlogCard1 />
         <BlogCard2 />
         <BlogCard3 />
+        <BlogCard4 />
       </Container>
     </main>
   )

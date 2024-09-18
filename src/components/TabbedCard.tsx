@@ -19,8 +19,8 @@ const TabbedCard: React.FC<TabbedCardProps> = ({
   }
 
   return (
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-      <h2 className="py-4 text-4xl mb-4">{title}</h2>
+    <div className="bg-white shadow-lg rounded-lg overflow-hidden mb-5">
+      <h2 className="py-4 px-4 text-4xl mb-4 text-black">{title}</h2>
       <div className="flex border-b justify-end">
         <button
           className={`md:w-3/12 sm:w-4/12 w-6/12 py-2 text-center ${activeTab === 'component' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
