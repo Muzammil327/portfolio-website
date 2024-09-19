@@ -2,7 +2,11 @@
 [Clerk](https://clerk.com/) is a popular authentication and user management platform that can be easily integrated with Next.js. Here's a step-by-step guide on how to set up Next.js with Clerk:
 
 ## Step 1: Create a Clerk account
-If you haven't already, create a Clerk account by signing up on the Clerk website. Follow the instructions to set up your account and create a new application.
+If you haven't already, create a Clerk account by [signing up](https://dashboard.clerk.com/sign-up) on the Clerk website. Follow the instructions to set up your account and create a new application.
+
+Give the name of Application and select Social Provider and other inputs from users.
+![Clerk Application and Social Selecter](/)
+
 
 ## Step 2: Install the Clerk SDK
 In your Next.js project, install the Clerk SDK using npm or yarn:
