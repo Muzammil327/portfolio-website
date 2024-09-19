@@ -5,7 +5,7 @@
 If you haven't already, create a Clerk account by [signing up](https://dashboard.clerk.com/sign-up) on the Clerk website. Follow the instructions to set up your account and create a new application.
 
 Give the name of Application and select Social Provider and other inputs from users.
-![Clerk Application and Social Selecter](/)
+![Clerk Application and Social Selecter](/src/learning/authentication/clerk/clerk-appplication-and-social.PNG)
 
 
 ## Step 2: Install the Clerk SDK
