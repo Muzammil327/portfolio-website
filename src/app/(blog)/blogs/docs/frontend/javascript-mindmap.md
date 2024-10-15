@@ -44,6 +44,12 @@ keyword:
   // string into an array of substrings.
   // separator is white space (" ") or ("-")
 
+### Interview
+
+`What is the difference between == and === in Javascript.`
+
+`==` checks for the same value, while `===` checks for the same value and type.
+
 ### Resorces
 
 - [Javascript Official](/)
