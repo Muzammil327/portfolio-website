@@ -82,3 +82,24 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 export default MyApp
 ```
+## Step 6: SignUp
+
+[Learn More](https://clerk.com/docs/components/unstyled/sign-in-button)
+
+```bash
+import { SignUpButton } from '@clerk/nextjs'
+  <SignUpButton mode="modal">
+        <button>Sign up</button>
+      </SignUpButton>
+```
+
+## Step 7: SignIn
+
+[Learn More](https://clerk.com/docs/components/unstyled/sign-in-button)
+
+```bash
+import { SignInButton } from '@clerk/nextjs'
+ <SignInButton>
+        <button>Sign in with Clerk</button>
+      </SignInButton>
+```
