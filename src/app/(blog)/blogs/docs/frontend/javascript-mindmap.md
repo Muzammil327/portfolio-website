@@ -46,9 +46,44 @@ keyword:
 
 ### Interview
 
-`What is the difference between == and === in Javascript.`
+```bash
+'What is the difference between == and === in Javascript.'
 
 `==` checks for the same value, while `===` checks for the same value and type.
+```
+
+```bash
+'callback'
+
+A callback is a function passed as an argument to another function that gets executed after the asynchronous task is complete.
+```
+
+```bash
+'Promises'
+
+A promise is an object that represents the eventual completion (or failure) of an asynchronous operation. It allows chaining asynchronous operations and is more readable than deeply nested callbacks.
+```
+
+```bash
+'Async/Await'
+
+Introduced to make asynchronous code look and behave more like synchronous code. It makes code easier to read and maintain.
+```
+
+```bash
+'Synchronous'
+- Tasks execute in sequence (one after the other)
+- Yes, blocking execution
+- Simple and predictable
+- Can be slower for I/O-bound tasks
+
+'Asynchronous'
+- Tasks can execute independently and concurrently
+- No, non-blocking execution
+- More complex due to callbacks/promises
+- More efficient for I/O operations and concurrency
+
+```
 
 ### Resorces
 
